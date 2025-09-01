@@ -5,11 +5,11 @@ import { defineConfig } from 'tsup'
 import rootConfig from '../../tsup.config'
 
 function directiveRemover(nameOfFile: string) {
-  const file = path.resolve(__dirname, 'dist', nameOfFile);
+  const file = path.resolve(__dirname, 'dist', nameOfFile)
 
   return fs.promises.writeFile(
     file,
-    fs.readFileSync(file, 'utf-8').replace("'use client'\n", ''),
+    fs.readFileSync(file, 'utf-8').replace("'use client'\n", '')
   )
 }
 
@@ -18,21 +18,16 @@ export default defineConfig({
   entry: [
     'src/components/**/index.ts',
     'src/colors.ts',
-    'src/preset.ts',
+    'src/base-presets.ts',
     'src/index.ts',
   ],
   tsconfig: './tsconfig.json',
   sourcemap: false,
-  external: [
-    '@chakra-ui/react',
-    '@emotion/react',
-    'react',
-    'react-dom'
-  ],
+  external: ['@chakra-ui/react', '@emotion/react', 'react', 'react-dom'],
   async onSuccess() {
     await Promise.all([
       directiveRemover('index.cjs'),
-      directiveRemover('index.js')
+      directiveRemover('index.js'),
     ])
-  }
-});
+  },
+})

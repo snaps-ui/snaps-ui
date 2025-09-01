@@ -14,18 +14,19 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./preset": {
-      "snapsui": "./src/preset.ts",
-      "types": "./dist/preset.d.ts",
-      "import": "./dist/preset.js",
-      "require": "./dist/preset.cjs"
+    "./base-preset": {
+      "snapsui": "./src/base-preset.ts",
+      "types": "./dist/base-preset.d.ts",
+      "import": "./dist/base-preset.js",
+      "require": "./dist/base-preset.cjs"
     },
     "./colors": {
       "snapsui": "./src/colors.ts",
       "types": "./dist/colors.d.ts",
       "import": "./dist/colors.js",
       "require": "./dist/colors.cjs"
-    }
+    },
+    "./package.json": "./package.json"
   },
   "scripts": {
     "clean": "rimraf --no-glob ./dist",
