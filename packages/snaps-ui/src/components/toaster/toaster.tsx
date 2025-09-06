@@ -25,19 +25,19 @@ interface ToasterProps {
   status?: StatusType
 }
 
-export const successToast = (props: Omit<ToasterProps, 'id'>) => {
+export const successToast = (props: Omit<ToasterProps, 'id' | 'status'>) => {
   return sonnerToast.custom((id) => (
     <Toast id={id} status="success" {...props} />
   ))
 }
 
-export const warningToast = (props: Omit<ToasterProps, 'id'>) => {
+export const warningToast = (props: Omit<ToasterProps, 'id' | 'status'>) => {
   return sonnerToast.custom((id) => (
     <Toast id={id} status="warning" {...props} />
   ))
 }
 
-export const errorToast = (props: Omit<ToasterProps, 'id'>) => {
+export const errorToast = (props: Omit<ToasterProps, 'id' | 'status'>) => {
   return sonnerToast.custom((id) => <Toast id={id} status="error" {...props} />)
 }
 
