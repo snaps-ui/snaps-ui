@@ -20,7 +20,7 @@
     "test:watch": "vitest --watch --onlyChanged",
     "commitlint": "commitlint --edit",
     "release": "pnpm run changeset:version && pnpm run build:packages && pnpm run publish",
-    "publish": "pnpm --filter snaps-ui /* publish --access public --tag latest",
+    "publish": "pnpm --filter @snaps-ui /* publish --access public --tag latest",
     "changeset:version": "changeset version"
   },
   "bugs": {

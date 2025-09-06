@@ -1,0 +1,66 @@
+{
+  "name": "@snaps-ui/system",
+  "version": "1.0.0",
+  "private": false,
+  "description": "snaps-ui system",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "snapsui": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean": "rimraf --no-glob ./dist",
+    "build": "pnpm clean && pnpm build:tsup && pnpm build:types",
+    "build:tsup": "tsup --config tsup.config.ts",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist --project tsconfig.json",
+    "dev": "tsup --watch --config tsup.config.ts",
+    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../eslint.config.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snaps-ui/snaps-ui",
+    "directory": "packages/snaps-ui"
+  },
+  "keywords": [
+    "snaps-ui",
+    "react",
+    "ui",
+    "chakra-ui",
+    "theme",
+    "design-system",
+    "react-components",
+    "accessible",
+    "uikit",
+    "components",
+    "library",
+    "emotion"
+  ],
+  "author": "Justice Chimobi <chimobi.justice@gmail.com>",
+  "license": "MIT",
+  "packageManager": "pnpm@10.15.0",
+  "devDependencies": {
+    "@chakra-ui/react": "^3.26.0",
+    "@emotion/react": "^11",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
