@@ -26,6 +26,12 @@
       "import": "./dist/colors.js",
       "require": "./dist/colors.cjs"
     },
+    "./*": {
+      "snapsui": "./src/components/*/index.ts",
+      "types": "./dist/types/components/*/index.d.ts",
+      "import": "./dist/components/*/index.js",
+      "require": "./dist/components/*/index.cjs"
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
@@ -72,9 +78,17 @@
     "react": ">=18",
     "react-dom": ">=18"
   },
+  "dependencies": {
+    "@snaps-ui/system": "workspace:*",
+    "sonner": "^2.0.7"
+  },
   "devDependencies": {
+    "@chakra-ui/react": "^3.26.0",
+    "@emotion/react": "^11",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
     "react-icons": "^5.5.0",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.0",
