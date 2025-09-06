@@ -1,8 +1,8 @@
 {
-  "name": "@snaps-ui/react",
+  "name": "@snaps-ui/system",
   "version": "1.0.0",
   "private": false,
-  "description": "A collection of prebuilt, customizable Chakra UI components for faster development",
+  "description": "snaps-ui system",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -13,24 +13,6 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    },
-    "./base-preset": {
-      "snapsui": "./src/base-preset.ts",
-      "types": "./dist/base-preset.d.ts",
-      "import": "./dist/base-preset.js",
-      "require": "./dist/base-preset.cjs"
-    },
-    "./colors": {
-      "snapsui": "./src/colors.ts",
-      "types": "./dist/colors.d.ts",
-      "import": "./dist/colors.js",
-      "require": "./dist/colors.cjs"
-    },
-    "./*": {
-      "snapsui": "./src/components/*/index.ts",
-      "types": "./dist/types/components/*/index.d.ts",
-      "import": "./dist/components/*/index.js",
-      "require": "./dist/components/*/index.cjs"
     },
     "./package.json": "./package.json"
   },
@@ -61,6 +43,7 @@
     "react",
     "ui",
     "chakra-ui",
+    "theme",
     "design-system",
     "react-components",
     "accessible",
@@ -72,24 +55,9 @@
   "author": "Justice Chimobi <chimobi.justice@gmail.com>",
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
-  "peerDependencies": {
-    "@chakra-ui/react": "^3.26.0",
-    "@emotion/react": "^11",
-    "react": ">=18",
-    "react-dom": ">=18"
-  },
-  "dependencies": {
-    "@snaps-ui/system": "workspace:*",
-    "sonner": "^2.0.7"
-  },
   "devDependencies": {
     "@chakra-ui/react": "^3.26.0",
     "@emotion/react": "^11",
-    "@types/react": "^19.1.12",
-    "@types/react-dom": "^19.1.9",
-    "react": "19.1.1",
-    "react-dom": "19.1.1",
-    "react-icons": "^5.5.0",
     "rimraf": "^6.0.1",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",
