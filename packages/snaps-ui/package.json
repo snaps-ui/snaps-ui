@@ -26,6 +26,12 @@
       "import": "./dist/colors.js",
       "require": "./dist/colors.cjs"
     },
+    "./hooks": {
+      "snapsui": "./src/hooks/index.ts",
+      "types": "./dist/hooks/index.d.ts",
+      "import": "./dist/hooks/index.js",
+      "require": "./dist/hooks/index.cjs"
+    },
     "./*": {
       "snapsui": "./src/components/*/index.ts",
       "types": "./dist/types/components/*/index.d.ts",
@@ -75,6 +81,7 @@
   "peerDependencies": {
     "@chakra-ui/react": "^3.26.0",
     "@emotion/react": "^11",
+    "next-themes": "^0.4.6",
     "react": ">=18",
     "react-dom": ">=18"
   },
