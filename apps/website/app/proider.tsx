@@ -8,11 +8,11 @@ import { system } from '~/app/theme'
 
 export const AppProvider = (props: { children: React.ReactNode }) => {
   return (
-    <SnapsProvider value={system}>
-      <ThemeProvider attribute="class" disableTransitionOnChange>
+    <ThemeProvider attribute="class" disableTransitionOnChange>
+      <SnapsProvider value={system}>
         <Toaster position="top-right" />
         {props.children}
-      </ThemeProvider>
-    </SnapsProvider>
+      </SnapsProvider>
+    </ThemeProvider>
   )
 }
