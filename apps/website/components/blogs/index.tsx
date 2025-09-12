@@ -1,7 +1,8 @@
 'use client'
 
 import { Box } from '@snaps-ui/react/box'
-import { Heading } from '@snaps-ui/react/Heading'
+
+import { Heading } from '@snaps-ui/react/heading'
 
 export const BlogsSection = () => {
   return (
