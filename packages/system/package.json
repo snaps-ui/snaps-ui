@@ -1,6 +1,6 @@
 {
   "name": "@snaps-ui/system",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "private": false,
   "description": "snaps-ui system",
   "type": "module",
@@ -14,14 +14,20 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
+    "./colors": {
+      "snapsui": "./src/colors.ts",
+      "types": "./dist/colors.d.ts",
+      "import": "./dist/colors.js",
+      "require": "./dist/colors.cjs"
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
     "clean": "rimraf --no-glob ./dist",
-    "build": "pnpm clean && pnpm build:tsup && pnpm build:types",
-    "build:tsup": "tsup --config tsup.config.ts",
+    "build:tsup": "NODE_OPTIONS='--max-old-space-size=16384' tsup --config tsup.config.ts ",
     "build:types": "tsc --emitDeclarationOnly --outDir dist --project tsconfig.json",
-    "dev": "tsup --watch --config tsup.config.ts",
+    "prebuild": "pnpm clean",
+    "build": "tsc --outDir dist --project tsconfig.json",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../eslint.config.js",
     "typecheck": "tsc --noEmit",
     "test": "vitest"
@@ -55,9 +61,13 @@
   "author": "Justice Chimobi <chimobi.justice@gmail.com>",
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
-  "devDependencies": {
+  "peerDependencies": {
     "@chakra-ui/react": "^3.26.0",
     "@emotion/react": "^11",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
     "rimraf": "^6.0.1",
     "tsup": "^8.5.0",
     "typescript": "^5.9.2",

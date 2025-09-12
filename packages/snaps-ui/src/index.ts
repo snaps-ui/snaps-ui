@@ -8,9 +8,6 @@ export {
   useControllableState,
   useSelect,
   createContext,
-  createListCollection,
-  createGridCollection,
-  createFileTreeCollection,
   mergeRefs,
   createHighlightJsAdapter,
   createShikiAdapter,
@@ -59,9 +56,25 @@ export type {
   SystemStyleObject,
 } from '@chakra-ui/react/styled-system'
 
+export {
+  createFileTreeCollection,
+  createGridCollection,
+  createListCollection,
+  createTreeCollection,
+} from './collection'
+export type {
+  CollectionItem,
+  CollectionOptions,
+  FilePathTreeNode,
+  FlatTreeNode,
+  GridCollection,
+  ListCollection,
+  TreeCollection,
+  TreeCollectionOptions,
+  TreeNode,
+} from './collection'
+
 export { SnapsProvider } from './provider/index.ts'
 export { type SnapsProviderProps } from './provider/index.ts'
 
 export * from './components/index.ts'
-
-export * from './hooks/index.ts'

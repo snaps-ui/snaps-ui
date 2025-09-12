@@ -1,8 +1,11 @@
 {
-    "include": [],
-    "references": [
-      {
-        "path": "./packages/snaps-ui/tsconfig.json"
-      }
-    ]
-  }
+  "include": [],
+  "references": [
+    {
+      "path": "./packages/snaps-ui/tsconfig.json"
+    },
+    {
+      "path": "./packages/system/tsconfig.json"
+    }
+  ]
+}

@@ -28,6 +28,17 @@ export const keyframes = defineKeyframes({
     },
   },
 
+  ripple: {
+    '0%': {
+      transform: 'scale(0)',
+      opacity: '0.9',
+    },
+    '100%': {
+      transform: 'scale(4.9)',
+      opacity: '0',
+    },
+  },
+
   'bg-position': {
     from: { backgroundPosition: 'var(--animate-from, 1rem) 0' },
     to: { backgroundPosition: 'var(--animate-to, 0) 0' },

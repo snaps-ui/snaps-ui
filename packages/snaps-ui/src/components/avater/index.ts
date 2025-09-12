@@ -1,0 +1,15 @@
+export {
+  Avatar,
+  useAvatar,
+  useAvatarStyles,
+  AvatarRoot,
+  AvatarFallback,
+  AvatarIcon,
+  AvatarImage,
+  AvatarGroup,
+  AvatarRootProvider,
+  type AvatarRootProps,
+  type AvatarGroupProps,
+  type AvatarIconProps,
+  type UseAvatarProps,
+} from '@chakra-ui/react/avatar'

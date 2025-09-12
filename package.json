@@ -1,6 +1,6 @@
 {
   "name": "snaps-ui",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "snaps-ui monorepo, A collection of prebuilt, customizable Chakra UI components for faster development",
   "private": true,
   "type": "module",
@@ -13,6 +13,7 @@
     "build:docs": "pnpm --filter docs build",
     "build:packages": "turbo run build --filter='./packages/*' --concurrency=5",
     "build:storybook": "pnpm --filter storybook build",
+    "build:tsup": "pnpm -r --filter='./packages/*' run build:tsup",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
     "test": "vitest",
@@ -30,6 +31,10 @@
     "type": "git",
     "url": "https://github.com/snaps-ui/snaps-ui"
   },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "keywords": [
     "snaps-ui",
     "react",

@@ -1,5 +1,20 @@
 ///////////////////////////// chakra ui components ///////////////////////////
 
+export {
+  Avatar,
+  useAvatar,
+  useAvatarStyles,
+  AvatarRoot,
+  AvatarFallback,
+  AvatarIcon,
+  AvatarImage,
+  AvatarGroup,
+  AvatarRootProvider,
+  type AvatarRootProps,
+  type AvatarGroupProps,
+  type AvatarIconProps,
+  type UseAvatarProps,
+} from './avater/index.ts'
 export { AspectRatio, type AspectRatioProps } from './aspect-ratio/index.ts'
 export {
   AbsoluteCenter,
@@ -18,6 +33,11 @@ export { Checkmark, type CheckmarkProps } from './checkmark/index.ts'
 export { Circle, type CircleProps } from './circle/index.ts'
 export { ClientOnly, type ClientOnlyProps } from './client-only/index.ts'
 export { Code, type CodeProps } from './code/index.ts'
+export {
+  CodeBlock,
+  createHighlightJsAdapter,
+  createShikiAdapter,
+} from './code-block/index.ts'
 export { ColorPicker } from './color-picker/index.ts'
 export {
   ColorSwatch,
@@ -70,6 +90,7 @@ export { Heading, type HeadingProps } from './heading/index.ts'
 export { Highlight, type HighlightProps } from './highlight/index.ts'
 
 export { Icon, type IconProps } from './icon/index.ts'
+export { IconButton, type IconButtonProps } from './icon-button'
 export { Image, type ImageProps } from './image/index.ts'
 export { Input, InputPropsProvider } from './input/index.ts'
 export type { InputProps } from './input/index.ts'
@@ -93,6 +114,15 @@ export {
 export { Mark } from './mark/index.ts'
 
 export { ScrollArea } from './scroll-area/index.ts'
+export {
+  Stack,
+  HStack,
+  VStack,
+  StackSeparator,
+  type StackProps,
+  type StackSeparatorProps,
+} from './stack/index.ts'
+export { SimpleGrid, type SimpleGridProps } from './simple-grid/index.ts'
 
 export { Text, type TextProps } from './text/index.ts'
 export { TreeView } from './tree-view/index.ts'
