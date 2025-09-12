@@ -36,6 +36,8 @@ import { keyframes } from './tokens/keyframes'
 import { semanticShadows } from './semantic-tokens/shadows'
 import { semanticRadii } from './semantic-tokens/radii'
 import { semanticColors } from './semantic-tokens/colors'
+import { recipes } from '../recipes/recipes'
+import { slotRecipes } from '..//slot-recipes/recipes'
 
 export const defaultTheme = defineConfig({
   preflight: true,
@@ -70,11 +72,11 @@ export const defaultTheme = defineConfig({
       radii: semanticRadii,
       colors: semanticColors,
     },
-    // recipes: '',
+    recipes: recipes,
     textStyles: textStyles,
     layerStyles: layerStyles,
     animationStyles: animationStyles,
-    // slotRecipes: ''
+    slotRecipes: slotRecipes,
   },
   conditions: conditions,
 })

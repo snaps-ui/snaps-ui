@@ -1,7 +1,6 @@
 'use client'
 
 import * as React from 'react'
-
 import { Toaster as SonnerToaster, type ToasterProps } from 'sonner'
 
 export type { ToasterProps }

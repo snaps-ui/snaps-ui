@@ -1,6 +1,6 @@
 {
   "name": "@snaps-ui/react",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "private": false,
   "description": "A collection of prebuilt, customizable Chakra UI components for faster development",
   "type": "module",
@@ -14,17 +14,11 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./base-preset": {
-      "snapsui": "./src/base-preset.ts",
-      "types": "./dist/base-preset.d.ts",
-      "import": "./dist/base-preset.js",
-      "require": "./dist/base-preset.cjs"
-    },
-    "./colors": {
-      "snapsui": "./src/colors.ts",
-      "types": "./dist/colors.d.ts",
-      "import": "./dist/colors.js",
-      "require": "./dist/colors.cjs"
+    "./base-presets": {
+      "snapsui": "./src/base-presets.ts",
+      "types": "./dist/base-presets.d.ts",
+      "import": "./dist/base-presets.js",
+      "require": "./dist/base-presets.cjs"
     },
     "./hooks": {
       "snapsui": "./src/hooks/index.ts",
@@ -32,9 +26,15 @@
       "import": "./dist/hooks/index.js",
       "require": "./dist/hooks/index.cjs"
     },
+    "./collection": {
+      "snapsui": "./src/collection.ts",
+      "types": "./dist/collection.d.ts",
+      "import": "./dist/collection.js",
+      "require": "./dist/collection.cjs"
+    },
     "./*": {
       "snapsui": "./src/components/*/index.ts",
-      "types": "./dist/types/components/*/index.d.ts",
+      "types": "./dist/components/*/index.d.ts",
       "import": "./dist/components/*/index.js",
       "require": "./dist/components/*/index.cjs"
     },
@@ -42,10 +42,10 @@
   },
   "scripts": {
     "clean": "rimraf --no-glob ./dist",
-    "build": "pnpm clean && pnpm build:tsup && pnpm build:types",
-    "build:tsup": "tsup --config tsup.config.ts",
+    "build:tsup": "NODE_OPTIONS='--max-old-space-size=16384' tsup --config tsup.config.ts ",
     "build:types": "tsc --emitDeclarationOnly --outDir dist --project tsconfig.json",
-    "dev": "tsup --watch --config tsup.config.ts",
+    "prebuild": "pnpm clean",
+    "build": "tsc --outDir dist --project tsconfig.json",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../eslint.config.js",
     "typecheck": "tsc --noEmit",
     "test": "vitest"

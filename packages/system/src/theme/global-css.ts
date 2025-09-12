@@ -1,66 +1,3 @@
-// import { defineGlobalStyles } from '@chakra-ui/react'
-
-// const empty = 'var(--chakra-empty,/*!*/ /*!*/)'
-
-// export const globalCss = defineGlobalStyles({
-//   '*': {
-//     '--ring-inset': empty,
-//     '--ring-offset-width': '0px',
-//     '--ring-offset-color': '#fff',
-//     '--ring-color': 'rgba(66, 153, 225, 0.6)',
-//     '--ring-offset-shadow': '0 0 #0000',
-//     '--ring-shadow': '0 0 #0000',
-//     ...Object.fromEntries(
-//       [
-//         'brightness',
-//         'contrast',
-//         'grayscale',
-//         'hue-rotate',
-//         'invert',
-//         'saturate',
-//         'sepia',
-//         'drop-shadow',
-//       ].map((prop) => [`--${prop}`, empty]),
-//     ),
-//     ...Object.fromEntries(
-//       [
-//         'blur',
-//         'brightness',
-//         'contrast',
-//         'grayscale',
-//         'hue-rotate',
-//         'invert',
-//         'opacity',
-//         'saturate',
-//         'sepia',
-//       ].map((prop) => [`--backdrop-${prop}`, empty]),
-//     ),
-//     '--global-font-mono': 'fonts.mono',
-//     '--global-font-body': 'fonts.body',
-//     '--global-color-border': 'colors.border',
-//     '--cursor-button': 'default',
-//     '--radius-full': '9999px',
-//     '--scale-factor': '1',
-//     '--overlay-effect': 'blur({blurs.lg})',
-//     '--backdrop-effect': 'none',
-//     '--scrollbar-color': 'colors.border.emphasized',
-//     scrollbarWidth: 'thin',
-//     scrollbarColor: 'var(--scrollbar-color) transparent',
-//   },
-//   body: {
-//     color: 'fg',
-//     bg: 'bg',
-//     lineHeight: '1.5',
-//     colorPalette: 'accent',
-//   },
-//   '*::placeholder, *[data-placeholder]': {
-//     color: 'fg.muted/90',
-//   },
-//   '*::selection': {
-//     bg: 'colorPalette.solid/20',
-//   },
-// })
-
 import { defineGlobalStyles } from '@chakra-ui/react'
 
 const empty = 'var(--chakra-empty,/*!*/ /*!*/)'
@@ -69,8 +6,8 @@ export const globalCss = defineGlobalStyles({
   '*': {
     '--ring-inset': empty,
     '--ring-offset-width': '0px',
-    '--ring-offset-color': 'colors.stone.50',
-    '--ring-color': 'colors.blue.500',
+    '--ring-offset-color': 'colors.snaps.700',
+    '--ring-color': 'colors.snaps.500',
     '--ring-offset-shadow': '0 0 #0000',
     '--ring-shadow': '0 0 #0000',
     ...Object.fromEntries(
@@ -100,13 +37,13 @@ export const globalCss = defineGlobalStyles({
     ),
     '--global-font-mono': 'fonts.mono',
     '--global-font-body': 'fonts.body',
-    '--global-color-border': 'colors.stone.300',
+    '--global-color-border': 'colors.snaps.50',
     '--cursor-button': 'default',
     '--radius-full': '9999px',
     '--scale-factor': '1',
     '--overlay-effect': 'blur({blurs.lg})',
     '--backdrop-effect': 'none',
-    '--scrollbar-color': 'colors.slate.600',
+    '--scrollbar-color': 'colors.stone.200',
     scrollbarWidth: 'thin',
     scrollbarColor: 'var(--scrollbar-color) transparent',
   },
@@ -114,12 +51,12 @@ export const globalCss = defineGlobalStyles({
     color: 'colors.slate.900',
     bg: 'colors.stone.50',
     lineHeight: '1.5',
-    colorPalette: 'denim',
+    colorPalette: 'red',
   },
   '*::placeholder, *[data-placeholder]': {
-    color: 'colors.slate.400',
+    color: 'colors.slate.900',
   },
   '*::selection': {
-    bg: 'colors.ochre.500',
+    bg: 'colors.ochre.800',
   },
 })

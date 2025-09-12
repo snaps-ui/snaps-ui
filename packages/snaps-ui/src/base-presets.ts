@@ -1,8 +1,12 @@
 import { createSystem, defaultBaseConfig, mergeConfigs } from '@chakra-ui/react'
-
-import { defaultTheme } from '@snaps-ui/system'
+import { defaultTheme, utilities } from '@snaps-ui/system'
 
 const defaultConfig = mergeConfigs(defaultBaseConfig, defaultTheme)
+
+defaultConfig.utilities = Object.assign(
+  defaultConfig.utilities ?? {},
+  utilities
+)
 
 const defaultSystem = createSystem(defaultConfig)
 

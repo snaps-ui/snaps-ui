@@ -1,6 +1,7 @@
 import { defineTokens } from '@chakra-ui/react'
 
 export type ColorPalette =
+  | 'snaps'
   | 'stone'
   | 'slate'
   | 'olive'
@@ -52,6 +53,18 @@ export const colors = defineTokens.colors({
     800: { value: 'oklch(0 0 0 / 0.80)' },
     900: { value: 'oklch(0 0 0 / 0.92)' },
     950: { value: 'oklch(0 0 0 / 0.95)' },
+  },
+  snaps: {
+    50: { value: '#fff5f4' },
+    100: { value: '#ffe1dd' },
+    200: { value: '#ffc9c0' },
+    300: { value: '#ffbcb0' },
+    400: { value: '#ffab9d' },
+    500: { value: '#ff9a89' },
+    600: { value: '#ff8a76' },
+    700: { value: '#e67568' },
+    800: { value: '#cc6158' },
+    900: { value: '#b34e49' },
   },
   stone: {
     50: { value: 'oklch(0.985 0.002 90)' },

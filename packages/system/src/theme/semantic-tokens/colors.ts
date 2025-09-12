@@ -1,72 +1,10 @@
 import { defineSemanticTokens } from '@chakra-ui/react'
 
 export const semanticColors = defineSemanticTokens.colors({
-  // Presence: Status indicators for user presence
-  presence: {
-    online: {
-      value: { _light: '{colors.moss.500}', _dark: '{colors.moss.500}' },
-    },
-    offline: {
-      value: { _light: '{colors.slate.400}', _dark: '{colors.slate.400}' },
-    },
-    busy: {
-      value: { _light: '{colors.ochre.500}', _dark: '{colors.ochre.500}' },
-    },
-    dnd: {
-      value: {
-        _light: '{colors.terracotta.500}',
-        _dark: '{colors.terracotta.500}',
-      },
-    },
-    away: {
-      value: { _light: '{colors.slate.400}', _dark: '{colors.slate.400}' },
-    },
-  },
-
-  // Status: Colors for informational messages and states
-  status: {
-    success: {
-      value: { _light: '{colors.moss.500}', _dark: '{colors.moss.500}' },
-    },
-    error: {
-      value: {
-        _light: '{colors.terracotta.500}',
-        _dark: '{colors.terracotta.500}',
-      },
-    },
-    warning: {
-      value: { _light: '{colors.ochre.500}', _dark: '{colors.ochre.500}' },
-    },
-    info: {
-      value: { _light: '{colors.denim.500}', _dark: '{colors.denim.500}' },
-    },
-  },
-
-  // Sidebar colors
-  sidebar: {
-    bg: {
-      value: { _light: '{colors.stone.100}', _dark: '{colors.black}' },
-    },
-    fg: {
-      value: { _light: '{colors.slate.900}', _dark: '{colors.stone.100}' },
-    },
-    border: {
-      value: { _light: '{colors.stone.200}', _dark: '{colors.slate.800}' },
-    },
-    accent: {
-      bg: {
-        value: { _light: '{colors.stone.200}', _dark: '{colors.slate.900}' },
-      },
-      fg: {
-        value: { _light: '{colors.slate.900}', _dark: '{colors.slate.200}' },
-      },
-    },
-  },
-
   // Backgrounds
   bg: {
     DEFAULT: {
-      value: { _light: '{colors.white}', _dark: '{colors.black}' },
+      value: { _light: '{colors.snaps.500}', _dark: '{colors.snaps.600}' },
     },
     muted: {
       value: { _light: '{colors.stone.50}', _dark: '{colors.slate.950}' },
@@ -75,7 +13,7 @@ export const semanticColors = defineSemanticTokens.colors({
       value: { _light: '{colors.stone.100}', _dark: '{colors.slate.900}' },
     },
     emphasized: {
-      value: { _light: '{colors.stone.200}', _dark: '{colors.slate.800}' },
+      value: { _light: '{colors.white}', _dark: '{colors.rosehip.50}' },
     },
     inverted: {
       value: { _light: '{colors.black}', _dark: '{colors.white}' },
@@ -120,13 +58,13 @@ export const semanticColors = defineSemanticTokens.colors({
   // Foreground (text) colors
   fg: {
     DEFAULT: {
-      value: { _light: '{colors.black}', _dark: '{colors.stone.50}' },
+      value: { _light: '{colors.black}', _dark: '{colors.blackAlpha.700}' },
     },
     muted: {
       value: { _light: '{colors.slate.500}', _dark: '{colors.slate.500}' },
     },
     subtle: {
-      value: { _light: '{colors.slate.600}', _dark: '{colors.slate.400}' },
+      value: { _light: '{colors.slate.600}', _dark: '{colors.slate.800}' },
     },
     emphasized: {
       value: { _light: '{colors.slate.800}', _dark: '{colors.slate.200}' },
@@ -154,7 +92,7 @@ export const semanticColors = defineSemanticTokens.colors({
   // Border colors
   border: {
     DEFAULT: {
-      value: { _light: '{colors.stone.200}', _dark: '{colors.slate.800}' },
+      value: { _light: '{colors.snaps.300}', _dark: '{colors.snaps.400}' },
     },
     muted: {
       value: { _light: '{colors.stone.50}', _dark: '{colors.slate.950}' },
@@ -166,7 +104,7 @@ export const semanticColors = defineSemanticTokens.colors({
       value: { _light: '{colors.stone.300}', _dark: '{colors.slate.700}' },
     },
     inverted: {
-      value: { _light: '{colors.slate.800}', _dark: '{colors.stone.200}' },
+      value: { _light: '{colors.stone.200}', _dark: '{colors.stone.300}' },
     },
     error: {
       value: {
@@ -188,7 +126,7 @@ export const semanticColors = defineSemanticTokens.colors({
   // Brand-specific color palettes
   accent: {
     contrast: {
-      value: { _light: 'white', _dark: 'white' },
+      value: { _light: 'colors.slate.700', _dark: 'colors.slate.300' },
     },
     fg: {
       value: { _light: '{colors.denim.700}', _dark: '{colors.denim.300}' },
@@ -441,6 +379,30 @@ export const semanticColors = defineSemanticTokens.colors({
         _light: '{colors.terracotta.600}',
         _dark: '{colors.terracotta.600}',
       },
+    },
+  },
+
+  snaps: {
+    contrast: {
+      value: { _light: 'white', _dark: 'white' },
+    },
+    fg: {
+      value: { _light: '{colors.snaps.700}', _dark: '{colors.snaps.300}' },
+    },
+    muted: {
+      value: { _light: '{colors.snaps.50}', _dark: '{colors.snaps.950}' },
+    },
+    subtle: {
+      value: { _light: '{colors.snaps.100}', _dark: '{colors.snaps.900}' },
+    },
+    emphasized: {
+      value: { _light: '{colors.snaps.200}', _dark: '{colors.snaps.800}' },
+    },
+    solid: {
+      value: { _light: '{colors.snaps.600}', _dark: '{colors.snaps.600}' },
+    },
+    focusRing: {
+      value: { _light: '{colors.snaps.600}', _dark: '{colors.snaps.600}' },
     },
   },
 
