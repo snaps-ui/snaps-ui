@@ -1,27 +1,21 @@
 'use client'
 
-import { forwardRef, useEffect } from 'react'
+import { forwardRef, useEffect, useState } from 'react'
 import { LuSearch } from 'react-icons/lu'
 
 import { Input, type InputProps } from '../input/index'
 import { InputGroup } from '../input-group/index'
 import { Kbd } from '../kbd/index'
 
-enum KeyList {
-  Meta = '⌘',
-  Ctrl = 'Ctrl',
-  Shift = 'Shft',
-  Alt = 'Alt',
-  F = 'F',
-  K = 'K',
-  L = 'L',
-  P = 'P',
+function isMobileDevice() {
+  if (typeof navigator === 'undefined') return false
+  return /android|bb\d+|meego|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(?:hone|od|pad)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(?:ob|in)i|palm(?: os)?|phone|p(?:ixi|re)\/|plucker|pocket|psp|series(?:4|6)0|symbian|treo|up\.(?:browser|link)|vodafone|wap|windows ce|windows phone|xda|xiino|zte-/i.test(
+    navigator.userAgent
+  )
 }
 
-type KeyboardShortcut = `${KeyList} + ${KeyList}`
-
 export interface CommandInputProps extends InputProps {
-  shortcut?: KeyboardShortcut
+  shortcut?: string
   onOpen?: () => void
   title?: string
   readOnly?: boolean
@@ -29,16 +23,29 @@ export interface CommandInputProps extends InputProps {
 
 export const CommandInput = forwardRef<HTMLInputElement, CommandInputProps>(
   function CommandInput(props, ref) {
-    const {
-      shortcut = '⌘ + K',
-      onOpen,
-      title,
-      readOnly = true,
-      ...rest
-    } = props
+    const { shortcut, onOpen, title, readOnly = true, ...rest } = props
+
+    const [isMobile, setIsMobile] = useState(false)
+    const [resolvedShortcut, setResolvedShortcut] = useState<string | null>(
+      null
+    )
 
     useEffect(() => {
-      const parts = shortcut.split('+').map((p) => p.trim().toLowerCase())
+      const mobile = isMobileDevice()
+      setIsMobile(mobile)
+
+      if (!mobile) {
+        const isMac = /Mac|iPod|iPhone|iPad/.test(navigator.userAgent)
+        setResolvedShortcut(shortcut ?? (isMac ? '⌘ + K' : 'Ctrl + K'))
+      }
+    }, [shortcut])
+
+    useEffect(() => {
+      if (isMobile || !resolvedShortcut) return
+
+      const parts = resolvedShortcut
+        .split('+')
+        .map((p) => p.trim().toLowerCase())
 
       const handleKeyDown = (e: KeyboardEvent) => {
         const pressed: string[] = []
@@ -59,18 +66,20 @@ export const CommandInput = forwardRef<HTMLInputElement, CommandInputProps>(
 
       window.addEventListener('keydown', handleKeyDown)
       return () => window.removeEventListener('keydown', handleKeyDown)
-    }, [shortcut, onOpen])
+    }, [resolvedShortcut, onOpen, isMobile])
 
     return (
       <InputGroup
-        flex={'1'}
+        flex="1"
         startElement={<LuSearch />}
         endElement={
-          <>
-            {shortcut.split('+').map((key, i) => (
-              <Kbd key={i}>{key.trim()}</Kbd>
-            ))}
-          </>
+          !isMobile && resolvedShortcut ? (
+            <>
+              {resolvedShortcut.split('+').map((key, i) => (
+                <Kbd key={i}>{key.trim()}</Kbd>
+              ))}
+            </>
+          ) : null
         }
       >
         <Input
