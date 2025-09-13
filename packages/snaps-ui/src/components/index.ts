@@ -133,6 +133,8 @@ export { Wrap, type WrapProps } from './wrap/index.ts'
 
 ///////////////////////// snaps-ui components //////////////////////////////////////////////
 
+export { CommandInput, type CommandInputProps } from './command-input/index.ts'
+
 export {
   toast,
   successToast,
