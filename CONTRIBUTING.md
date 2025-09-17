@@ -49,7 +49,7 @@ pnpm install
 
 ```bash
 # Run Storybook -- coming soon
-pnpm dev:storybook
+pnpm storybook
 
 # Build all packages
 pnpm build:packages
@@ -108,7 +108,7 @@ Docs are coming soon!
 Run Storybook locally:
 
 ```bash
-pnpm dev:storybook
+pnpm storybook
 ```
 
 Then visit http://localhost:6006
