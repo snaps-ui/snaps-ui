@@ -4,8 +4,6 @@ import { Box } from '@snaps-ui/react/box'
 import { Container } from '@snaps-ui/react/container'
 import { Center } from '@snaps-ui/react/center'
 import { Button } from '@snaps-ui/react/button'
-import { Heading } from '@snaps-ui/react/heading'
-import { Text } from '@snaps-ui/react/text'
 import { Flex } from '@snaps-ui/react/flex'
 import { Stack } from '@snaps-ui/react/stack'
 import { SiChakraui } from 'react-icons/si'
@@ -13,6 +11,8 @@ import { IoLogoReact } from 'react-icons/io5'
 import { SiTypescript } from 'react-icons/si'
 import Link from 'next/link'
 import { FaTerminal } from 'react-icons/fa'
+
+import { Typography } from '~/components/typography'
 
 const Logos = [
   {
@@ -46,10 +46,9 @@ export const HeroSection = () => {
           m={'5rem auto'}
           textAlign={'center'}
         >
-          <Heading
-            as="h2"
-            fontSize={{ base: '4xl', md: '8xl' }}
-            fontWeight="extrabold"
+          <Typography
+            variant="heading"
+            fontSize={{ base: '30px', md: '65px' }}
             css={{
               '--c1':
                 'var(--chakra-colors-snaps-400, var(--chakra-colors-brand-500, #6366F1))',
@@ -71,16 +70,12 @@ export const HeroSection = () => {
             }}
           >
             Build modern apps with speed and flexibility
-          </Heading>
-          <Text
-            fontSize={{ base: '17px', md: '24px' }}
-            my={'10px'}
-            color={'accent.contrast'}
-          >
+          </Typography>
+          <Typography variant="title" my={'10px'} color={'accent.contrast'}>
             Snaps UI is a collection of prebuilt, customizable Chakra&nbsp;UI
             components. Ship faster with a consistent design system, intuitive
             APIs, and production-ready building blocks for your next project.
-          </Text>
+          </Typography>
 
           <Stack
             direction={{ base: 'column', sm: 'row' }}
@@ -111,9 +106,9 @@ export const HeroSection = () => {
           </Stack>
 
           <Box mt="2rem" opacity={0.7}>
-            <Text fontSize="sm" mb={4} mt={1}>
+            <Typography variant="body3" mb={4} mt={1}>
               Powered by
-            </Text>
+            </Typography>
 
             <Flex align="center" justify="center" gap={8} display={'flex'}>
               {Logos.map(({ href, label, icon }) => (
@@ -133,9 +128,9 @@ export const HeroSection = () => {
                     }}
                   >
                     <Box fontSize={{ base: 'sm', md: '2xl' }}>{icon}</Box>
-                    <Text fontSize={{ base: 'sm', md: 'md' }} mt={1}>
+                    <Typography variant="body3" mt={1}>
                       {label}
-                    </Text>
+                    </Typography>
                   </Flex>
                 </Link>
               ))}

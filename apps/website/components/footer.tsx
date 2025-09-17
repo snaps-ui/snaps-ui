@@ -5,16 +5,15 @@ import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { Stack } from '@snaps-ui/react/stack'
 import { IconButton } from '@snaps-ui/react/icon-button'
-import { Text } from '@snaps-ui/react/text'
-import { Heading } from '@snaps-ui/react/heading'
 import { Grid, GridItem } from '@snaps-ui/react/grid'
 import { FaGithub, FaXTwitter, FaDiscord } from 'react-icons/fa6'
 import { IoLogoVercel } from 'react-icons/io5'
 
 import { AppLogo } from '~/components/logo'
+import { Typography } from '~/components/typography'
 
 const resources = [
-  { href: '/docs', label: 'Documentions' },
+  { href: '/docs', label: 'Documentations' },
   { href: '/docs', label: 'Components' },
   { href: '/blogs', label: 'Blog' },
 ]
@@ -57,16 +56,17 @@ export const Footer = () => {
           <Stack gap={5} maxW="sm">
             <AppLogo />
 
-            <Text fontSize="13px">
+            <Typography variant="body3">
               Build beautiful, accessible UIs with ease and Craft stunning
               interfaces, faster.
-            </Text>
+            </Typography>
 
-            <Text fontSize="13px">
+            <Typography variant="body2">
               Maintained by{' '}
-              <Text
-                as="span"
+              <Typography
+                variant="body3"
                 color="bg"
+                as={'span'}
                 transition="color 0.2s ease"
                 fontWeight="bolder"
               >
@@ -77,14 +77,14 @@ export const Footer = () => {
                 >
                   Justice Chimobi
                 </Link>
-              </Text>{' '}
+              </Typography>{' '}
               and contributors
-            </Text>
+            </Typography>
 
             <Flex align="center" gap={2} fontSize="13px">
-              <Text>Deployed on</Text>
+              <Typography variant="body3">Deployed on</Typography>
               <IoLogoVercel />
-              <Text>Vercel</Text>
+              <Typography variant="body3">Vercel</Typography>
             </Flex>
 
             <Flex gap={3} mt={2}>
@@ -108,9 +108,9 @@ export const Footer = () => {
 
         {/* Resources */}
         <GridItem textAlign={{ base: 'left', md: 'center' }}>
-          <Heading fontSize="15px" mb={4} color={'gray.700'}>
+          <Typography variant="subtitle" mb={4}>
             Resources
-          </Heading>
+          </Typography>
           <Stack gap={3}>
             {resources.map(({ href, label }) => (
               <Link
@@ -119,8 +119,8 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Text
-                  fontSize="13px"
+                <Typography
+                  variant="body3"
                   color="gray.300"
                   transition="color 0.2s ease"
                   _hover={{
@@ -129,7 +129,7 @@ export const Footer = () => {
                   }}
                 >
                   {label}
-                </Text>
+                </Typography>
               </Link>
             ))}
           </Stack>
@@ -137,9 +137,9 @@ export const Footer = () => {
 
         {/* Company */}
         <GridItem textAlign={{ base: 'left', md: 'center' }}>
-          <Heading fontSize="15px" mb={4} color={'gray.700'}>
+          <Typography variant="subtitle" mb={4}>
             Company
-          </Heading>
+          </Typography>
           <Stack gap={3}>
             {company.map(({ href, label }) => (
               <Link
@@ -148,9 +148,8 @@ export const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Text
-                  fontSize="13px"
-                  color="gray.300"
+                <Typography
+                  variant="body3"
                   transition="color 0.2s ease"
                   _hover={{
                     color: 'blackAlpha.800',
@@ -158,7 +157,7 @@ export const Footer = () => {
                   }}
                 >
                   {label}
-                </Text>
+                </Typography>
               </Link>
             ))}
           </Stack>

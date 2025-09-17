@@ -5,13 +5,13 @@ import { useEffect, useState } from 'react'
 import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { IconButton } from '@snaps-ui/react/icon-button'
-import { Text } from '@snaps-ui/react/text'
 import { warningToast } from '@snaps-ui/react/toaster'
 import { FaGithub, FaBars } from 'react-icons/fa6'
+import { FaTimes } from 'react-icons/fa'
 
 import { ColorModeButton } from '~/components/color-mode-button'
 import { AppLogo } from '~/components/logo'
-import { FaTimes } from 'react-icons/fa'
+import { Typography } from '~/components/typography'
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -53,19 +53,17 @@ export const NavBar = () => {
         {/* Desktop Nav */}
         <Flex gap="6" align="center" display={{ base: 'none', md: 'flex' }}>
           {navLinks.map(({ href, label }, index: number) => (
-            <Text
+            <Typography
+              variant="body3"
               key={index}
-              fontSize="13px"
-              fontWeight="medium"
-              color="gray.500"
               transition="color 0.2s ease"
               _hover={{
-                color: 'blackAlpha.800',
-                _dark: { color: 'whiteAlpha.800' },
+                color: 'blackAlpha.700',
+                _dark: { color: 'whiteAlpha.700' },
               }}
             >
               <Link href={href}>{label}</Link>
-            </Text>
+            </Typography>
           ))}
 
           <IconButton
@@ -113,11 +111,9 @@ export const NavBar = () => {
           gap="3"
         >
           {navLinks.map(({ href, label }, index: number) => (
-            <Text
+            <Typography
+              variant="body2"
               key={index}
-              fontSize="14px"
-              fontWeight="medium"
-              color="gray.600"
               _hover={{
                 color: 'blackAlpha.800',
                 _dark: { color: 'whiteAlpha.800' },
@@ -125,7 +121,7 @@ export const NavBar = () => {
               onClick={() => setMenuOpen(false)}
             >
               <Link href={href}>{label}</Link>
-            </Text>
+            </Typography>
           ))}
 
           <Flex gap="4" align="center">

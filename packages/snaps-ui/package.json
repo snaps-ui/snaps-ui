@@ -32,6 +32,12 @@
       "import": "./dist/collection.js",
       "require": "./dist/collection.cjs"
     },
+    "./provider": {
+      "snapsui": "./src/provider/index.ts",
+      "types": "./dist/provider/index.d.ts",
+      "import": "./dist/provider/index.js",
+      "require": "./dist/provider/index.cjs"
+    },
     "./*": {
       "snapsui": "./src/components/*/index.ts",
       "types": "./dist/components/*/index.d.ts",
