@@ -1,24 +1,27 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { chakra } from '@snaps-ui/react'
 import { Box } from '@snaps-ui/react/box'
 import { CodeBlock, createShikiAdapter } from '@snaps-ui/react/code-block'
-import { Text } from '@snaps-ui/react/text'
-import { Heading } from '@snaps-ui/react/heading'
+import type { HighlighterGeneric } from 'shiki'
 import { SimpleGrid } from '@snaps-ui/react/simple-grid'
 import { VStack } from '@snaps-ui/react/stack'
 import { Button } from '@snaps-ui/react/button'
 import { Input } from '@snaps-ui/react/input'
 import { Card } from '@snaps-ui/react/card'
-import { Toaster } from '@snaps-ui/react/toaster'
+import { Flex } from '@snaps-ui/react/flex'
+import { Stack, HStack } from '@snaps-ui/react/stack'
 import {
   toast,
   successToast,
   errorToast,
   warningToast,
 } from '@snaps-ui/react/toaster'
-import type { HighlighterGeneric } from 'shiki'
+import { FaLinkedin } from 'react-icons/fa6'
+
+import { Typography } from '~/components/typography'
 
 const showToastBtn = {
   code: `
@@ -88,22 +91,14 @@ export const CodePreview = () => {
   return (
     <Box as={'section'} px={{ base: '6', md: '12' }} py="12" mt="16">
       <Box textAlign={'left'} mb={'25px'} width={'90%'} mx={'auto'}>
-        <Text
-          fontWeight="extrabold"
-          fontSize={{ base: '18px', md: '30px' }}
-          color={'accent.contrast'}
-        >
+        <Typography variant="subheading">
           Getting Started with Snaps UI
-        </Text>
+        </Typography>
 
-        <Text
-          fontWeight="extrabold"
-          fontSize={{ base: '13px', md: '16px' }}
-          color={'accent.contrast'}
-        >
+        <Typography variant="body2">
           Build faster with the simplicity of Chakra UI and the flexibility of
           your own design system.
-        </Text>
+        </Typography>
       </Box>
 
       <SimpleGrid
@@ -123,77 +118,138 @@ export const CodePreview = () => {
             <Button variant="solid" size={{ base: 'sm', md: 'lg' }}>
               Get Started
             </Button>
-            <Text fontSize={{ base: 'xs', md: 'md' }} color={'accent.contrast'}>
+            <Typography variant="body3">
               Same intuitive API as Chakra — but styled with your system
-            </Text>
+            </Typography>
           </VStack>
         </Box>
       </SimpleGrid>
 
-      <Heading
-        size={{ base: 'md', md: 'lg' }}
-        mb={8}
-        textAlign="center"
-        color={'accent.contrast'}
-      >
-        Use your favourite components
-      </Heading>
+      <Box width={'90%'} mx={'auto'}>
+        <Box textAlign={'left'} mb={'25px'} width={{ base: '100%', md: '50%' }}>
+          <Typography variant="subheading">
+            Use your favourite components
+          </Typography>
 
-      <SimpleGrid columns={[1, null, 3]} gap={10}>
-        {/* Buttons */}
-        <VStack gap={4}>
-          <Text fontWeight="bold" color={'accent.contrast'}>
-            Buttons
-          </Text>
-          <Button variant="solid" width={{ base: '100%', md: 'fit-content' }}>
-            Solid
-          </Button>
-          <Button variant="outline" width={{ base: '100%', md: 'fit-content' }}>
-            Outline
-          </Button>
-          <Button variant="ghost" width={{ base: '100%', md: 'fit-content' }}>
-            Ghost
-          </Button>
-        </VStack>
+          <Typography variant="body2">
+            Build your next app faster with high-quality, tested components.
+            Snaps UI includes everything you need to create complex web
+            applications with ease.
+          </Typography>
+        </Box>
 
-        {/* Input */}
-        <VStack gap={4} width={{ base: '100%', md: '100%' }}>
-          <Text fontWeight="bold" color={'accent.contrast'}>
-            Inputs
-          </Text>
-          <Input placeholder="Type something..." />
-          <Input placeholder="Type something..." variant={'flushed'} />
-          <Input placeholder="Type something..." variant={'subtle'} />
-        </VStack>
+        <Flex
+          justifyContent={'space-around'}
+          flexDirection={{ base: 'column', md: 'row' }}
+          gap={6}
+        >
+          <Box>
+            <Typography variant="body1">Buttons</Typography>
 
-        {/* Card */}
-        <VStack gap={6} align="stretch">
-          <Text fontWeight="bold" color={'accent.contrast'}>
-            Card
-          </Text>
-          <Card.Root>
-            <Card.Header>Welcome</Card.Header>
-            <Card.Body>This is a Snaps UI card.</Card.Body>
-          </Card.Root>
-        </VStack>
-      </SimpleGrid>
+            <Flex gap={'3'} mt={'9px'}>
+              <Button
+                variant="solid"
+                width={{ base: '100%', md: 'fit-content' }}
+              >
+                Solid
+              </Button>
+              <Button
+                variant="outline"
+                width={{ base: '100%', md: 'fit-content' }}
+              >
+                Outline
+              </Button>
+              <Button
+                variant="ghost"
+                width={{ base: '100%', md: 'fit-content' }}
+              >
+                Ghost
+              </Button>
+            </Flex>
+          </Box>
+
+          <Box>
+            <Typography variant="body1">Inputs</Typography>
+
+            <Flex
+              mt={'9px'}
+              flexDirection={{ base: 'column', md: 'row' }}
+              gap={4}
+            >
+              <Input placeholder="Type something..." />
+              <Input placeholder="Type something..." variant={'flushed'} />
+              <Input placeholder="Type something..." variant={'subtle'} />
+            </Flex>
+          </Box>
+        </Flex>
+
+        <Flex justifyContent={'space-between'} mt={'25px'}>
+          <Box width={'100%'}>
+            <Typography variant="body1">Cards</Typography>
+
+            <Flex
+              mt={'9px'}
+              flexDirection={{ base: 'column', md: 'row' }}
+              gap={4}
+            >
+              <Card.Root width={'full'}>
+                <Card.Body gap="2">
+                  <Flex
+                    justifyContent={'space-between'}
+                    justifyItems={'flex-start'}
+                  >
+                    <HStack mb="6" gap="3">
+                      <Image
+                        src={'/justice-chimobi.jpeg'}
+                        width={40}
+                        height={40}
+                        alt={'aurthor of snaps ui avatar'}
+                        style={{ borderRadius: '50%' }}
+                        placeholder={'blur'}
+                        blurDataURL={
+                          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mPsn9pfDwAFogI0qPkC4wAAAABJRU5ErkJggg=='
+                        }
+                      />
+                      <Stack gap="0">
+                        <Card.Title mt="2">Justice Chimobi</Card.Title>
+                        <Typography variant="body3" color={'gray.200'}>
+                          Creator Snaps UI
+                        </Typography>
+                      </Stack>
+                    </HStack>
+
+                    <Link
+                      href={'https://www.linkedin.com/in/justice-chimobi'}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <FaLinkedin size={'18px'} />
+                    </Link>
+                  </Flex>
+                  <Card.Description>
+                    Building developer-friendly UI components for modern React
+                    apps. Snaps UI helps you build faster with styled,
+                    accessible components.
+                  </Card.Description>
+                </Card.Body>
+              </Card.Root>
+
+              <Card.Root width={'full'}>
+                <Card.Header>Welcome</Card.Header>
+                <Card.Body>This is a Snaps UI card.</Card.Body>
+              </Card.Root>
+            </Flex>
+          </Box>
+        </Flex>
+      </Box>
 
       <Box width={'90%'} mx={'auto'}>
         <Box mt={'15px'} width={{ base: '90%', md: '50%' }}>
-          <Heading
-            color={'accent.contrast'}
-            size={{ base: 'md', md: 'lg' }}
-            mb={2}
-            mt="16"
-          >
+          <Typography variant="body2" mb={2} mt="16">
             Toasts built on Sonner
-          </Heading>
+          </Typography>
 
-          <Text
-            fontSize={{ base: 'sm', md: 'md' }}
-            color={'accent.contrast'}
-            mb={8}
-          >
+          <Typography variant="body2" mb={8}>
             Snaps UI toast is powered by{' '}
             <SonnerLink
               href={'https://sonner.emilkowal.ski/'}
@@ -205,7 +261,7 @@ export const CodePreview = () => {
             under the hood — fast, lightweight, and fully customizable. Use our
             prebuilt helpers (<code>successToast</code>, <code>errorToast</code>
             , <code>warningToast</code>) or render your own component.
-          </Text>
+          </Typography>
         </Box>
 
         <SimpleGrid
@@ -231,53 +287,62 @@ export const CodePreview = () => {
               >
                 Show Toast
               </Button>
-              <Text fontSize="md" color={'accent.contrast'}>
+              <Typography variant="body3">
                 Toasters are built in, just like Chakra’s <code>useToast</code>.
-              </Text>
-              <Toaster position="top-right" />
+              </Typography>
+
+              {/* Buttons */}
+              <Flex
+                gap={4}
+                alignContent={'center'}
+                justifyContent={'center'}
+                mt={'20px'}
+              >
+                <Button
+                  onClick={() => {
+                    successToast({
+                      title: 'Success toast',
+                      description: 'Snaps UI success description Text!',
+                    })
+                  }}
+                  width={{ base: '100%', md: 'fit-content' }}
+                >
+                  Success Toast
+                </Button>
+                <Button
+                  onClick={() => {
+                    errorToast({
+                      title: 'Error toast',
+                      description: 'Snaps UI error description Text!',
+                    })
+                  }}
+                  variant="outline"
+                  width={{ base: '100%', md: 'fit-content' }}
+                >
+                  Error Toast
+                </Button>
+                <Button
+                  onClick={() => {
+                    warningToast({
+                      title: 'Warning toast',
+                      description: 'Snaps UI Warning description Text!',
+                    })
+                  }}
+                  variant="ghost"
+                  width={{ base: '100%', md: 'fit-content' }}
+                >
+                  Warning Toast
+                </Button>
+              </Flex>
             </VStack>
           </Box>
         </SimpleGrid>
 
-        <SimpleGrid columns={[1, null, 2]} gap={10}>
-          <VStack gap={4}>
-            <Button
-              onClick={() => {
-                successToast({
-                  title: 'Success toast',
-                  description: 'Snaps UI success description Text!',
-                })
-              }}
-              width={{ base: '100%', md: 'fit-content' }}
-            >
-              Success Toast
-            </Button>
-            <Button
-              onClick={() => {
-                errorToast({
-                  title: 'Error toast',
-                  description: 'Snaps UI error description Text!',
-                })
-              }}
-              variant="outline"
-              width={{ base: '100%', md: 'fit-content' }}
-            >
-              Error Toast
-            </Button>
-            <Button
-              onClick={() => {
-                warningToast({
-                  title: 'Warning toast',
-                  description: 'Snaps UI Warning description Text!',
-                })
-              }}
-              variant="ghost"
-              width={{ base: '100%', md: 'fit-content' }}
-            >
-              Warning Toast
-            </Button>
-          </VStack>
-
+        <Flex
+          justifyContent={'center'}
+          width={{ base: '100%', md: '60%' }}
+          mx={'auto'}
+        >
           <VStack gap={4}>
             <Button
               onClick={() =>
@@ -301,13 +366,13 @@ export const CodePreview = () => {
             >
               Custom Toast
             </Button>
-            <Text fontSize="md" color={'accent.contrast'} textAlign="center">
+            <Typography variant="body3" textAlign="center">
               Snaps UI toast is flexible — you can use built-in variants
               (successToast, errorToast, warningToast) or pass your own
               component for full customization.
-            </Text>
+            </Typography>
           </VStack>
-        </SimpleGrid>
+        </Flex>
       </Box>
     </Box>
   )

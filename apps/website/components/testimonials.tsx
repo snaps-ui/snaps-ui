@@ -7,9 +7,10 @@ import { Box } from '@snaps-ui/react/box'
 import { Card } from '@snaps-ui/react/card'
 import { Grid, GridItem } from '@snaps-ui/react/grid'
 import { Stack, HStack } from '@snaps-ui/react/stack'
-import { Text } from '@snaps-ui/react/text'
 import { Flex } from '@snaps-ui/react/flex'
 import { FaLinkedin } from 'react-icons/fa'
+
+import { Typography } from '~/components/typography'
 
 const getRandomColor = () => {
   const colors = [
@@ -118,21 +119,13 @@ export const Testimonials = () => {
       mt="16"
     >
       <Box textAlign={'left'} mb={'25px'} width={'90%'} mx={'auto'}>
-        <Text
-          fontWeight="extrabold"
-          fontSize={{ base: '18px', md: '30px' }}
-          color={'accent.contrast'}
-        >
+        <Typography variant="subheading">
           Trusted by developers, startups, and enterprises
-        </Text>
+        </Typography>
 
-        <Text
-          fontWeight="extrabold"
-          fontSize={{ base: '13px', md: '16px' }}
-          color={'accent.contrast'}
-        >
+        <Typography variant="body1">
           Join thousands of developers and companies around the world.
-        </Text>
+        </Typography>
       </Box>
 
       <Grid
@@ -168,9 +161,9 @@ export const Testimonials = () => {
                       )}
                       <Stack gap="0">
                         <Card.Title mt="2">{name}</Card.Title>
-                        <Text color="gray.400" textStyle="sm">
+                        <Typography variant="body3" color={'gray.200'}>
                           {role}
-                        </Text>
+                        </Typography>
                       </Stack>
                     </HStack>
 

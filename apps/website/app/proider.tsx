@@ -1,7 +1,7 @@
 'use client'
 
 import { ThemeProvider } from 'next-themes'
-import { SnapsProvider } from '@snaps-ui/react'
+import { SnapsProvider } from '@snaps-ui/react/provider'
 import { Toaster } from '@snaps-ui/react/toaster'
 
 import { system } from '~/app/theme'
