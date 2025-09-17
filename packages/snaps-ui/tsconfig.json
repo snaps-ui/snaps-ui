@@ -6,7 +6,6 @@
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "customConditions": ["snapsui"],
     "incremental": true,
     "tsBuildInfoFile": "dist/.tsbuildinfo.json",
     "declaration": true,

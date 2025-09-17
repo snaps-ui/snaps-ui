@@ -9,13 +9,11 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "snapsui": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
     "./colors": {
-      "snapsui": "./src/colors.ts",
       "types": "./dist/colors.d.ts",
       "import": "./dist/colors.js",
       "require": "./dist/colors.cjs"

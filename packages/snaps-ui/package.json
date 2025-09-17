@@ -9,37 +9,31 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "snapsui": "./src/index.ts",
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
     "./base-presets": {
-      "snapsui": "./src/base-presets.ts",
       "types": "./dist/base-presets.d.ts",
       "import": "./dist/base-presets.js",
       "require": "./dist/base-presets.cjs"
     },
     "./hooks": {
-      "snapsui": "./src/hooks/index.ts",
       "types": "./dist/hooks/index.d.ts",
       "import": "./dist/hooks/index.js",
       "require": "./dist/hooks/index.cjs"
     },
     "./collection": {
-      "snapsui": "./src/collection.ts",
       "types": "./dist/collection.d.ts",
       "import": "./dist/collection.js",
       "require": "./dist/collection.cjs"
     },
     "./provider": {
-      "snapsui": "./src/provider/index.ts",
       "types": "./dist/provider/index.d.ts",
       "import": "./dist/provider/index.js",
       "require": "./dist/provider/index.cjs"
     },
     "./*": {
-      "snapsui": "./src/components/*/index.ts",
       "types": "./dist/components/*/index.d.ts",
       "import": "./dist/components/*/index.js",
       "require": "./dist/components/*/index.cjs"
