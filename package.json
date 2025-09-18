@@ -13,6 +13,7 @@
     "build:packages": "turbo run build --filter='./packages/*' --concurrency=5",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "build-storybook-docs": "storybook build --docs",
     "build:tsup": "pnpm -r --filter='./packages/*' run build:tsup",
     "lint": "turbo run lint",
     "clean": "turbo run clean",

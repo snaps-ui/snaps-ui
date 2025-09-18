@@ -87,6 +87,8 @@
   },
   "dependencies": {
     "@snaps-ui/system": "workspace:*",
+    "embla-carousel": "^8.6.0",
+    "embla-carousel-react": "^8.6.0",
     "sonner": "^2.0.7"
   },
   "devDependencies": {

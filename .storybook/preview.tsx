@@ -35,7 +35,9 @@ const preview: Preview = {
       // 'off' - skip a11y checks entirely
       test: 'todo',
     },
+    codePanel: true,
   },
+  tags: ['autodocs'],
   decorators: [
     (Story) => (
       <SnapsProvider value={system}>
