@@ -136,6 +136,36 @@ export { Wrap, type WrapProps } from './wrap/index.ts'
 export { CommandInput, type CommandInputProps } from './command-input/index.ts'
 
 export {
+  CarouselRoot,
+  CarouselViewport,
+  CarouselContainer,
+  CarouselSlide,
+  CarouselControls,
+  CarouselButtonWrapper,
+  CarouselNextButton,
+  CarouselPrevButton,
+  CarouselDots,
+  CarouselDot,
+} from './carousel'
+export type {
+  CarouselRootProps,
+  CarouselViewportProps,
+  CarouselContainerProps,
+  CarouselSlideProps,
+  CarouselControlsProps,
+  CarouselButtonWrapperProps,
+  CarouselNextButtonProps,
+  CarouselPrevButtonProps,
+  CarouselDotsProps,
+  CarouselDotProps,
+} from './carousel/index.ts'
+export * as Carousel from './carousel/index.ts'
+export { useCarousel } from './carousel/index.ts'
+
+export { Paper, PaperPropsProvider } from './paper/index.ts'
+export type { PaperProps } from './paper/index.ts'
+
+export {
   toast,
   successToast,
   errorToast,
