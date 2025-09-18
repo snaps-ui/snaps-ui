@@ -70,7 +70,7 @@ interface TypographyProps extends HTMLChakraProps<'div'> {
  * Typography component
  */
 export const Typography = forwardRef<HTMLDivElement, TypographyProps>(
-  function TypographyProps(props, ref) {
+  function Typography(props, ref) {
     const { variant, children, ...rest } = props
     const style = variants[variant]
 
