@@ -1,177 +1,70 @@
-# ⚡ Snaps UI
+# Contributing to Snaps UI
 
-> **Snaps UI — a snappy, accessible React UI library built for speed, simplicity, and delightful developer experience.**
+Thanks for showing interest in contributing to **Snaps UI 💖** — you rock!
 
-Snaps UI is a modern React component library built **on top of [Chakra UI](https://chakra-ui.com/)**.  
-It helps you build beautiful, accessible, and customizable UIs with ease.  
-It’s fast, lightweight, and snaps right into your workflow.
+## Overview
 
-## 🌟 Why Snaps UI?
+Here are a few ways you can help improve Snaps UI:
 
-Snaps UI isn’t here to replace Chakra UI — it’s here to supercharge it.
-Think of it as a layer of prebuilt, production-ready components on top of Chakra’s amazing foundation.
+- **Improve the documentation**: Add new demos, fix typos, or expand missing information.
+- **Add new demos**: Contribute new component demos to the website and Storybook.
+- **Fix bugs**: Report bugs, fix them, or suggest improvements.
+- **Contribute to the code**: Propose new features by opening a GitHub Discussion, or pick up an existing issue to work on.
+- **Enhance the codebase**: Improve performance, accessibility, or developer experience.
 
-Instead of reinventing the wheel, Snaps UI gives you:
+> We welcome all contributions — no matter how big or small.
 
-Opinionated design defaults
+## Architecture
 
-Ready-to-use recipes and patterns
+Snaps UI is built with **flexibility and reusability** in mind. It provides production-ready components powered by a lightweight core, while keeping styling and customization fully in your control.
 
-A snappy developer experience ✨
+### Filing Issues
 
-## 🧑‍💻 Contributing
+- If the issue is related to **component logic or accessibility**, open it in the Snaps UI repository.
+- If it’s a **styling or design issue**, you can usually fix it directly in the Snaps UI codebase and submit a PR.
 
-First off, thanks for taking the time to contribute 💜
-Snaps UI is an open-source design system built with React, Chakra UI, and TypeScript.
-We welcome issues, discussions, and pull requests to help make this project better.
+### Feature Requests
 
-## Development Setup
+- If the feature is a **new component**, start a discussion in the [Snaps UI repository](https://github.com/snaps-ui/snaps-ui).
+- If the feature involves **core logic or architectural changes**, open an issue so we can evaluate and plan together.
 
-### Prerequisites:
+## Local Setup
 
-- Node.js >=20.x
-
-- pnpm 10.15.0
-
-- Git
-
-### Clone & Install:
+- Clone the repository
 
 ```bash
 git clone https://github.com/snaps-ui/snaps-ui.git
-cd snaps-ui
+```
+
+Install dependencies
+
+```bash
 pnpm install
 ```
 
----
-
-## Available Commands:
+Build all packages locally
 
 ```bash
-# Run Storybook -- coming soon
-pnpm storybook
-
-# Build all packages
 pnpm build:packages
-
-# Test
-pnpm test
 ```
 
-## 🚀 Features
-
-- ⚡ **Snappy Developer Experience** – intuitive APIs with great TypeScript support.
-- 🎨 **Customizable** – powered by Chakra’s theming system & design tokens.
-- ♿ **Accessible by Default** – WAI-ARIA compliant components.
-- 🪶 **Lightweight** – tree-shakeable and optimized for performance.
-- 🧩 **Composable** – built on Chakra primitives, extendable with your own components.
-
----
-
-## 📦 Installation
-
-```bash
-# with npm
-npm install @snaps-ui/react
-
-# with yarn
-yarn add @snaps-ui/react
-
-# with pnpm
-pnpm add @snaps-ui/react
-```
-
-## 🛠 Usage
-
-```tsx
-'use client'
-
-import { Button } from '@snaps-ui/react/button'
-
-export default function App() {
-  return (
-    <Button variant="solid" size="lg">
-      Get Started
-    </Button>
-  )
-}
-```
-
-## 📖 Documentation
-
-Docs are coming soon!
-
-📚 Full documentation site (planned)
-
-📘 Storybook for interactive component previews (coming soon)
-
-Run Storybook locally:
+Start Storybook
 
 ```bash
 pnpm storybook
 ```
 
-Then visit http://localhost:6006
-
-## Coding Guidelines
-
-TypeScript first → all new code must use TypeScript.
-
-Follow Chakra’s component patterns for consistency.
-
-Commit messages follow Conventional Commits
-
-feat: add new component
-
-fix: resolve button padding issue
-
-docs: update README
-
-chore: update dependencies
-
-## Testing
-
-We use Vitest for unit tests:
+Start documentation website
 
 ```bash
-pnpm test
+pnpm dev:web
 ```
 
-## Documentation
+## Recommended Extensions
 
-All components must include Storybook stories.
+We recommend using the following extensions in your editor:
 
-Use MDX for extra documentation when necessary.
-
-## Submitting Changes
-
-### Fork & create a feature branch:
-
-```bash
-git checkout -b feat/new-component
-```
-
-### Add a changeset for versioning:
-
-```bash
-pnpm changeset
-```
-
-### Commit & push:
-
-```bash
-git commit -m "feat: add <YourComponent>"
-git push origin feat/new-component
-```
-
-## 📣 Stay Connected
-
-🌐 [Website](https://snaps-ui.vercel.app/)
-
-🐦 Twitter (coming soon)
-
-💬 Community Discord (coming soon)
-
-🐙 [GitHub Issues](https://github.com/snaps-ui/snaps-ui/issues)
-
-MIT © [Justice Chimobi](LICENSE)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [EditorConfig](https://editorconfig.org/)
+- [MDX](https://mdxjs.com/)

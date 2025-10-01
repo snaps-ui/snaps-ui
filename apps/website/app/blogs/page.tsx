@@ -1,9 +1,10 @@
-import { BlogsSection } from '~/components/blogs'
+// import { BlogsSection } from '~/components/blogs'
 
 export default function Page() {
   return (
     <>
-      <BlogsSection />
+      {/* <BlogsSection /> */}
+      jjdjdj
     </>
   )
 }

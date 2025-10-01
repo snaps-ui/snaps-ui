@@ -6,6 +6,7 @@ import { ClientOnly } from '@snaps-ui/react/client-only'
 import { IconButton } from '@snaps-ui/react/icon-button'
 import { IoSunnyOutline } from 'react-icons/io5'
 import { FaMoon } from 'react-icons/fa6'
+import { Skeleton } from '@snaps-ui/react'
 
 export const ColorModeButton = () => {
   const { theme, setTheme } = useTheme()
@@ -15,13 +16,12 @@ export const ColorModeButton = () => {
   }
 
   return (
-    <ClientOnly fallback={<p>...</p>}>
+    <ClientOnly fallback={<Skeleton height={'50px'} />}>
       <IconButton
         onClick={handleChageTheme}
-        size="sm"
+        size="xs"
         color="inherit"
-        variant="plain"
-        cursor={'pointer'}
+        variant="ghost"
       >
         {theme === 'light' ? (
           <IoSunnyOutline size={'17px'} />

@@ -1,8 +1,3 @@
-export {
-  Stack,
-  HStack,
-  VStack,
-  StackSeparator,
-  type StackProps,
-  type StackSeparatorProps,
-} from '@chakra-ui/react/stack'
+export { Stack, HStack, VStack } from './stack'
+
+export type { StackProps, HStackProps, VStackProps } from './stack'

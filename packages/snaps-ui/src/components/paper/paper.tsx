@@ -1,26 +1,25 @@
 'use client'
 
-import {
-  type HTMLChakraProps,
-  type UnstyledProp,
-  type RecipeProps,
-  createRecipeContext,
-} from '@chakra-ui/react/styled-system'
+import { forwardRef } from 'react'
+import { ark } from '@ark-ui/react/factory'
+import type { ComponentProps } from '@snaps-ui/styled-system/types'
+import { paperRecipe } from '@snaps-ui/styled-system/recipes'
+import { styled } from '@snaps-ui/styled-system/jsx'
 
-import { type PaperVariantProps } from '@snaps-ui/system'
+const StyledPaper = styled(ark.div, paperRecipe)
 
-const { withContext, PropsProvider } = createRecipeContext({
-  key: 'snapsPaper',
-})
+export type PaperBaseProps = ComponentProps<typeof StyledPaper>
 
-export interface PaperBaseProps
-  extends RecipeProps<'snapsPaper'>,
-    UnstyledProp,
-    PaperVariantProps {}
+export interface PaperProps extends PaperBaseProps {}
 
-export interface PaperProps extends HTMLChakraProps<'div'>, PaperBaseProps {}
+export const Paper = forwardRef<HTMLDivElement, PaperProps>(
+  function Paper(props, ref) {
+    const { children, ...rest } = props
 
-export const Paper = withContext<HTMLDivElement, PaperProps>('div')
-
-export const PaperPropsProvider =
-  PropsProvider as React.Provider<PaperBaseProps>
+    return (
+      <StyledPaper ref={ref} {...rest}>
+        {children}
+      </StyledPaper>
+    )
+  }
+)

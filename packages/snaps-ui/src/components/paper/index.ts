@@ -1,2 +1,1 @@
-export { Paper, PaperPropsProvider } from './paper'
-export type { PaperProps } from './paper'
+export { Paper, type PaperProps } from './paper'

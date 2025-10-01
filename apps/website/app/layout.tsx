@@ -5,6 +5,8 @@ import { AppProvider } from '~/app/proider'
 import { Footer } from '~/components/footer'
 import { NavBar } from '~/components/navbar'
 
+import './global.css'
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -23,23 +25,23 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'Snaps UI',
   description:
-    'A collection of prebuilt, customizable Chakra UI components for faster development',
+    'A beautifully crafted React design system powered by Ark UI and Panda CSS, providing accessible, themeable, and production-ready components.',
   authors: [
-    { name: 'Justice Chimobi', url: 'https://justice-chimobi.vercel.app/' },
+    { name: 'Justice Chimobi', url: 'https://github.com/chimobi-justice' },
   ],
   applicationName: 'Snaps UI',
   keywords: [
     'snaps-ui',
     'react',
     'ui',
-    'chakra-ui',
+    'ark ui',
+    'panda css',
     'design-system',
     'react-components',
     'accessible',
     'uikit',
     'components',
     'library',
-    'emotion',
   ],
 }
 

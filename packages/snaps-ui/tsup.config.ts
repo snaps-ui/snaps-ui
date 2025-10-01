@@ -23,7 +23,7 @@ export default defineConfig({
   ],
   tsconfig: './tsconfig.json',
   sourcemap: false,
-  external: ['@chakra-ui/react', '@emotion/react', 'react', 'react-dom'],
+  external: ['@ark-ui/react', '@pandacss/dev', 'react', 'react-dom'],
   async onSuccess() {
     await Promise.all([
       directiveRemover('index.cjs'),

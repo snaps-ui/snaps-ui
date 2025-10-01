@@ -24,6 +24,6 @@ Closes # <!-- Github issue # here -->
 
 ## 💣 Is this a breaking change (Yes/No):
 
-<!-- If Yes, please describe the impact and migration path for existing Chakra users. -->
+<!-- If Yes, please describe the impact and migration path for existing snaps ui users. -->
 
 ## 📝 Additional Information

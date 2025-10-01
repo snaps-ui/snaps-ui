@@ -5,12 +5,12 @@ import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { Stack } from '@snaps-ui/react/stack'
 import { IconButton } from '@snaps-ui/react/icon-button'
+import { Typography } from '@snaps-ui/react/typography'
 import { Grid, GridItem } from '@snaps-ui/react/grid'
 import { FaGithub, FaXTwitter, FaDiscord } from 'react-icons/fa6'
 import { IoLogoVercel } from 'react-icons/io5'
 
 import { AppLogo } from '~/components/logo'
-import { Typography } from '~/components/typography'
 
 const resources = [
   { href: '/docs', label: 'Documentations' },
@@ -18,8 +18,10 @@ const resources = [
   { href: '/blogs', label: 'Blog' },
 ]
 
-const company = [
-  { href: 'mailto:chimobi.justice@gmail.com', label: 'Contact Us' },
+const community = [
+  { href: '#', label: 'Discord' },
+  { href: '#', label: 'Twitter' },
+  { href: 'https://github.com/snaps-ui/snaps-ui', label: 'Github' },
 ]
 
 const socials = [
@@ -36,133 +38,117 @@ export const Footer = () => {
   return (
     <Box
       as="footer"
-      borderTop="1px solid"
-      borderColor={{ base: 'blackAlpha.200', _dark: 'whiteAlpha.200' }}
-      bg={{ base: 'whiteAlpha.50', _dark: 'blackAlpha.50' }}
+      role="company info"
+      bg={'bg.emphasized'}
       backdropFilter="blur(10px)"
       px={{ base: '6', md: '12' }}
       py="12"
       mt="16"
       color={'accent.contrast'}
     >
-      <Grid
-        w="90%"
-        mx="auto"
-        templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
-        gap={{ base: '10', md: '16' }}
-      >
-        {/* Left Section */}
-        <GridItem>
-          <Stack gap={5} maxW="sm">
-            <AppLogo />
+      <Flex flexDirection={{ base: 'column-reverse', md: 'row' }}>
+        <Stack
+          gap={4}
+          width={{ base: '100%', md: '50%' }}
+          mt={{ base: '35px', md: '0px' }}
+        >
+          <AppLogo />
 
-            <Typography variant="body3">
-              Build beautiful, accessible UIs with ease and Craft stunning
-              interfaces, faster.
-            </Typography>
+          <Typography variant="body2">
+            Build beautiful, accessible UIs with ease and Craft stunning
+            interfaces, faster.
+          </Typography>
 
-            <Typography variant="body2">
-              Maintained by{' '}
-              <Typography
-                variant="body3"
-                color="bg"
-                as={'span'}
-                transition="color 0.2s ease"
-                fontWeight="bolder"
+          <Typography variant="body2">
+            Maintained by{' '}
+            <Typography
+              variant="body2"
+              color="bg"
+              as={'span'}
+              transition="color 0.2s ease"
+              fontWeight="bolder"
+            >
+              <Link
+                href="https://github.com/chimobi-justice"
+                target="_blank"
+                rel="noopener noreferrer"
               >
+                Justice Chimobi
+              </Link>
+            </Typography>{' '}
+            and contributors
+          </Typography>
+
+          <Flex alignItems="center" gap={2} fontSize="13px">
+            <Typography variant="body2">Deployed on</Typography>
+            <IoLogoVercel />
+            <Typography variant="body2">Vercel</Typography>
+          </Flex>
+
+          <Flex gap={3} mt={2}>
+            {socials.map(({ href, label, icon }) => (
+              <IconButton
+                key={label}
+                asChild
+                aria-label={label}
+                variant="ghost"
+                size="2xs"
+              >
+                <Link href={href} target="_blank" rel="noopener noreferrer">
+                  {icon}
+                </Link>
+              </IconButton>
+            ))}
+          </Flex>
+        </Stack>
+        <Grid
+          width={{ base: '100%', md: '50%' }}
+          gridTemplateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
+          gap={{ base: '10', md: '16' }}
+        >
+          {/* Resources */}
+          <GridItem>
+            <Typography variant="body1" mb={4}>
+              Resources
+            </Typography>
+            <Stack gap={3}>
+              {resources.map(({ href, label }) => (
                 <Link
-                  href="https://github.com/chimobi-justice"
+                  key={label}
+                  href={href}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Justice Chimobi
+                  <Typography variant="body2" transition="color 0.2s ease">
+                    {label}
+                  </Typography>
                 </Link>
-              </Typography>{' '}
-              and contributors
-            </Typography>
-
-            <Flex align="center" gap={2} fontSize="13px">
-              <Typography variant="body3">Deployed on</Typography>
-              <IoLogoVercel />
-              <Typography variant="body3">Vercel</Typography>
-            </Flex>
-
-            <Flex gap={3} mt={2}>
-              {socials.map(({ href, label, icon }) => (
-                <IconButton
-                  key={label}
-                  asChild
-                  aria-label={label}
-                  variant="plain"
-                  size="sm"
-                  rounded="full"
-                >
-                  <Link href={href} target="_blank" rel="noopener noreferrer">
-                    {icon}
-                  </Link>
-                </IconButton>
               ))}
-            </Flex>
-          </Stack>
-        </GridItem>
+            </Stack>
+          </GridItem>
 
-        {/* Resources */}
-        <GridItem textAlign={{ base: 'left', md: 'center' }}>
-          <Typography variant="subtitle" mb={4}>
-            Resources
-          </Typography>
-          <Stack gap={3}>
-            {resources.map(({ href, label }) => (
-              <Link
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Typography
-                  variant="body3"
-                  color="gray.300"
-                  transition="color 0.2s ease"
-                  _hover={{
-                    color: 'blackAlpha.800',
-                    _dark: { color: 'whiteAlpha.800' },
-                  }}
+          {/* Community */}
+          <GridItem>
+            <Typography variant="body1" mb={4}>
+              Community
+            </Typography>
+            <Stack gap={3}>
+              {community.map(({ href, label }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  {label}
-                </Typography>
-              </Link>
-            ))}
-          </Stack>
-        </GridItem>
-
-        {/* Company */}
-        <GridItem textAlign={{ base: 'left', md: 'center' }}>
-          <Typography variant="subtitle" mb={4}>
-            Company
-          </Typography>
-          <Stack gap={3}>
-            {company.map(({ href, label }) => (
-              <Link
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Typography
-                  variant="body3"
-                  transition="color 0.2s ease"
-                  _hover={{
-                    color: 'blackAlpha.800',
-                    _dark: { color: 'whiteAlpha.800' },
-                  }}
-                >
-                  {label}
-                </Typography>
-              </Link>
-            ))}
-          </Stack>
-        </GridItem>
-      </Grid>
+                  <Typography variant="body2" transition="color 0.2s ease">
+                    {label}
+                  </Typography>
+                </Link>
+              ))}
+            </Stack>
+          </GridItem>
+        </Grid>
+      </Flex>
     </Box>
   )
 }
