@@ -1,0 +1,36 @@
+import { defineTokens } from '@pandacss/dev'
+
+export const colors = defineTokens.colors({
+  current: { value: 'currentColor' },
+  black: {
+    DEFAULT: { value: '#000000' },
+    alpha1: { value: 'rgba(0, 0, 0, 0.05)' },
+    alpha2: { value: 'rgba(0, 0, 0, 0.1)' },
+    alpha3: { value: 'rgba(0, 0, 0, 0.15)' },
+    alpha4: { value: 'rgba(0, 0, 0, 0.2)' },
+    alpha5: { value: 'rgba(0, 0, 0, 0.3)' },
+    alpha6: { value: 'rgba(0, 0, 0, 0.4)' },
+    alpha7: { value: 'rgba(0, 0, 0, 0.5)' },
+    alpha8: { value: 'rgba(0, 0, 0, 0.6)' },
+    alpha9: { value: 'rgba(0, 0, 0, 0.7)' },
+    alpha10: { value: 'rgba(0, 0, 0, 0.8)' },
+    alpha11: { value: 'rgba(0, 0, 0, 0.9)' },
+    alpha12: { value: 'rgba(0, 0, 0, 0.95)' },
+  },
+  white: {
+    DEFAULT: { value: '#ffffff' },
+    alpha1: { value: 'rgba(255, 255, 255, 0.05)' },
+    alpha2: { value: 'rgba(255, 255, 255, 0.1)' },
+    alpha3: { value: 'rgba(255, 255, 255, 0.15)' },
+    alpha4: { value: 'rgba(255, 255, 255, 0.2)' },
+    alpha5: { value: 'rgba(255, 255, 255, 0.3)' },
+    alpha6: { value: 'rgba(255, 255, 255, 0.4)' },
+    alpha7: { value: 'rgba(255, 255, 255, 0.5)' },
+    alpha8: { value: 'rgba(255, 255, 255, 0.6)' },
+    alpha9: { value: 'rgba(255, 255, 255, 0.7)' },
+    alpha10: { value: 'rgba(255, 255, 255, 0.8)' },
+    alpha11: { value: 'rgba(255, 255, 255, 0.9)' },
+    alpha12: { value: 'rgba(255, 255, 255, 0.95)' },
+  },
+  transparent: { value: 'rgb(0 0 0 / 0)' },
+})
