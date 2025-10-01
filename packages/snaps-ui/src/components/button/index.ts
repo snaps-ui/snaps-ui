@@ -1,1 +1,1 @@
-export { Button, type ButtonProps } from '@chakra-ui/react/button'
+export { Button, type ButtonProps } from './button'

@@ -1,0 +1,63 @@
+import { createColorTokens } from '../utils/createColorTokens'
+
+const light = {
+  '1': { value: '#fdfdf9' },
+  '2': { value: '#fefce9' },
+  '3': { value: '#fffab8' },
+  '4': { value: '#fff394' },
+  '5': { value: '#ffe770' },
+  '6': { value: '#f3d768' },
+  '7': { value: '#e4c767' },
+  '8': { value: '#d5ae39' },
+  '9': { value: '#ffe629' },
+  '10': { value: '#ffdc00' },
+  '11': { value: '#9e6c00' },
+  '12': { value: '#473b1f' },
+  alpha1: { value: '#aaaa0006' },
+  alpha2: { value: '#f4dd0016' },
+  alpha3: { value: '#ffee0047' },
+  alpha4: { value: '#ffe3016b' },
+  alpha5: { value: '#ffd5008f' },
+  alpha6: { value: '#ebbc0097' },
+  alpha7: { value: '#d2a10098' },
+  alpha8: { value: '#c99700c6' },
+  alpha9: { value: '#ffe100d6' },
+  alpha10: { value: '#ffdc00' },
+  alpha11: { value: '#9e6c00' },
+  alpha12: { value: '#2e2000e0' },
+}
+
+const dark = {
+  '1': { value: '#14120b' },
+  '2': { value: '#1b180f' },
+  '3': { value: '#2d2305' },
+  '4': { value: '#362b00' },
+  '5': { value: '#433500' },
+  '6': { value: '#524202' },
+  '7': { value: '#665417' },
+  '8': { value: '#836a21' },
+  '9': { value: '#ffe629' },
+  '10': { value: '#ffff57' },
+  '11': { value: '#f5e147' },
+  '12': { value: '#f6eeb4' },
+  alpha1: { value: '#d1510004' },
+  alpha2: { value: '#f9b4000b' },
+  alpha3: { value: '#ffaa001e' },
+  alpha4: { value: '#fdb70028' },
+  alpha5: { value: '#febb0036' },
+  alpha6: { value: '#fec40046' },
+  alpha7: { value: '#fdcb225c' },
+  alpha8: { value: '#fdca327b' },
+  alpha9: { value: '#ffe629' },
+  alpha10: { value: '#ffff57' },
+  alpha11: { value: '#fee949f5' },
+  alpha12: { value: '#fef6baf6' },
+}
+
+export default createColorTokens(
+  'yellow',
+  light,
+  dark,
+  'gray.light.12',
+  'gray.light.12'
+)

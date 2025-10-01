@@ -1,7 +1,7 @@
 {
   "name": "snaps-ui",
   "version": "0.0.0-development",
-  "description": "snaps-ui monorepo, A collection of prebuilt, customizable Chakra UI components for faster development",
+  "description": "snaps-ui monorepo, A beautifully crafted React design system powered by Ark UI and Panda",
   "private": true,
   "type": "module",
   "scripts": {
@@ -42,14 +42,14 @@
     "snaps-ui",
     "react",
     "ui",
-    "chakra-ui",
+    "ark-ui",
+    "Panda Css",
     "design-system",
     "react-components",
     "accessible",
     "uikit",
     "components",
-    "library",
-    "emotion"
+    "library"
   ],
   "author": "Justice Chimobi <chimobi.justice@gmail.com>",
   "license": "MIT",

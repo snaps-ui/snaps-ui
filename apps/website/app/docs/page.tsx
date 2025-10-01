@@ -1,9 +1,10 @@
-import { DocSection } from '~/components/docs'
+// import { DocSection } from '~/components/docs'
 
 export default function Page() {
   return (
     <>
-      <DocSection />
+      {/* <DocSection /> */}
+      jjdjdj
     </>
   )
 }

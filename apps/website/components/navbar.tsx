@@ -5,23 +5,24 @@ import { useEffect, useState } from 'react'
 import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { IconButton } from '@snaps-ui/react/icon-button'
-import { warningToast } from '@snaps-ui/react/toaster'
+
+// import { warningToast } from '@snaps-ui/react/toaster'
+import { Typography } from '@snaps-ui/react/typography'
 import { FaGithub, FaBars } from 'react-icons/fa6'
 import { FaTimes } from 'react-icons/fa'
 
 import { ColorModeButton } from '~/components/color-mode-button'
 import { AppLogo } from '~/components/logo'
-import { Typography } from '~/components/typography'
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     if (!sessionStorage.getItem('snaps-ui-toast-shown')) {
-      warningToast({
-        title: '🚧 Snaps UI',
-        description: 'Snaps UI is still in development mode.',
-      })
+      //   warningToast({
+      //     title: '🚧 Snaps UI',
+      //     description: 'Snaps UI is still in development mode.',
+      //   })
 
       sessionStorage.setItem('snaps-ui-toast-shown', 'true')
     }
@@ -38,28 +39,35 @@ export const NavBar = () => {
       as="nav"
       position="sticky"
       top="0"
-      borderBottom="0.1px solid"
-      borderColor={{ base: 'blackAlpha.400', _dark: 'whiteAlpha.400' }}
-      bg={{ base: 'whiteAlpha.50', _dark: 'blackAlpha.50' }}
+      bg={'bg.emphasized'}
       backdropFilter="blur(10px)"
       px="4"
-      py="2"
+      py="4"
       zIndex="1000"
     >
-      <Flex w="90%" mx="auto" align="center" justify="space-between">
+      <Flex
+        w="90%"
+        mx="auto"
+        alignItems="center"
+        justifyContent="space-between"
+      >
         {/* Logo */}
         <AppLogo />
 
         {/* Desktop Nav */}
-        <Flex gap="6" align="center" display={{ base: 'none', md: 'flex' }}>
+        <Flex
+          gap="2"
+          alignItems="center"
+          display={{ base: 'none', md: 'flex' }}
+        >
           {navLinks.map(({ href, label }, index: number) => (
             <Typography
-              variant="body3"
+              variant="body2"
               key={index}
               transition="color 0.2s ease"
               _hover={{
-                color: 'blackAlpha.700',
-                _dark: { color: 'whiteAlpha.700' },
+                color: 'fg.subtle',
+                _dark: { color: 'fg.muted' },
               }}
             >
               <Link href={href}>{label}</Link>
@@ -69,9 +77,8 @@ export const NavBar = () => {
           <IconButton
             asChild
             aria-label="GitHub Repository"
-            variant="plain"
-            size="sm"
-            colorPalette="gray"
+            variant="ghost"
+            size="xs"
           >
             <Link
               href="https://github.com/snaps-ui/snaps-ui"
@@ -105,7 +112,6 @@ export const NavBar = () => {
           px="4"
           py="3"
           borderRadius="md"
-          bg={{ base: 'whiteAlpha.900', _dark: 'blackAlpha.800' }}
           display={{ base: 'flex', md: 'none' }}
           flexDirection="column"
           gap="3"
@@ -124,12 +130,12 @@ export const NavBar = () => {
             </Typography>
           ))}
 
-          <Flex gap="4" align="center">
+          <Flex gap="4" alignItems="center">
             <IconButton
               asChild
               aria-label="GitHub Repository"
               variant="plain"
-              size="sm"
+              size="xs"
               colorPalette="gray"
             >
               <Link

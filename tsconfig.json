@@ -5,7 +5,7 @@
       "path": "./packages/snaps-ui/tsconfig.json"
     },
     {
-      "path": "./packages/system/tsconfig.json"
+      "path": "./packages/preset/tsconfig.json"
     }
   ]
 }
