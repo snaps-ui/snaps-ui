@@ -158,6 +158,13 @@ export const buttonRecipe = defineRecipe({
       false: {}, // no ripple styles
     },
 
+    fullWidth: {
+      true: {
+        width: '100%',
+      },
+      false: {},
+    },
+
     size: {
       '2xs': {
         h: '6',
@@ -242,5 +249,6 @@ export const buttonRecipe = defineRecipe({
     variant: 'solid',
     size: 'md',
     ripple: false,
+    fullWidth: false,
   },
 })

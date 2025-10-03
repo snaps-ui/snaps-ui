@@ -6,7 +6,7 @@ import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { IconButton } from '@snaps-ui/react/icon-button'
 
-// import { warningToast } from '@snaps-ui/react/toaster'
+import { warningToast } from '@snaps-ui/react/toaster'
 import { Typography } from '@snaps-ui/react/typography'
 import { FaGithub, FaBars } from 'react-icons/fa6'
 import { FaTimes } from 'react-icons/fa'
@@ -19,13 +19,18 @@ export const NavBar = () => {
 
   useEffect(() => {
     if (!sessionStorage.getItem('snaps-ui-toast-shown')) {
-      //   warningToast({
-      //     title: '🚧 Snaps UI',
-      //     description: 'Snaps UI is still in development mode.',
-      //   })
+      warningToast({
+        title: '🚧 Snaps UI',
+        description: 'Snaps UI is still in development mode.',
+      })
 
       sessionStorage.setItem('snaps-ui-toast-shown', 'true')
     }
+
+    warningToast({
+      title: '🚧 Snaps UI',
+      description: 'Snaps UI is still in development mode.',
+    })
   }, [])
 
   const navLinks = [
