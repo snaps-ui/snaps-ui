@@ -4,10 +4,8 @@ import Link from 'next/link'
 import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { Stack } from '@snaps-ui/react/stack'
-import { IconButton } from '@snaps-ui/react/icon-button'
 import { Typography } from '@snaps-ui/react/typography'
 import { Grid, GridItem } from '@snaps-ui/react/grid'
-import { FaGithub, FaXTwitter, FaDiscord } from 'react-icons/fa6'
 import { IoLogoVercel } from 'react-icons/io5'
 
 import { AppLogo } from '~/components/logo'
@@ -22,16 +20,6 @@ const community = [
   { href: '#', label: 'Discord' },
   { href: '#', label: 'Twitter' },
   { href: 'https://github.com/snaps-ui/snaps-ui', label: 'Github' },
-]
-
-const socials = [
-  {
-    href: 'https://github.com/snaps-ui/snaps-ui',
-    label: 'GitHub Repository',
-    icon: <FaGithub size={18} />,
-  },
-  { href: '#', label: 'Twitter', icon: <FaXTwitter size={18} /> },
-  { href: '#', label: 'Discord', icon: <FaDiscord size={18} /> },
 ]
 
 export const Footer = () => {
@@ -84,22 +72,6 @@ export const Footer = () => {
             <IoLogoVercel />
             <Typography variant="body2">Vercel</Typography>
           </Flex>
-
-          <Flex gap={3} mt={2}>
-            {socials.map(({ href, label, icon }) => (
-              <IconButton
-                key={label}
-                asChild
-                aria-label={label}
-                variant="ghost"
-                size="2xs"
-              >
-                <Link href={href} target="_blank" rel="noopener noreferrer">
-                  {icon}
-                </Link>
-              </IconButton>
-            ))}
-          </Flex>
         </Stack>
         <Grid
           width={{ base: '100%', md: '50%' }}
@@ -119,7 +91,14 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Typography variant="body2" transition="color 0.2s ease">
+                  <Typography
+                    variant="body2"
+                    transition="color 0.2s ease"
+                    _hover={{
+                      color: 'fg.subtle',
+                      _dark: { color: 'fg.muted' },
+                    }}
+                  >
                     {label}
                   </Typography>
                 </Link>
@@ -140,7 +119,14 @@ export const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <Typography variant="body2" transition="color 0.2s ease">
+                  <Typography
+                    variant="body2"
+                    transition="color 0.2s ease"
+                    _hover={{
+                      color: 'fg.subtle',
+                      _dark: { color: 'fg.muted' },
+                    }}
+                  >
                     {label}
                   </Typography>
                 </Link>

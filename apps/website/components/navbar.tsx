@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useState } from 'react'
+import { /*useEffect*/ useState } from 'react'
 import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { IconButton } from '@snaps-ui/react/icon-button'
@@ -17,16 +17,16 @@ import { AppLogo } from '~/components/logo'
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
-  useEffect(() => {
-    if (!sessionStorage.getItem('snaps-ui-toast-shown')) {
-      //   warningToast({
-      //     title: '🚧 Snaps UI',
-      //     description: 'Snaps UI is still in development mode.',
-      //   })
+  // useEffect(() => {
+  //   if (!sessionStorage.getItem('snaps-ui-toast-shown')) {
+  //     warningToast({
+  //       title: '🚧 Snaps UI',
+  //       description: 'Snaps UI is still in development mode.',
+  //     })
 
-      sessionStorage.setItem('snaps-ui-toast-shown', 'true')
-    }
-  }, [])
+  //     sessionStorage.setItem('snaps-ui-toast-shown', 'true')
+  //   }
+  // }, [])
 
   const navLinks = [
     { href: '/docs', label: 'Docs' },
