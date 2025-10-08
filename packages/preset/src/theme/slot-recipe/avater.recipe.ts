@@ -2,7 +2,7 @@ import { defineSlotRecipe } from '@pandacss/dev'
 import { avatarAnatomy } from '@ark-ui/react/anatomy'
 
 export const avaterSlotRecipe = defineSlotRecipe({
-  className: 'avatar',
+  className: 'snaps-avatar',
   slots: avatarAnatomy.keys(),
   base: {
     root: {

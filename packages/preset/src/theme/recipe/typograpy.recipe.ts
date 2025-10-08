@@ -1,13 +1,14 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const typographyRecipe = defineRecipe({
-  className: 'typography',
+  className: 'snaps-typography',
   jsx: ['Typography'],
-  description: 'Snaps UI Typography variants similar to MUI',
+  description: 'Snaps UI Typography variants',
   base: {
     color: 'fg.default',
     fontWeight: 'normal',
     margin: '0',
+    userSelect: 'none',
   },
   variants: {
     variant: {

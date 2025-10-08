@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const spinnerRecipe = defineRecipe({
-  className: 'spinner',
+  className: 'snaps-spinner',
   base: {
     display: 'inline-block',
     borderColor: 'colorPalette.default',

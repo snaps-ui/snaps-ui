@@ -14,16 +14,14 @@ import { testimonials } from '~/constant/testimonials'
 
 export const Testimonials = () => {
   return (
-    <Box
-      as="section"
-      borderColor={{ base: 'blackAlpha.200', _dark: 'whiteAlpha.200' }}
-      bg={{ base: 'whiteAlpha.50', _dark: 'blackAlpha.50' }}
-      backdropFilter="blur(10px)"
-      px={{ base: '6', md: '12' }}
-      py="12"
-      mt="16"
-    >
-      <Box textAlign={'left'} mb={'25px'} width={'90%'} mx={'auto'}>
+    <Box as="section" px={{ base: '6', md: '12' }} py="12" mt="16">
+      <Box
+        textAlign={'left'}
+        mb={'25px'}
+        width={'90%'}
+        mx={'auto'}
+        colorPalette={'red'}
+      >
         <Typography variant="h4" color={'fg.muted'}>
           Trusted by developers, startups, and enterprises
         </Typography>

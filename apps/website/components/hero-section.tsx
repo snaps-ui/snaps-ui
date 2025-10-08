@@ -55,7 +55,7 @@ export const HeroSection = () => {
             variant="h1"
             fontSize={{ base: '30px', md: '65px' }}
             align="center"
-            color={'#ff8976'}
+            color={'accent.default'}
             lineHeight={'1.4em'}
           >
             Build modern apps with speed and flexibility
@@ -79,9 +79,11 @@ export const HeroSection = () => {
             mt={'25px'}
             mb={'5px'}
           >
-            <Button variant={'solid'} size={'xl'} bg={'#ff8976'} ripple>
-              Get Started
-            </Button>
+            <Link href={'/docs/getting-started'}>
+              <Button variant={'solid'} size={'xl'} bg={'#ff8976'} ripple>
+                Get Started
+              </Button>
+            </Link>
 
             <Center
               as="pre"
@@ -111,6 +113,7 @@ export const HeroSection = () => {
             <Flex
               alignItems="center"
               justifyContent="center"
+              flexWrap={'wrap'}
               gap={8}
               display={'flex'}
             >

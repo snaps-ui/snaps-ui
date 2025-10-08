@@ -11,8 +11,8 @@ import { IoLogoVercel } from 'react-icons/io5'
 import { AppLogo } from '~/components/logo'
 
 const resources = [
-  { href: '/docs', label: 'Documentations' },
-  { href: '/docs', label: 'Components' },
+  { href: '/getting-started', label: 'Documentations' },
+  { href: '/getting-started', label: 'Components' },
   { href: '/blogs', label: 'Blog' },
 ]
 
@@ -27,8 +27,9 @@ export const Footer = () => {
     <Box
       as="footer"
       role="company info"
-      bg={'bg.emphasized'}
+      bg={'bg.default'}
       backdropFilter="blur(10px)"
+      shadow={'2xs'}
       px={{ base: '6', md: '12' }}
       py="12"
       mt="16"
@@ -51,10 +52,13 @@ export const Footer = () => {
             Maintained by{' '}
             <Typography
               variant="body2"
-              color="bg"
+              color={'accent.default'}
               as={'span'}
               transition="color 0.2s ease"
               fontWeight="bolder"
+              _hover={{
+                color: 'accent.emphasized',
+              }}
             >
               <Link
                 href="https://github.com/chimobi-justice"

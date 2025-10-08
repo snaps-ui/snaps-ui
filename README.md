@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://github.com/snaps-ui/snaps-ui">
+    <img src="https://raw.githubusercontent.com/snaps-ui/snaps-ui/main/apps/website/public/app-logo.png?raw=true" alt="snaps logo" width="300" />
+  </a>
+</p>
+
 # Snaps UI ⚡
 
 ## Build modern apps with speed and flexibility
@@ -32,16 +38,10 @@ Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 
 💬 Community Discord (coming soon)
 
-## 📜 License
-
-MIT © [Justice Chimobi](LICENSE)
-
-### 💪🏽 Thanks to all Contributors
-
-Thanks a lot for spending your time helping Snaps UI grow. Thanks a lot! Keep rocking🍻
-
-[![Contributors](https://contrib.rocks/image?repo=snaps-ui/snaps-ui)](https://github.com/snaps-ui/snaps-ui/graphs/contributors)
-
 ### 🙏🏽 Support
 
 This project needs a star️ from you. Don't forget to leave a star✨
+
+## 📜 License
+
+MIT © [Justice Chimobi](LICENSE)

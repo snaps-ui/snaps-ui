@@ -47,8 +47,7 @@ export const AvatarRoot = withSlotProvider<HTMLDivElement, AvatarRootProps>(
 export interface AvatarFallbackProps
   extends Assign<HTMLStyledProps<'span'>, ArkAvatar.FallbackBaseProps> {
   /**
-   * The name to derive the initials from.
-   * If not provided, the fallback will display a generic icon.
+   * The name to derive the initials from the avatar.
    */
   name?: string
 }
@@ -60,11 +59,6 @@ function getFallback(props: AvatarFallbackProps) {
   if (props.name) return getInitials(props.name)
   return <AvatarIcon />
 }
-
-// export const AvatarFallback = withSlotContext<
-//   HTMLSpanElement,
-//   AvatarFallbackProps
-// >(ArkAvatar.Fallback, 'fallback')
 
 export const AvatarFallback = forwardRef<HTMLDivElement, AvatarFallbackProps>(
   function AvatarFallback(props, ref) {
