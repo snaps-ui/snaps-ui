@@ -8,7 +8,7 @@ import { styled } from '@snaps-ui/styled-system/jsx'
 
 const StyledPaper = styled(ark.div, paperRecipe)
 
-export type PaperBaseProps = ComponentProps<typeof StyledPaper>
+type PaperBaseProps = ComponentProps<typeof StyledPaper>
 
 export interface PaperProps extends PaperBaseProps {}
 

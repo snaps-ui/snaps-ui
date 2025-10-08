@@ -20,7 +20,7 @@ export const HStack = styled(ark.div, {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 'var(--stack-gap, 0.5rem)',
+    gap: '1rem',
   },
 })
 export type HStackProps = ComponentProps<typeof HStack>
@@ -31,7 +31,7 @@ export const VStack = styled(ark.div, {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    gap: 'var(--stack-gap, 0.5rem)',
+    gap: '1rem',
   },
 })
 export type VStackProps = ComponentProps<typeof VStack>

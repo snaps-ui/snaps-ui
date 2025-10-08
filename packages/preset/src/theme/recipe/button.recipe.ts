@@ -1,7 +1,7 @@
 import { defineRecipe } from '@pandacss/dev'
 
 export const buttonRecipe = defineRecipe({
-  className: 'button',
+  className: 'snaps-button',
   jsx: ['Button', 'IconButton'],
   base: {
     colorPalette: 'gray',

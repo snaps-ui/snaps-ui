@@ -1,7 +1,8 @@
 'use client'
 
 import { forwardRef } from 'react'
-import { Button, type ButtonProps } from '../button'
+
+import { Button, type ButtonProps } from '../button/index'
 
 export interface IconButtonProps extends ButtonProps {}
 
