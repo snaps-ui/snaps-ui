@@ -11,8 +11,8 @@ import { IoLogoVercel } from 'react-icons/io5'
 import { AppLogo } from '~/components/logo'
 
 const resources = [
-  { href: '/getting-started', label: 'Documentations' },
-  { href: '/getting-started', label: 'Components' },
+  { href: '/docs/getting-started', label: 'Documentations' },
+  { href: '/docs/components', label: 'Components' },
   { href: '/blogs', label: 'Blog' },
 ]
 
@@ -89,12 +89,7 @@ export const Footer = () => {
             </Typography>
             <Stack gap={3}>
               {resources.map(({ href, label }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <Link key={label} href={href}>
                   <Typography
                     variant="body2"
                     transition="color 0.2s ease"

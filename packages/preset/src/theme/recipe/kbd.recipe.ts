@@ -39,11 +39,11 @@ export const kbdRecipe = defineRecipe({
       },
       md: {
         textStyle: 'sm',
-        minHeight: '6',
+        minHeight: '7',
       },
       lg: {
         textStyle: 'md',
-        minHeight: '7',
+        minHeight: '9',
       },
     },
   },

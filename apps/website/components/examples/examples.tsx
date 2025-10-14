@@ -1,5 +1,6 @@
 'use client'
 
+import { Avatar, AvatarGroup } from '@snaps-ui/react/avatar'
 import { Button } from '@snaps-ui/react/button'
 import { Box } from '@snaps-ui/react/box'
 import { Center } from '@snaps-ui/react/center'
@@ -10,7 +11,6 @@ import { HStack, Stack } from '@snaps-ui/react/stack'
 import { Typography } from '@snaps-ui/react/typography'
 import { Tabs } from '@snaps-ui/react/tabs'
 import { FaPlus } from 'react-icons/fa6'
-import { Avatar, AvatarGroup } from '@snaps-ui/react'
 
 export const BillingAddress = () => {
   return (
@@ -28,7 +28,6 @@ export const BillingAddress = () => {
           <Field.Textarea
             placeholder="Add any additional message"
             variant={'subtle'}
-            _focus={{ borderColor: 'accent.default' }}
             rows={4}
           />
         </Field.Root>
@@ -64,11 +63,7 @@ export const PaymentMethod = () => {
       <Stack gap={5}>
         <Field.Root>
           <Field.Label>Name</Field.Label>
-          <Field.Input
-            placeholder="John Doe"
-            variant={'subtle'}
-            _focus={{ borderColor: 'accent.default' }}
-          />
+          <Field.Input placeholder="John Doe" variant={'subtle'} />
         </Field.Root>
 
         <Flex gap={3}>
@@ -80,7 +75,6 @@ export const PaymentMethod = () => {
               <Field.Input
                 placeholder="1234 45675 45332 3445"
                 variant={'subtle'}
-                _focus={{ borderColor: 'accent.default' }}
               />
               <Field.Error>The card number is required</Field.Error>
             </Field.Root>
@@ -89,11 +83,7 @@ export const PaymentMethod = () => {
           <Box width={'30%'}>
             <Field.Root>
               <Field.Label>CVV</Field.Label>
-              <Field.Input
-                placeholder="John Doe"
-                variant={'subtle'}
-                _focus={{ borderColor: 'accent.default' }}
-              />
+              <Field.Input placeholder="John Doe" variant={'subtle'} />
             </Field.Root>
           </Box>
         </Flex>
@@ -102,31 +92,36 @@ export const PaymentMethod = () => {
   )
 }
 
+export const teamImages = [
+  {
+    name: 'Justice Chimobi',
+    image: 'https://avatars.githubusercontent.com/u/74328318?v=4',
+  },
+  {
+    name: 'Nelson Chinedu',
+    image: 'https://avatars.githubusercontent.com/u/26670804?v=4',
+  },
+]
+
 export const TeamMembers = () => {
   return (
     <Paper width={'full'} height="min-content">
       <Center>
         <Stack gap={4} mb={'15px'} textAlign={'center'}>
           <AvatarGroup justifyContent={'center'} gap="0" spaceX="-2">
+            {teamImages.map((team) => (
+              <Avatar.Root key={team.name}>
+                <Avatar.Fallback name={team.name} />
+                <Avatar.Image src={team.image} />
+              </Avatar.Root>
+            ))}
             <Avatar.Root>
-              <Avatar.Fallback name="Uchiha Sasuke" />
-              <Avatar.Image src="https://cdn.myanimelist.net/r/84x124/images/characters/9/131317.webp?s=d4b03c7291407bde303bc0758047f6bd" />
-            </Avatar.Root>
-
-            <Avatar.Root>
-              <Avatar.Fallback name="Baki Ani" />
-              <Avatar.Image src="https://cdn.myanimelist.net/r/84x124/images/characters/7/284129.webp?s=a8998bf668767de58b33740886ca571c" />
-            </Avatar.Root>
-
-            <Avatar.Root>
-              <Avatar.Fallback name="Uchiha Chan" />
-              <Avatar.Image src="https://cdn.myanimelist.net/r/84x124/images/characters/9/105421.webp?s=269ff1b2bb9abe3ac1bc443d3a76e863" />
-            </Avatar.Root>
-            <Avatar.Root>
-              <Avatar.Fallback>+8</Avatar.Fallback>
+              <Avatar.Fallback>+3</Avatar.Fallback>
             </Avatar.Root>
           </AvatarGroup>
-          <Typography variant={'subtitle1'}>No Team Members</Typography>
+          <Typography variant={'subtitle1'} textAlign={'center'}>
+            No Team Members
+          </Typography>
           <Typography variant={'subtitle2'}>
             Invite your team to collaborate on this project.
           </Typography>

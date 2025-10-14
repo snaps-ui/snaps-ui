@@ -1,1 +1,44 @@
 @layer reset, base, tokens, recipes, utilities;
+
+pre.shiki {
+  padding: 15px;
+  overflow: auto;
+  margin-top: 1.2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+
+  code {
+    overflow: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+.doc-container {
+  padding-top: 2rem;
+
+  & > h2,
+  h3,
+  p {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  a {
+    color: var(--colors-color-palette-default);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

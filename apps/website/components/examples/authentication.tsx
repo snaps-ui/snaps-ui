@@ -40,17 +40,12 @@ export const AuthenticationExample = () => {
                 <Field.Input
                   placeholder="mail@example.com"
                   variant={'subtle'}
-                  _focus={{ borderColor: 'accent.default' }}
                 />
               </Field.Root>
 
               <Field.Root>
                 <Field.Label>Password</Field.Label>
-                <Field.Input
-                  placeholder="*********"
-                  variant={'subtle'}
-                  _focus={{ borderColor: 'accent.default' }}
-                />
+                <Field.Input placeholder="*********" variant={'subtle'} />
               </Field.Root>
 
               <Stack gap={3}>

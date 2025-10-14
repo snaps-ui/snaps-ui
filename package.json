@@ -7,9 +7,7 @@
   "scripts": {
     "prepare": "husky",
     "dev:web": "pnpm --filter website dev",
-    "dev:docs": "pnpm --filter docs dev",
     "build:web": "pnpm --filter website build",
-    "build:docs": "pnpm --filter docs build",
     "build:packages": "turbo run build --filter='./packages/*' --concurrency=5",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",

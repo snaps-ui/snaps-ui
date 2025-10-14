@@ -3,17 +3,17 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Box } from '@snaps-ui/react/box'
+import { Button } from '@snaps-ui/react/button'
 import { Flex } from '@snaps-ui/react/flex'
 import { IconButton } from '@snaps-ui/react/icon-button'
 import { CommandInput } from '@snaps-ui/react/command-input'
 import { Typography } from '@snaps-ui/react/typography'
 import { FaGithub, FaBars } from 'react-icons/fa6'
 import { FaTimes } from 'react-icons/fa'
+import { FcLike } from 'react-icons/fc'
 
 import { ColorModeButton } from '~/components/color-mode-button'
 import { AppLogo } from '~/components/logo'
-import { Button } from '@snaps-ui/react'
-import { FcLike } from 'react-icons/fc'
 
 export const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -51,15 +51,15 @@ export const NavBar = () => {
           alignItems="center"
           display={{ base: 'none', md: 'flex' }}
         >
-          <Link
-            href={'https://ko-fi.com/snaps_ui'}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button variant={'ghost'} ripple>
+          <Button variant={'ghost'} ripple asChild>
+            <Link
+              href={'https://ko-fi.com/snaps_ui'}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FcLike /> Sponsor
-            </Button>
-          </Link>
+            </Link>
+          </Button>
 
           <CommandInput
             onOpen={() => alert('Open Command')}
