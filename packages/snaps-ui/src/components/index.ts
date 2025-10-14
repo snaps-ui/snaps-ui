@@ -2,6 +2,7 @@ export { ark as snaps } from '@ark-ui/react/factory'
 export type { HTMLArkProps as HTMLSnapsProps } from '@ark-ui/react/factory'
 
 export * from './avatar/index'
+export * from './badge/index'
 export * from './box/index'
 export * from './button/index'
 export * from './card/index'

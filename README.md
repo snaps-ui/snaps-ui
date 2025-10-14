@@ -12,6 +12,12 @@
 
 ---
 
+<p align="center">
+  <a href="https://github.com/snaps-ui/snaps-ui">
+    <img src="https://raw.githubusercontent.com/snaps-ui/snaps-ui/main/apps/website/public/snaps-showcase.png?raw=true" alt="snaps logo" width="100%" />
+  </a>
+</p>
+
 ## 🚀 Features
 
 - ⚡ **Snappy Developer Experience** – copy-paste ready, works out of the box.
@@ -33,6 +39,8 @@ Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 ## 📣 Stay Connected
 
 [💻 Website](https://snaps-ui.vercel.app/)
+
+🐦 [LinkedIn](https://www.linkedin.com/company/snaps-ui)
 
 🐦 Twitter (coming soon)
 

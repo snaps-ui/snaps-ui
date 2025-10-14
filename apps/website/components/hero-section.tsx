@@ -79,11 +79,9 @@ export const HeroSection = () => {
             mt={'25px'}
             mb={'5px'}
           >
-            <Link href={'/docs/getting-started'}>
-              <Button variant={'solid'} size={'xl'} bg={'#ff8976'} ripple>
-                Get Started
-              </Button>
-            </Link>
+            <Button variant={'solid'} size={'xl'} bg={'#ff8976'} asChild ripple>
+              <Link href={'/docs/getting-started'}>Get Started</Link>
+            </Button>
 
             <Center
               as="pre"

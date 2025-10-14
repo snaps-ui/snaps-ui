@@ -48,7 +48,7 @@ export const Testimonials = () => {
                       alignItems={'flex-start'}
                     >
                       <HStack mb="6" gap="3">
-                        <Avatar.Root>
+                        <Avatar.Root size={'sm'}>
                           <Avatar.Fallback name={name} />
                           <Avatar.Image src={image} />
                         </Avatar.Root>

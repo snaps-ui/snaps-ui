@@ -1,0 +1,29 @@
+---
+title: Avatar
+description: A graphical representation of a user, commonly used in profile sections, comment threads, or user menus.
+---
+
+<ExampleTabs name="avatar-basics" scope="avatar" />
+
+## Usage
+
+```tsx
+import { Avatar } from '@snaps-ui/react'
+
+;<Avatar.Root>
+  <Avatar.Fallback />
+  <Avatar.Image />
+</Avatar.Root>
+```
+
+## Sizes
+
+You can control the size of the Avatar using the **size** prop.
+
+<ExampleTabs name="avatar-sizes" scope="avatar" />
+
+## Fallback
+
+When no image source is provided, the Avatar automatically renders the user’s initials and when no initial value it displays an icon.
+
+<ExampleTabs name="avatar-fallback" scope="avatar" />

@@ -10,11 +10,13 @@ import { inputRecipe } from './input.recipe'
 import { kbdRecipe } from './kbd.recipe'
 import { textareaRecipe } from './textarea.recipe'
 import { commandInputRecipe } from './command-Input.recipe'
+import { badgeRecipes } from './bagde.recipe'
 
 export const recipes: Record<
   string,
   Partial<RecipeConfig<RecipeVariantRecord>>
 > = {
+  badgeRecipes,
   buttonRecipe,
   commandInputRecipe,
   inputRecipe,
