@@ -15,14 +15,22 @@ import { isMobileDevice } from '../../utils/is-mobile-device'
 export interface CommandInputProps extends Omit<BoxProps, 'direction'> {
   shortcut?: string
   onOpen?: () => void
-  title?: string
+  placeholder?: string
+  leftElement?: React.ReactNode
 }
 
 export const CommandInput = React.forwardRef<
   HTMLInputElement,
   CommandInputProps
 >(function CommandInput(props, ref) {
-  const { shortcut, onOpen, title = 'Search...', className, ...rest } = props
+  const {
+    shortcut,
+    onOpen,
+    placeholder = 'Search...',
+    leftElement,
+    className,
+    ...rest
+  } = props
   const slotStyles = commandInputRecipe()
 
   const [isMobile, setIsMobile] = React.useState(false)
@@ -74,8 +82,8 @@ export const CommandInput = React.forwardRef<
       {...rest}
     >
       <Flex alignItems="center" gap="2">
-        <LuSearch />
-        <Typography color="fg.muted">{title}</Typography>
+        {leftElement ?? <LuSearch />}
+        <Typography color="fg.muted">{placeholder}</Typography>
       </Flex>
 
       {!isMobile && resolvedShortcut ? (

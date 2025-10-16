@@ -18,4 +18,7 @@ export default defineConfig({
   staticCss: {
     recipes: '*',
   },
+  theme: {
+    extend: {},
+  },
 })

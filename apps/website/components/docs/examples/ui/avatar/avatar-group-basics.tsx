@@ -17,7 +17,7 @@ export const imgUrl = [
 
 export const AvatarGroupBasics = () => {
   return (
-    <AvatarGroup gap="0" spaceX="-2">
+    <AvatarGroup>
       {imgUrl.map((data) => (
         <Avatar.Root size={'lg'} key={data.id}>
           <Avatar.Fallback />

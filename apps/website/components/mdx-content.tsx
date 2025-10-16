@@ -9,6 +9,8 @@ import { Callout } from '~/components/mdx/callout'
 import { Anchor } from '~/components/mdx/anchor'
 import { Code, Pre } from '~/components/mdx/code'
 import { CodeBlock } from '~/components/mdx/code-block'
+import Link from 'next/link'
+import { Typography } from '@snaps-ui/react'
 
 const sharedComponents = {
   a: Anchor,

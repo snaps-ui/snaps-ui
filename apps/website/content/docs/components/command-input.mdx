@@ -1,0 +1,37 @@
+---
+title: Command Input
+description: An input-like trigger used to open command palettes or search dialogs, supporting icons, keyboard shortcuts, and custom placeholders
+---
+
+<ExampleTabs name="command-input-demo" scope="command-input" />
+
+## Usage
+
+```tsx
+import { CommandInput } from '@snaps-ui/react'
+
+;<CommandInput onOpen={() => console.log('Open command palette')} />
+```
+
+The **CommandInput** component acts as a trigger for opening a command palette or search dialog.
+It supports keyboard shortcuts, icons, and custom placeholder text.
+
+## With Custom Icon
+
+<ExampleTabs name="command-input-icon" scope="command-input" />
+
+## With Custom Shortcut
+
+You can override the default shortcut (⌘ + K on Mac or Ctrl + K on Windows) using the shortcut prop.
+
+<ExampleTabs name="command-input-shortcut" scope="command-input" />
+
+## Responsive Behavior
+
+On mobile devices, the keyboard shortcut display is automatically hidden to ensure a clean UI.
+
+When the user presses the defined shortcut, the onOpen callback is automatically triggered (except on mobile devices).
+
+## Accessibility
+
+The CommandInput uses a semantic button **role** with **aria-haspopup="dialog"** for accessibility, making it discoverable by assistive technologies as a command or dialog trigger.

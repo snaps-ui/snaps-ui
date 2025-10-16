@@ -26,12 +26,13 @@ export const DocsPage = ({ children }: { children: React.ReactNode }) => {
         top="0"
         h="100vh"
         overflowY="auto"
+        display={{ base: 'none', md: 'block' }}
       >
         <Sidebar />
       </Box>
 
       {/* Main Content */}
-      <Box as="main" flex="1" p={{ base: '6', md: '10' }} overflowY="auto">
+      <Box as="main" flex="1" p={{ base: '2', md: '10' }} overflowY="auto">
         {children}
       </Box>
     </Flex>
@@ -52,10 +53,23 @@ function Sidebar() {
     >
       <Stack gap="6">
         <Stack gap="3">
-          <Typography variant={'body1'}>Getting Started</Typography>
+          <Typography variant={'body1'} color={'fg.default'}>
+            Getting Started
+          </Typography>
           <Link href="/docs/getting-started" style={{ marginLeft: '6px' }}>
-            <Typography variant={'body2'} as={'span'}>
+            <Typography variant={'body2'} color={'fg.muted'} as={'span'}>
               Installation
+            </Typography>
+          </Link>
+        </Stack>
+
+        <Stack gap="3">
+          <Typography variant={'body1'} color={'fg.default'}>
+            Theming
+          </Typography>
+          <Link href="/docs/theming" style={{ marginLeft: '6px' }}>
+            <Typography variant={'body2'} color={'fg.muted'} as={'span'}>
+              customization
             </Typography>
           </Link>
         </Stack>
@@ -71,7 +85,7 @@ function Sidebar() {
                 marginLeft: '6px',
               }}
             >
-              <Typography variant={'body2'} as={'span'}>
+              <Typography variant={'body2'} color={'fg.muted'} as={'span'}>
                 {link.name} {link.new ? <Badge /> : ''}
               </Typography>
             </Link>

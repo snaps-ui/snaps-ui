@@ -14,14 +14,7 @@ export interface SpinnerProps extends SpinnerPropsProps {}
 
 export const Spinner = forwardRef<HTMLDivElement, SpinnerProps>(
   function Spinner(props, ref) {
-    return (
-      <StyledSpinner
-        ref={ref}
-        borderBottomColor="transparent"
-        borderLeftColor="transparent"
-        {...props}
-      />
-    )
+    return <StyledSpinner ref={ref} {...props} />
   }
 )
 

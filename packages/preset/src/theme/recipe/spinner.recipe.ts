@@ -4,14 +4,15 @@ export const spinnerRecipe = defineRecipe({
   className: 'snaps-spinner',
   base: {
     display: 'inline-block',
-    borderColor: 'colorPalette.default',
     borderStyle: 'solid',
     borderRadius: 'full',
     borderWidth: '2px',
     width: 'var(--size)',
     height: 'var(--size)',
-    animation: 'spin',
-    animationDuration: 'fastest',
+    borderColor: 'colorPalette.default',
+    borderBottomColor: 'transparent',
+    borderLeftColor: 'transparent',
+    animation: 'spin 0.6s linear infinite',
   },
   variants: {
     size: {
