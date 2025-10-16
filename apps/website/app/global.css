@@ -24,6 +24,7 @@ pre.shiki {
   p {
     padding-bottom: 10px;
     padding-top: 10px;
+    line-height: 1em;
   }
 
   h2 {

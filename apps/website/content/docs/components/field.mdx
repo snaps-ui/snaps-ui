@@ -1,0 +1,56 @@
+---
+title: Field
+description: Provides a flexible container for form inputs, labels, and helper text.
+---
+
+<ExampleTabs name="field-basics" scope="field" />
+
+## Usage
+
+```tsx
+import { Field } from '@snaps-ui/react'
+
+;<Field.Root>
+  <Field.Label>
+    <Field.RequiredIndicator />
+  </Field.Label>
+  <Input />
+  <Field.HelperText />
+  <Field.ErrorText />
+</Field.Root>
+```
+
+## Examples
+
+### Error Text
+
+Pass the **invalid** prop to **Field.Root** and use the **Field.Error** to indicate that the field is invalid.
+
+<ExampleTabs name="field-error" scope="field" />
+
+### Helper Text
+
+Use the **Field.HelperText** to add helper text to the field.
+
+<ExampleTabs name="field-helper" scope="field" />
+
+### Disable
+
+You can use the **disabled** prop to disable the field.
+
+<ExampleTabs name="field-disabled" scope="field" />
+
+### Textarea
+
+This example illustrates how to use the **Field** component with a textarea element.
+
+> You can pass the **autoresize** prop to the Textarea component to enable automatic resizing as the user types.
+
+<ExampleTabs name="field-textarea" scope="field" />
+
+{/\* ### Select
+
+This example demonstrates how to integrate the **Field** component with a select dropdown.
+
+<ExampleTabs name="field-select" scope="field" />
+*/}

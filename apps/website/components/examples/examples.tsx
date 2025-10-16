@@ -108,7 +108,7 @@ export const TeamMembers = () => {
     <Paper width={'full'} height="min-content">
       <Center>
         <Stack gap={4} mb={'15px'} textAlign={'center'}>
-          <AvatarGroup justifyContent={'center'} gap="0" spaceX="-2">
+          <AvatarGroup justifyContent={'center'}>
             {teamImages.map((team) => (
               <Avatar.Root key={team.name}>
                 <Avatar.Fallback name={team.name} />

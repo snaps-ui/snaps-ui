@@ -7,7 +7,7 @@ export const cardSlotRecipe = defineSlotRecipe({
     root: {
       background: 'bg.default',
       borderRadius: 's3',
-      boxShadow: 'md',
+      boxShadow: 'sm',
       position: 'relative',
       flexDirection: 'column',
       overflow: 'hidden',
@@ -17,12 +17,12 @@ export const cardSlotRecipe = defineSlotRecipe({
       flex: '1',
       flexDirection: 'column',
       pb: '3',
-      px: '4',
+      px: '5',
     },
     header: {
       display: 'flex',
       flexDirection: 'column',
-      padding: '3',
+      padding: '4',
       gap: '2',
     },
     title: {
@@ -40,6 +40,7 @@ export const cardSlotRecipe = defineSlotRecipe({
       pb: '5',
       pt: '2',
       px: '4',
+      gap: '2',
     },
   },
 })

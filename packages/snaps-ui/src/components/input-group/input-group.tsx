@@ -2,8 +2,9 @@
 
 import * as React from 'react'
 import { Box } from '@snaps-ui/styled-system/jsx'
-import { Group } from '../group'
-import { type BoxProps } from '../box'
+
+import { Group } from '../group/index'
+import { type BoxProps } from '../box/index'
 
 export interface InputGroupProps extends Omit<BoxProps, 'direction'> {
   leftElement?: React.ReactNode
@@ -16,7 +17,7 @@ export const InputGroup = React.forwardRef<HTMLDivElement, InputGroupProps>(
     const { leftElement, rightElement, children, ...rest } = props
 
     return (
-      <Group ref={ref} gap={'0!'} {...rest}>
+      <Group ref={ref} attached {...rest}>
         {leftElement && (
           <Box
             px="3"

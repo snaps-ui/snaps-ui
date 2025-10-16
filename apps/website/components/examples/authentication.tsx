@@ -11,19 +11,28 @@ import { FaGithub, FaGoogle } from 'react-icons/fa6'
 
 export const AuthenticationExample = () => {
   return (
-    <Flex width={'full'} height={'100vh'}>
-      <Box width={'50%'} bg={'accent.subtle'} padding={'10px'}>
+    <Flex
+      width={'full'}
+      height={{ base: 'auto', md: '100vh' }}
+      flexDirection={{ base: 'column', md: 'row' }}
+    >
+      <Box
+        width={'50%'}
+        bg={'accent.subtle'}
+        padding={'10px'}
+        display={{ base: 'none', md: 'block' }}
+      >
         <Typography variant={'h5'}>Snaps UI</Typography>
       </Box>
 
       <Box
-        width={'50%'}
+        width={{ base: '100%', md: '50%' }}
         display={'flex'}
         flexDirection={'column'}
         justifyContent={'center'}
         alignItems={'center'}
       >
-        <Box width={'60%'}>
+        <Box width={{ base: '100%', md: '60%' }}>
           <Paper width={'full'}>
             <Stack gap={2} mb={'15px'} textAlign={'center'}>
               <Typography variant={'subtitle1'}>Create an account</Typography>

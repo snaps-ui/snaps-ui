@@ -24,7 +24,7 @@ export default async function DocsPagePage({ params }: Props) {
     <DocsPage>
       <Flex gap={6} position="relative" alignItems="flex-start" py={6}>
         {/* Main content */}
-        <Box flex="1" maxW="70%" px={4}>
+        <Box flex="1" maxW={{ base: '100%', md: '75%' }} px={4}>
           <article className="doc-container">
             <Typography as="h1" fontSize="2xl" fontWeight="bold" mb={2}>
               {doc.title}
@@ -42,12 +42,13 @@ export default async function DocsPagePage({ params }: Props) {
 
         {/* right Sidebar */}
         <Box
-          width="30%"
+          width="25%"
           position="sticky"
           top="50px"
           alignSelf="flex-start"
           px={4}
           py={2}
+          display={{ base: 'none', md: 'block' }}
         >
           <Typography variant="body2" fontWeight="medium" mb={2}>
             On this page
@@ -55,7 +56,7 @@ export default async function DocsPagePage({ params }: Props) {
           {/* headings here */}
           <Box as={'ul'} pl={'7px'}>
             {doc.toc?.map((heading) => (
-              <Box as={'li'} key={heading.title} my={'10px'}>
+              <Box as={'li'} key={heading.title} my={'10px'} fontSize={'13px'}>
                 <a href={`${heading.url}`}>{heading.title}</a>
               </Box>
             ))}
