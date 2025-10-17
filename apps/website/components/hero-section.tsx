@@ -47,14 +47,14 @@ export const HeroSection = () => {
           justifyContent={'center'}
           alignItems={'center'}
           p={'15px'}
-          width={{ base: '90%', md: '85%' }}
+          width={{ base: '100%', md: '85%' }}
           m={'5rem auto'}
           textAlign={'center'}
         >
           <Typography
             variant="h1"
             fontSize={{ base: '30px', md: '65px' }}
-            align="center"
+            textAlign="center"
             color={'accent.default'}
             lineHeight={'1.4em'}
           >
@@ -65,7 +65,7 @@ export const HeroSection = () => {
             variant="subtitle1"
             my={'10px'}
             color={'accent.contrast'}
-            align={'center'}
+            textAlign={'center'}
             lineHeight={'1.7em'}
           >
             Snaps UI is a modern UI library with reusable, intuitive components

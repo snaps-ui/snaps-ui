@@ -1,0 +1,56 @@
+---
+title: Clipboard
+description: A component to copy text to the clipboard
+---
+
+<ExampleTabs name="clipboard-basics" scope="clipboard" />
+
+## Usage
+
+```tsx
+import { Clipboard } from '@snaps-ui/react'
+
+;<Clipboard.Root>
+  <Clipboard.Trigger>
+    <Clipboard.CopyText />
+    <Clipboard.Indicator />
+  </Clipboard.Trigger>
+  <Clipboard.Input />
+</Clipboard.Root>
+```
+
+## Examples
+
+### Input
+
+Use the **Clipboard.Input** component to create a copy input.
+
+<ExampleTabs name="clipboard-with-input" scope="clipboard" />
+
+### Timer
+
+Use the **timeout** prop to change the duration of the copy message.
+
+<ExampleTabs name="clipboard-with-timer" scope="clipboard" />
+
+### Store
+
+You can use the **useClipboard** hook to create a custom clipboard component.
+
+<ExampleTabs name="clipboard-with-store" scope="clipboard" />
+
+### Root Provider
+
+Use the **useClipboard** hook together with the **Clipboard.RootProvider** component to manually control the clipboard’s state and behavior.
+
+This setup gives you maximum flexibility — you can:
+
+- Access clipboard state programmatically (e.g. clipboard.copied).
+
+- Trigger copying from anywhere using clipboard.copy().
+
+- Share the same clipboard store across multiple components.
+
+> When using **Clipboard.RootProvider**, you don’t need to use Clipboard.Root.
+
+<ExampleTabs name="clipboard-root-provider" scope="clipboard" />

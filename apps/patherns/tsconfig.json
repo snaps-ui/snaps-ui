@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.app.json",
+  "include": ["**/*.ts", "**/*.tsx", "eslint.config.mjs"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "strict": true,
+    "customConditions": ["dev"],
+    "paths": {
+      "patherns/*": ["./src/*"]
+    }
+  }
+}

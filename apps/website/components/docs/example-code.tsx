@@ -3,7 +3,7 @@ import path from 'node:path'
 import { Box } from '@snaps-ui/react/box'
 
 import { getHighlighter } from '~/lib/shiki'
-import { type ExampleProps } from '~/components/docs/examples/example-tabs'
+import { type ExampleProps } from '~/components/docs/example-tabs'
 import { CopyButton } from '~/components/mdx/copy-button'
 
 interface CodeProps extends ExampleProps {
@@ -14,7 +14,7 @@ export const ExampleCode = async (props: CodeProps) => {
   const { name, showCopy = true, scope = '' } = props
   const filePath = path.join(
     process.cwd(),
-    'components/docs/examples/ui',
+    '../patherns/src/examples',
     scope,
     `${name}.tsx`
   )
@@ -34,8 +34,8 @@ export const ExampleCode = async (props: CodeProps) => {
         }}
       />
       {showCopy && (
-        <Box pos="absolute" top="8" right="6">
-          <CopyButton code={html} />
+        <Box pos="absolute" top="45" right="6">
+          <CopyButton code={code} />
         </Box>
       )}
     </Box>

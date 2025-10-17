@@ -1,4 +1,4 @@
-import { Box, BoxProps } from '@snaps-ui/react'
+import { Box, type BoxProps } from '@snaps-ui/react/box'
 
 export const ExampleCodeWrapper = (props: BoxProps) => {
   const { children, ...rest } = props

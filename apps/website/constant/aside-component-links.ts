@@ -35,6 +35,11 @@ export const asideComponentLinks = [
     linkUrl: 'circle',
   },
   {
+    name: 'Clipboard',
+    new: true,
+    linkUrl: 'clipboard',
+  },
+  {
     name: 'Close Button',
     new: true,
     linkUrl: 'close-button',

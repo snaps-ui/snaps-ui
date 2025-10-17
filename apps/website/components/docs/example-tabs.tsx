@@ -1,7 +1,7 @@
 import { Tabs } from '@snaps-ui/react/tabs'
 
-import { ExamplePreview } from './example-preview'
-import { ExampleCode } from './example-code'
+import { ExamplePreview } from '~/components/docs/example-preview'
+import { ExampleCode } from '~/components/docs/example-code'
 
 export interface ExampleProps {
   name: string

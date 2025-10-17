@@ -2,9 +2,9 @@ import { Avatar, Button, Card } from '@snaps-ui/react'
 
 export default function CardDemo() {
   return (
-    <Card.Root width="340px">
+    <Card.Root>
       <Card.Body gap="2">
-        <Avatar.Root size="lg" shape="rounded">
+        <Avatar.Root size="2xl" shape="rounded">
           <Avatar.Image src="https://picsum.photos/200/300" />
           <Avatar.Fallback name="Dolor Sit" />
         </Avatar.Root>

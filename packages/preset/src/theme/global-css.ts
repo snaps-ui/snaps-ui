@@ -7,6 +7,7 @@ export const globalCss = defineGlobalStyles({
     _dark: {
       colorScheme: 'dark',
     },
+    colorPalette: 'gray',
   },
   '*, *::before, *::after': {
     borderColor: 'border.subtle',
@@ -14,10 +15,9 @@ export const globalCss = defineGlobalStyles({
     boxSizing: 'border-box',
   },
   '*::placeholder, *[data-placeholder]': {
-    opacity: 1,
-    color: 'fg.subtle',
+    color: 'fg.muted/80',
   },
   '*::selection': {
-    bg: 'colorPalette.alpha3',
+    bg: 'colorPalette.emphasized/80',
   },
 })

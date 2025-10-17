@@ -8,7 +8,6 @@ export const typographyRecipe = defineRecipe({
     color: 'fg.default',
     fontWeight: 'normal',
     margin: '0',
-    userSelect: 'none',
   },
   variants: {
     variant: {
@@ -51,18 +50,11 @@ export const typographyRecipe = defineRecipe({
       },
     },
 
-    align: {
-      left: { textAlign: 'left' },
-      center: { textAlign: 'center' },
-      right: { textAlign: 'right' },
-      justify: { textAlign: 'justify' },
-    },
     gutterBottom: {
       true: { marginBottom: '0.35em' },
     },
   },
   defaultVariants: {
     variant: 'body1',
-    align: 'left',
   },
 })
