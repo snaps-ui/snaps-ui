@@ -1,0 +1,56 @@
+---
+title: Accordion
+description: A collapsible component for displaying content in a vertical stack.
+---
+
+<ExampleTabs name="accordion-basics" scope="accordion" />
+
+## Usage
+
+```tsx
+import { Accordion } from '@snaps-ui/react'
+
+;<Accordion.Root>
+  <Accordion.Item>
+    <Accordion.ItemTrigger>
+      <Accordion.ItemIndicator />
+    </Accordion.ItemTrigger>
+    <Accordion.ItemContent>
+      <Accordion.ItemBody />
+    </Accordion.ItemContent>
+  </Accordion.Item>
+</Accordion.Root>
+```
+
+## Examples
+
+### Default Value
+
+Set the **defaultValue** prop to specify which item should be expanded by default.
+
+<ExampleTabs name="accordion-default-value" scope="accordion" />
+
+### Collapsible
+
+Use the **collapsible** prop to allow users to close all accordion items.
+
+<ExampleTabs name="accordion-collapsible" scope="accordion" />
+
+### Multiple Panels
+
+Use the **multiple** prop to enable expanding multiple panels at the same time.
+
+<ExampleTabs name="accordion-multiple" scope="accordion" />
+
+### Size
+
+Use the **size** prop to adjust the overall size of the accordion.
+Available sizes: **sm**, **md**, **lg**.
+
+<ExampleTabs name="accordion-size" scope="accordion" />
+
+### Variants
+
+Use the **variant** prop to switch between different visual styles of the accordion.
+
+<ExampleTabs name="accordion-variant" scope="accordion" />

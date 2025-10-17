@@ -1,5 +1,10 @@
 export const asideComponentLinks = [
   {
+    name: 'Accordion',
+    new: true,
+    linkUrl: 'accordion',
+  },
+  {
     name: 'Avatar',
     new: true,
     linkUrl: 'avatar',
@@ -98,11 +103,6 @@ export const asideComponentLinks = [
     name: 'KBD',
     new: false,
     linkUrl: 'kbd',
-  },
-  {
-    name: 'Loader - WIP',
-    new: false,
-    linkUrl: 'loader',
   },
   {
     name: 'Paper',
