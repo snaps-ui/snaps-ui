@@ -14,6 +14,10 @@ import { recipes } from './theme/recipe'
 import { slotRecipes } from './theme/slot-recipe'
 import red from './colors/red'
 import snaps from './colors/snaps'
+import blue from './colors/blue'
+import green from './colors/green'
+import purple from './colors/purple'
+import orange from './colors/orange'
 
 export const createSnapsPreset = (options: PresetsOptions) => {
   const { accentColor, radius, grayColor } = options
@@ -45,6 +49,10 @@ export const createSnapsPreset = (options: PresetsOptions) => {
           colors: {
             ...tokens.colors,
             red: red.tokens,
+            blue: blue.tokens,
+            green: green.tokens,
+            purple: purple.tokens,
+            orange: orange.tokens,
             snaps: snaps.tokens,
             gray: grayColor.tokens ?? {},
             [accentColor.name]: accentColor.tokens,
@@ -55,6 +63,10 @@ export const createSnapsPreset = (options: PresetsOptions) => {
           colors: {
             ...semanticTokens.colors,
             red: red.semanticTokens,
+            blue: blue.semanticTokens,
+            green: green.semanticTokens,
+            purple: purple.semanticTokens,
+            orange: orange.semanticTokens,
             snaps: snaps.semanticTokens,
             gray: normalizeNeutralTokens(grayColor.semanticTokens),
             [accentColor.name]: accentColor.semanticTokens,
