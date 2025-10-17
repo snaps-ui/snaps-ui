@@ -5,8 +5,10 @@ import { cardSlotRecipe } from './card.recipe'
 import { tabsRecipe } from './tabs.recipe'
 import { fieldRecipe } from './field.recipe'
 import { clipboardSlotRecipe } from './clipboard.recipe'
+import { accordionSlotRecipe } from './accordion.recipe'
 
 export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
+  accordionSlotRecipe,
   avaterSlotRecipe,
   cardSlotRecipe,
   clipboardSlotRecipe,
