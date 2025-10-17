@@ -1,22 +1,22 @@
 import * as runtime from 'react/jsx-runtime'
 import { Kbd } from '@snaps-ui/react/kbd'
+import { Card } from '@snaps-ui/react/card'
 
-import { ExampleTabs } from '~/components/docs/examples/example-tabs'
-import { ExamplePreview } from '~/components/docs/examples/example-preview'
-import { ExampleCode } from '~/components/docs/examples/example-code'
-import { ExampleCodeWrapper } from '~/components/docs/examples/example-code-wrapper'
+import { ExampleTabs } from '~/components/docs/example-tabs'
+import { ExamplePreview } from '~/components/docs/example-preview'
+import { ExampleCode } from '~/components/docs/example-code'
+import { ExampleCodeWrapper } from '~/components/docs/example-code-wrapper'
 import { Callout } from '~/components/mdx/callout'
 import { Anchor } from '~/components/mdx/anchor'
 import { Code, Pre } from '~/components/mdx/code'
 import { CodeBlock } from '~/components/mdx/code-block'
-import Link from 'next/link'
-import { Typography } from '@snaps-ui/react'
 
 const sharedComponents = {
   a: Anchor,
   kbd: Kbd,
   pre: Pre,
   code: Code,
+  card: Card,
   callout: Callout,
   ExampleTabs: ExampleTabs,
   ExamplePreview: ExamplePreview,

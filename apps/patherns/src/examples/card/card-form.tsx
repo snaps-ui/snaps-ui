@@ -1,7 +1,7 @@
 import { Button, Card, Field, Stack } from '@snaps-ui/react'
 
 export const CardForm = () => (
-  <Card.Root maxW="sm">
+  <Card.Root>
     <Card.Header>
       <Card.Title>Sign up</Card.Title>
       <Card.Description>

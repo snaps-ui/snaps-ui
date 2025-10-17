@@ -12,6 +12,7 @@
     "start": "next start",
     "lint": "eslint"
   },
+  "author": "Justice Chimobi <chimobi.justice@gmail.com>",
   "dependencies": {
     "@shikijs/rehype": "^3.13.0",
     "@shikijs/transformers": "^3.13.0",

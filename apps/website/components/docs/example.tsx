@@ -1,9 +1,9 @@
 import { Box } from '@snaps-ui/react/box'
 
-import { ExamplePreview } from './example-preview'
-import { ExampleCodeWrapper } from './example-code-wrapper'
-import { ExampleCode } from './example-code'
-import { ExampleProps } from './example-tabs'
+import { ExamplePreview } from '~/components/docs/example-preview'
+import { ExampleCodeWrapper } from '~/components/docs/example-code-wrapper'
+import { ExampleCode } from '~/components/docs/example-code'
+import { type ExampleProps } from '~/components/docs/example-tabs'
 
 export const Example = (props: ExampleProps) => {
   const { name } = props

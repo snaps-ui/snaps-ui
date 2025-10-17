@@ -1,9 +1,8 @@
 'use client'
 
 import { defineStyles } from '@pandacss/dev'
-import { Box, type BoxProps } from '@snaps-ui/react/box'
 import { IconButton } from '@snaps-ui/react/icon-button'
-
+import { Box, type BoxProps } from '@snaps-ui/react/box'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { LuCheck, LuCopy } from 'react-icons/lu'
 
@@ -30,8 +29,8 @@ const preStyle = defineStyles({
 })
 
 export const Pre = (props: BoxProps) => {
-  const [copied, setCopied] = useState(false)
   const isShiki = props.className?.includes('shiki')
+  const [copied, setCopied] = useState(false)
 
   const ref = useRef<HTMLPreElement | null>(null)
   const timeout = useRef<NodeJS.Timeout | null>(null)
@@ -52,16 +51,23 @@ export const Pre = (props: BoxProps) => {
     }
   }, [])
 
+  useEffect(() => {
+    return () => {
+      if (timeout.current) clearTimeout(timeout.current)
+    }
+  }, [])
+
   if (isShiki) {
     return (
       <Box position="relative" marginY="1.6em">
         <Box
           as="pre"
           {...props}
-          // ref={ref}
+          ref={ref as unknown as React.Ref<HTMLDivElement>}
           css={{ ...preStyle, marginY: '0' }}
         />
-        <Box pos="absolute" top="3" right="3.5" className="dark">
+
+        <Box pos="absolute" top="3" right="3.5">
           <IconButton onClick={onCopy} variant="ghost" size="sm">
             {copied ? <LuCheck /> : <LuCopy />}
           </IconButton>

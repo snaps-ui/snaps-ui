@@ -1,9 +1,11 @@
 import dynamic from 'next/dynamic'
-import type { ExampleProps } from './example-tabs'
+import type { ExampleProps } from '~/components/docs/example-tabs'
 
 export const ExamplePreview = ({ name, scope = '' }: ExampleProps) => {
   const Component = dynamic(async () => {
-    const mod = await import(`../examples/ui/${scope}/${name}.tsx`)
+    const mod = await import(
+      `../../../patherns/src/examples/${scope}/${name}.tsx`
+    )
 
     // Convert file-name (e.g. "avatar-card") → "AvatarCard"
     const componentName = name

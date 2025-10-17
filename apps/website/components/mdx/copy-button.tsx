@@ -1,20 +1,18 @@
 'use client'
 
-import { useState } from 'react'
+import { IconButton } from '@snaps-ui/react/icon-button'
+import { Clipboard } from '@snaps-ui/react/clipboard'
 
 export function CopyButton({ code }: { code?: string }) {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopy = async () => {
-    if (!code) return
-    await navigator.clipboard.writeText(code)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
   return (
-    <button onClick={handleCopy} className="copy-btn" aria-label="Copy code">
-      {copied ? 'Copied!' : 'Copy'}
-    </button>
+    <Clipboard.Root value={code}>
+      <Clipboard.Control>
+        <Clipboard.Trigger asChild>
+          <IconButton variant="ghost" size="sm">
+            <Clipboard.Indicator />
+          </IconButton>
+        </Clipboard.Trigger>
+      </Clipboard.Control>
+    </Clipboard.Root>
   )
 }
