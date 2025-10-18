@@ -11,33 +11,19 @@ export const typographyRecipe = defineRecipe({
   },
   variants: {
     variant: {
-      h1: {
-        textStyle: '5xl',
-        fontWeight: 'bold',
-        lineHeight: '3.75rem',
-        letterSpacing: '-0.02em',
-      },
+      h1: { textStyle: '6xl', fontWeight: 'bold', letterSpacing: '-0.02em' },
       h2: {
-        textStyle: '4xl',
+        textStyle: '5xl',
         fontWeight: 'semibold',
-        lineHeight: '2.75rem',
         letterSpacing: '-0.02em',
       },
-      h3: { textStyle: '3xl', fontWeight: 'semibold', lineHeight: '2.375rem' },
-      h4: { textStyle: '2xl', fontWeight: 'semibold', lineHeight: '2rem' },
-      h5: { textStyle: 'xl', fontWeight: 'medium', lineHeight: '1.875rem' },
-      h6: { textStyle: 'lg', fontWeight: 'medium', lineHeight: '1.75rem' },
+      h3: { textStyle: '4xl', fontWeight: 'semibold' },
+      h4: { textStyle: '3xl', fontWeight: 'medium' },
+      h5: { textStyle: '2xl', fontWeight: 'medium' },
+      h6: { textStyle: 'xl', fontWeight: 'medium' },
 
-      subtitle1: {
-        textStyle: 'md',
-        fontWeight: 'medium',
-        lineHeight: '1.5rem',
-      },
-      subtitle2: {
-        textStyle: 'sm',
-        fontWeight: 'medium',
-        lineHeight: '1.25rem',
-      },
+      subtitle1: { textStyle: 'lg', fontWeight: 'medium', color: 'fg.muted' },
+      subtitle2: { textStyle: 'md', fontWeight: 'medium', color: 'fg.muted' },
 
       body1: { textStyle: 'md', lineHeight: '1.5rem' },
       body2: { textStyle: 'sm', lineHeight: '1.25rem' },
