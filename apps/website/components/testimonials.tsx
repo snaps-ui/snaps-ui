@@ -4,10 +4,9 @@ import Link from 'next/link'
 import { Box } from '@snaps-ui/react/box'
 import { Card } from '@snaps-ui/react/card'
 import { Grid, GridItem } from '@snaps-ui/react/grid'
-import { Stack, HStack } from '@snaps-ui/react/stack'
 import { Flex } from '@snaps-ui/react/flex'
 import { Typography } from '@snaps-ui/react/typography'
-import { Avatar } from '@snaps-ui/react/avatar'
+import { Persona } from '@snaps-ui/react/persona'
 import { FaLinkedin } from 'react-icons/fa'
 
 import { testimonials } from '~/constant/testimonials'
@@ -47,17 +46,12 @@ export const Testimonials = () => {
                       justifyContent={'space-between'}
                       alignItems={'flex-start'}
                     >
-                      <HStack mb="6" gap="3">
-                        <Avatar.Root size={'sm'}>
-                          <Avatar.Fallback name={name} />
-                          <Avatar.Image src={image} />
-                        </Avatar.Root>
-
-                        <Stack gap="0">
-                          <Card.Title mt="2">{name}</Card.Title>
-                          <Typography variant="body2">{role}</Typography>
-                        </Stack>
-                      </HStack>
+                      <Persona
+                        name={name}
+                        title={role}
+                        img={image}
+                        imgSize="xl"
+                      />
 
                       {linkUrl && (
                         <Link
