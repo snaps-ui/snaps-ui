@@ -109,7 +109,11 @@ export const asideComponentLinks = [
     new: true,
     linkUrl: 'paper',
   },
-
+  {
+    name: 'Persona',
+    new: true,
+    linkUrl: 'persona',
+  },
   {
     name: 'Skeleton',
     new: false,

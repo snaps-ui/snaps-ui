@@ -1,0 +1,47 @@
+---
+title: Persona
+description: A composite component that combines an avatar, name, and title to represent a person or profile.
+---
+
+<ExampleTabs name="persona-basics" scope="persona" />
+
+## Usage
+
+```tsx
+import { Persona } from '@snaps-ui/react'
+
+;<Persona
+  name="Justice Chimobi"
+  title="Frontend Engineer"
+  img="justice-chimobi.png"
+  imgSize="md"
+/>
+```
+
+### The Persona component is made up of the following parts:
+
+**Avatar** — Displays the user’s image or initials.
+
+**Name** — The main text, typically the person’s full name.
+
+**Title** — A secondary text, usually representing the role or description.
+
+## Examples
+
+### Horizontal Layout
+
+Use the default layout to display the avatar beside the text.
+
+<ExampleTabs name="persona-horizontal" scope="persona" />
+
+## Vertical Layout
+
+Use the orientation="vertical" prop to stack the avatar above the text.
+
+<ExampleTabs name="persona-vertical" scope="persona" />
+
+## Custom Sizes
+
+Adjust the avatar size using the imgSize prop.
+
+<ExampleTabs name="persona-sizes" scope="persona" />
