@@ -1,10 +1,10 @@
-import { Field } from '@snaps-ui/react/field'
+import { Field, Input } from '@snaps-ui/react'
 
 export const FieldError = () => {
   return (
     <Field.Root invalid>
       <Field.Label>Email</Field.Label>
-      <Field.Input placeholder="snapsui@example.com" />
+      <Input placeholder="snapsui@example.com" />
       <Field.Error>This is an error text</Field.Error>
     </Field.Root>
   )

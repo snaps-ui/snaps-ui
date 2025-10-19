@@ -12,6 +12,7 @@ import { textareaRecipe } from './textarea.recipe'
 import { commandInputRecipe } from './command-Input.recipe'
 import { badgeRecipes } from './bagde.recipe'
 import { groupRecipe } from './group.recipe'
+import { floatLabelRecipe } from './float-label.recipe'
 
 export const recipes: Record<
   string,
@@ -20,6 +21,7 @@ export const recipes: Record<
   badgeRecipes,
   buttonRecipe,
   commandInputRecipe,
+  floatLabelRecipe,
   groupRecipe,
   inputRecipe,
   kbdRecipe,

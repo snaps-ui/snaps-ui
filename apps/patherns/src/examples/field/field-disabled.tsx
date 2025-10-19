@@ -1,10 +1,10 @@
-import { Field } from '@snaps-ui/react/field'
+import { Field, Input } from '@snaps-ui/react'
 
 export const FieldDisabled = () => {
   return (
     <Field.Root disabled>
       <Field.Label>Email</Field.Label>
-      <Field.Input placeholder="snapsui@example.com" />
+      <Input placeholder="snapsui@example.com" />
     </Field.Root>
   )
 }

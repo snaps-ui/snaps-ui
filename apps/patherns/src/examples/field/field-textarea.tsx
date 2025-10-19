@@ -1,10 +1,10 @@
-import { Field } from '@snaps-ui/react/field'
+import { Field, Textarea } from '@snaps-ui/react'
 
 export const FieldTextarea = () => {
   return (
     <Field.Root>
       <Field.Label>Password</Field.Label>
-      <Field.Textarea placeholder="Enter Bio..." />
+      <Textarea placeholder="Enter Bio..." />
     </Field.Root>
   )
 }

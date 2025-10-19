@@ -1,0 +1,44 @@
+---
+title: Float Input
+description: A floating label input built on the Input and Field components for compact, accessible forms.
+---
+
+<ExampleTabs name="float-input-basics" scope="float-input" />
+
+## Usage
+
+```tsx
+import { FloatInput } from '@snaps-ui/react'
+
+;<FloatInput />
+```
+
+The **FloatInput** combines the Input and **Field.Label** components to create an input with a floating label.
+
+It accepts all props available in **Input** component.
+
+## Examples
+
+### Error Text
+
+Wrap the **FloatInput** in **Field.Root** and pass the invalid prop to **Field.Root**, then use **Field.Error** to show validation feedback.
+
+<ExampleTabs name="float-with-error" scope="float-input" />
+
+### Helper Text
+
+Use the **Field.HelperText** to add helper text to the field.
+
+<ExampleTabs name="float-with-helper" scope="float-input" />
+
+### Disable
+
+You can use the **disabled** prop to disable the field.
+
+<ExampleTabs name="float-with-disabled" scope="float-input" />
+
+### Size
+
+Pass the **size** prop to adjust both the input height and label font size.
+
+<ExampleTabs name="float-with-size" scope="float-input" />

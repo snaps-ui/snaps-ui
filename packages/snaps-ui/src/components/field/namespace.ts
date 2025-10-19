@@ -6,8 +6,6 @@ export {
   FieldHelperText as HelperText,
   FieldSelect as Select,
   FieldRequiredIndicator as RequiredIndicator,
-  FieldInput as Input,
-  FieldTextarea as Textarea,
   FieldContext,
 } from './field'
 
@@ -19,6 +17,4 @@ export type {
   FieldHelperTextProps as HelperTextProps,
   FieldSelectProps as SelectProps,
   FieldRequiredIndicatorProps as RequiredIndicatorProps,
-  FieldInputProps as InputProps,
-  FieldTextareaProps as TextareaProps,
 } from './field'

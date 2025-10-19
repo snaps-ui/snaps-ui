@@ -1,155 +1,68 @@
 export const asideComponentLinks = [
   {
-    name: 'Accordion',
-    new: true,
-    linkUrl: 'accordion',
+    section: 'Layout',
+    items: [
+      { name: 'Box', new: false, linkUrl: 'box' },
+      { name: 'Center', new: false, linkUrl: 'center' },
+      { name: 'Circle', new: false, linkUrl: 'circle' },
+      { name: 'Container', new: false, linkUrl: 'container' },
+      { name: 'Flex', new: false, linkUrl: 'flex' },
+      { name: 'Grid', new: false, linkUrl: 'grid' },
+      { name: 'Stack', new: false, linkUrl: 'stack' },
+      { name: 'Paper', new: true, linkUrl: 'paper' },
+      { name: 'Group', new: true, linkUrl: 'group' },
+      { name: 'Card', new: false, linkUrl: 'card' },
+    ],
   },
+
   {
-    name: 'Avatar',
-    new: true,
-    linkUrl: 'avatar',
+    section: 'Data Display',
+    items: [
+      { name: 'Avatar', new: true, linkUrl: 'avatar' },
+      { name: 'Avatar Group', new: true, linkUrl: 'avatar-group' },
+      { name: 'Persona', new: true, linkUrl: 'persona' },
+      { name: 'Image', new: false, linkUrl: 'image' },
+      { name: 'Typography', new: false, linkUrl: 'typography' },
+      { name: 'KBD', new: false, linkUrl: 'kbd' },
+    ],
   },
+
   {
-    name: 'Avatar Group',
-    new: true,
-    linkUrl: 'avatar-group',
+    section: 'Feedback',
+    items: [
+      { name: 'Button', new: false, linkUrl: 'button' },
+      { name: 'Icon Button', new: false, linkUrl: 'icon-button' },
+      { name: 'Close Button', new: true, linkUrl: 'close-button' },
+      { name: 'Skeleton', new: false, linkUrl: 'skeleton' },
+      { name: 'Spinner', new: false, linkUrl: 'spinner' },
+    ],
   },
+
   {
-    name: 'Box',
-    new: false,
-    linkUrl: 'box',
+    section: 'Form',
+    items: [
+      { name: 'Field', new: true, linkUrl: 'field' },
+      { name: 'Input', new: false, linkUrl: 'input' },
+      { name: 'Float Input', new: true, linkUrl: 'floating-input' },
+      { name: 'Textarea', new: false, linkUrl: 'textarea' },
+      { name: 'Command Input', new: true, linkUrl: 'command-input' },
+      { name: 'Input Group - WIP', new: false, linkUrl: 'input-group' },
+      { name: 'Clipboard', new: true, linkUrl: 'clipboard' },
+    ],
   },
+
   {
-    name: 'Button',
-    new: false,
-    linkUrl: 'button',
-  },
-  {
-    name: 'Card',
-    new: false,
-    linkUrl: 'card',
-  },
-  {
-    name: 'Center',
-    new: false,
-    linkUrl: 'center',
-  },
-  {
-    name: 'Circle',
-    new: false,
-    linkUrl: 'circle',
-  },
-  {
-    name: 'Clipboard',
-    new: true,
-    linkUrl: 'clipboard',
-  },
-  {
-    name: 'Close Button',
-    new: true,
-    linkUrl: 'close-button',
-  },
-  {
-    name: 'Command Input',
-    new: true,
-    linkUrl: 'command-input',
-  },
-  {
-    name: 'Container',
-    new: false,
-    linkUrl: 'container',
-  },
-  {
-    name: 'Field',
-    new: true,
-    linkUrl: 'field',
-  },
-  {
-    name: 'Flex',
-    new: false,
-    linkUrl: 'flex',
-  },
-  {
-    name: 'Grid',
-    new: false,
-    linkUrl: 'grid',
-  },
-  {
-    name: 'Group',
-    new: true,
-    linkUrl: 'group',
-  },
-  {
-    name: 'Icon Button',
-    new: false,
-    linkUrl: 'icon-button',
-  },
-  {
-    name: 'Image',
-    new: false,
-    linkUrl: 'image',
-  },
-  {
-    name: 'Input',
-    new: false,
-    linkUrl: 'input',
-  },
-  {
-    name: 'Input Group - WIP',
-    new: false,
-    linkUrl: 'input-group',
-  },
-  {
-    name: 'KBD',
-    new: false,
-    linkUrl: 'kbd',
-  },
-  {
-    name: 'Paper',
-    new: true,
-    linkUrl: 'paper',
-  },
-  {
-    name: 'Persona',
-    new: true,
-    linkUrl: 'persona',
-  },
-  {
-    name: 'Skeleton',
-    new: false,
-    linkUrl: 'skeleton',
-  },
-  {
-    name: 'Spinner',
-    new: false,
-    linkUrl: 'spinner',
-  },
-  {
-    name: 'Stack',
-    new: false,
-    linkUrl: 'stack',
-  },
-  {
-    name: 'Tabs',
-    new: true,
-    linkUrl: 'tabs',
-  },
-  {
-    name: 'Textarea',
-    new: false,
-    linkUrl: 'textarea',
-  },
-  {
-    name: 'Typography',
-    new: false,
-    linkUrl: 'typography',
+    section: 'Disclosure',
+    items: [
+      { name: 'Accordion', new: true, linkUrl: 'accordion' },
+      { name: 'Tabs', new: true, linkUrl: 'tabs' },
+    ],
   },
 ]
 
-export const asideUtilitiesLinks = [
+export const asideUtilLinks = [
   {
-    name: 'Client Only',
-    new: true,
-    linkUrl: 'client-only',
+    section: 'Utilities',
+    items: [{ name: 'Client Only', new: true, linkUrl: 'client-only' }],
   },
 ]

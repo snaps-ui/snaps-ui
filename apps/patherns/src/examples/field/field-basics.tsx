@@ -1,10 +1,10 @@
-import { Field } from '@snaps-ui/react/field'
+import { Field, Input } from '@snaps-ui/react'
 
 export const FieldBasics = () => {
   return (
     <Field.Root>
       <Field.Label>Password</Field.Label>
-      <Field.Input type="password" placeholder="enter your password" />
+      <Input type="password" placeholder="enter your password" />
     </Field.Root>
   )
 }

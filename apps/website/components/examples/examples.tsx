@@ -6,8 +6,10 @@ import { Box } from '@snaps-ui/react/box'
 import { Center } from '@snaps-ui/react/center'
 import { Flex } from '@snaps-ui/react/flex'
 import { Field } from '@snaps-ui/react/field'
+import { Input } from '@snaps-ui/react/input'
 import { Paper } from '@snaps-ui/react/paper'
 import { HStack, Stack } from '@snaps-ui/react/stack'
+import { Textarea } from '@snaps-ui/react/textarea'
 import { Typography } from '@snaps-ui/react/typography'
 import { Tabs } from '@snaps-ui/react/tabs'
 import { FaPlus } from 'react-icons/fa6'
@@ -25,7 +27,7 @@ export const BillingAddress = () => {
       <Stack gap={5}>
         <Field.Root>
           <Field.Label>Message</Field.Label>
-          <Field.Textarea
+          <Textarea
             placeholder="Add any additional message"
             variant={'subtle'}
             rows={4}
@@ -63,7 +65,7 @@ export const PaymentMethod = () => {
       <Stack gap={5}>
         <Field.Root>
           <Field.Label>Name</Field.Label>
-          <Field.Input placeholder="John Doe" variant={'subtle'} />
+          <Input placeholder="John Doe" variant={'subtle'} />
         </Field.Root>
 
         <Flex gap={3}>
@@ -72,10 +74,7 @@ export const PaymentMethod = () => {
               <Field.Label>
                 Card Number <Field.RequiredIndicator />
               </Field.Label>
-              <Field.Input
-                placeholder="1234 45675 45332 3445"
-                variant={'subtle'}
-              />
+              <Input placeholder="1234 45675 45332 3445" variant={'subtle'} />
               <Field.Error>The card number is required</Field.Error>
             </Field.Root>
           </Box>
@@ -83,7 +82,7 @@ export const PaymentMethod = () => {
           <Box width={'30%'}>
             <Field.Root>
               <Field.Label>CVV</Field.Label>
-              <Field.Input placeholder="John Doe" variant={'subtle'} />
+              <Input placeholder="John Doe" variant={'subtle'} />
             </Field.Root>
           </Box>
         </Flex>

@@ -11,7 +11,7 @@ import { LuCheck, LuX } from 'react-icons/lu'
 
 export const CardWithAvatar = () => {
   return (
-    <Card.Root>
+    <Card.Root width={{ base: 'full', md: '340px' }}>
       <Card.Body gap="2">
         <Card.Header>
           <Flex justifyContent={'space-between'} alignItems={'flex-start'}>
