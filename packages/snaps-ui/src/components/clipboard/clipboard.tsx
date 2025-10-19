@@ -107,3 +107,15 @@ export const ClipboardContext = ArkClipboard.Context
 
 export interface ClipboardCopyStatusDetails
   extends ArkClipboard.CopyStatusDetails {}
+
+// -------------------- CopyText --------------------
+export const ClipboardStatus = React.forwardRef<
+  HTMLDivElement,
+  ClipboardIndicatorProps
+>(function ClipboardStatus(props, ref) {
+  return (
+    <ClipboardIndicator copied="Copied" ref={ref} {...props}>
+      Copy
+    </ClipboardIndicator>
+  )
+})

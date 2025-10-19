@@ -10,10 +10,14 @@ import { Callout } from '~/components/mdx/callout'
 import { Anchor } from '~/components/mdx/anchor'
 import { Code, Pre } from '~/components/mdx/code'
 import { CodeBlock } from '~/components/mdx/code-block'
-import { P, Strong } from './mdx/typography'
+import { H1, H2, H3, H4, P, Strong } from '~/components/mdx/typography'
 
 const sharedComponents = {
   a: Anchor,
+  h1: H1,
+  h2: H2,
+  h3: H3,
+  h4: H4,
   kbd: Kbd,
   pre: Pre,
   code: Code,

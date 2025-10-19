@@ -14,9 +14,10 @@ export const clipboardSlotRecipe = defineSlotRecipe({
       display: 'flex',
       gap: '2',
     },
+    trigger: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '2',
+    },
   },
-
-  variants: {},
-
-  defaultVariants: {},
 })

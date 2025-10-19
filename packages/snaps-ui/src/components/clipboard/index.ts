@@ -6,6 +6,7 @@ export {
   ClipboardTrigger,
   ClipboardLabel,
   ClipboardInput,
+  ClipboardStatus,
   ClipboardContext,
 } from './clipboard'
 
