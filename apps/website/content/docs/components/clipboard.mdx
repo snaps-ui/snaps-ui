@@ -9,7 +9,6 @@ description: A component to copy text to the clipboard
 
 ```tsx
 import { Clipboard } from '@snaps-ui/react'
-
 ;<Clipboard.Root>
   <Clipboard.Trigger>
     <Clipboard.CopyText />
@@ -38,6 +37,12 @@ Use the **timeout** prop to change the duration of the copy message.
 You can use the **useClipboard** hook to create a custom clipboard component.
 
 <ExampleTabs name="clipboard-with-store" scope="clipboard" />
+
+### With Status Text
+
+You can use the **Clipboard.Status** to show a copy text.
+
+<ExampleTabs name="clipboard-with-status-text" scope="clipboard" />
 
 ### Root Provider
 
