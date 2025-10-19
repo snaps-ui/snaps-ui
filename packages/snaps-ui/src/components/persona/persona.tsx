@@ -63,7 +63,7 @@ export const Persona = forwardRef<HTMLDivElement, PersonaProps>(
         </Avatar.Root>
 
         {(name || title) && (
-          <Stack gap={2}>
+          <Stack>
             {name && (
               <Typography
                 variant="body1"

@@ -1,10 +1,10 @@
-import { Field } from '@snaps-ui/react/field'
+import { Field, Input } from '@snaps-ui/react'
 
 export const FieldHelper = () => {
   return (
     <Field.Root>
       <Field.Label>Email</Field.Label>
-      <Field.Input placeholder="snapsui@example.com" />
+      <Input placeholder="snapsui@example.com" />
       <Field.HelperText>This is a helper text</Field.HelperText>
     </Field.Root>
   )

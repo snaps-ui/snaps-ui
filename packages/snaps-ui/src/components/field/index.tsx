@@ -6,8 +6,6 @@ export {
   FieldHelperText,
   FieldSelect,
   FieldRequiredIndicator,
-  FieldInput,
-  FieldTextarea,
   FieldContext,
 } from './field'
 
@@ -19,8 +17,6 @@ export type {
   FieldHelperTextProps,
   FieldSelectProps,
   FieldRequiredIndicatorProps,
-  FieldInputProps,
-  FieldTextareaProps,
 } from './field'
 
 export * as Field from './namespace'

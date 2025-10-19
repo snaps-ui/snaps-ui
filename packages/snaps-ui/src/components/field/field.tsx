@@ -84,12 +84,6 @@ export const FieldSelect = withSlotContext<HTMLLabelElement, FieldSelectProps>(
   'select'
 )
 
-export type FieldInputProps = ComponentProps<typeof FieldInput>
-export const FieldInput = styled(ArkField.Input, inputRecipe)
-
-export type FieldTextareaProps = ComponentProps<typeof FieldTextarea>
-export const FieldTextarea = styled(ArkField.Textarea, textareaRecipe)
-
 // -------------------- Indicator --------------------
 export interface FieldRequiredIndicatorProps extends HTMLArkProps<'span'> {
   fallback?: React.ReactNode | undefined

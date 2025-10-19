@@ -4,6 +4,7 @@ import { Button } from '@snaps-ui/react/button'
 import { Box } from '@snaps-ui/react/box'
 import { Flex } from '@snaps-ui/react/flex'
 import { Field } from '@snaps-ui/react/field'
+import { Input } from '@snaps-ui/react/input'
 import { Paper } from '@snaps-ui/react/paper'
 import { Stack } from '@snaps-ui/react/stack'
 import { Typography } from '@snaps-ui/react/typography'
@@ -46,15 +47,12 @@ export const AuthenticationExample = () => {
                 <Field.Label>
                   Email <Field.RequiredIndicator />
                 </Field.Label>
-                <Field.Input
-                  placeholder="mail@example.com"
-                  variant={'subtle'}
-                />
+                <Input placeholder="mail@example.com" variant={'subtle'} />
               </Field.Root>
 
               <Field.Root>
                 <Field.Label>Password</Field.Label>
-                <Field.Input placeholder="*********" variant={'subtle'} />
+                <Input placeholder="*********" variant={'subtle'} />
               </Field.Root>
 
               <Stack gap={3}>

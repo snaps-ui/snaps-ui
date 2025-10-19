@@ -10,7 +10,7 @@ import { Badge as SnapsBadge } from '@snaps-ui/react/badge'
 
 import {
   asideComponentLinks,
-  asideUtilitiesLinks,
+  asideUtilLinks,
 } from '~/constant/aside-component-links'
 
 export const DocsPage = ({ children }: { children: React.ReactNode }) => {
@@ -75,38 +75,60 @@ function Sidebar() {
         </Stack>
 
         <Stack gap="3">
-          <Typography variant={'body1'}>Components</Typography>
-
-          {asideComponentLinks.map((link, index: number) => (
-            <Link
-              href={`/docs/components/${link.linkUrl}`}
-              key={index}
-              style={{
-                marginLeft: '6px',
-              }}
-            >
-              <Typography variant={'body2'} color={'fg.muted'} as={'span'}>
-                {link.name} {link.new ? <Badge /> : ''}
+          {asideComponentLinks.map((section, index: number) => (
+            <React.Fragment key={index}>
+              <Typography variant={'body2'} fontSize={'14px'}>
+                {section.section}
               </Typography>
-            </Link>
+
+              {section.items.map((item) => (
+                <Link
+                  href={`/docs/components/${item.linkUrl}`}
+                  key={item.name}
+                  style={{
+                    marginLeft: '6px',
+                  }}
+                >
+                  <Typography
+                    variant={'body2'}
+                    color={'fg.muted'}
+                    as={'span'}
+                    fontSize={'13px'}
+                  >
+                    {item.name} {item.new ? <Badge /> : ''}
+                  </Typography>
+                </Link>
+              ))}
+            </React.Fragment>
           ))}
         </Stack>
 
         <Stack gap="3">
-          <Typography variant={'body1'}>Utilities</Typography>
-
-          {asideUtilitiesLinks.map((link, index: number) => (
-            <Link
-              href={`/docs/utilities/${link.linkUrl}`}
-              key={index}
-              style={{
-                marginLeft: '6px',
-              }}
-            >
-              <Typography variant={'body2'} as={'span'}>
-                {link.name} {link.new ? <Badge /> : ''}
+          {asideUtilLinks.map((section, index: number) => (
+            <React.Fragment key={index}>
+              <Typography variant={'body2'} fontSize={'14px'}>
+                {section.section}
               </Typography>
-            </Link>
+
+              {section.items.map((item) => (
+                <Link
+                  href={`/docs/utilities/${item.linkUrl}`}
+                  key={item.name}
+                  style={{
+                    marginLeft: '6px',
+                  }}
+                >
+                  <Typography
+                    variant={'body2'}
+                    color={'fg.muted'}
+                    as={'span'}
+                    fontSize={'13px'}
+                  >
+                    {item.name} {item.new ? <Badge /> : ''}
+                  </Typography>
+                </Link>
+              ))}
+            </React.Fragment>
           ))}
         </Stack>
       </Stack>

@@ -12,7 +12,11 @@ export default defineConfig({
     }),
   ],
   preflight: true,
-  include: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
+  include: [
+    './app/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+    '../patherns/src/examples/**/*.{js,jsx,ts,tsx}',
+  ],
   outdir: 'dist',
   jsxFramework: 'react',
   staticCss: {

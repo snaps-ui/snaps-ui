@@ -1,7 +1,7 @@
-import { Button, Card, Field, Stack } from '@snaps-ui/react'
+import { Button, Card, Field, Input, Stack } from '@snaps-ui/react'
 
 export const CardForm = () => (
-  <Card.Root>
+  <Card.Root width={{ base: 'full', md: '340px' }}>
     <Card.Header>
       <Card.Title>Sign up</Card.Title>
       <Card.Description>
@@ -12,11 +12,11 @@ export const CardForm = () => (
       <Stack gap="4" w="full">
         <Field.Root>
           <Field.Label>First Name</Field.Label>
-          <Field.Input />
+          <Input />
         </Field.Root>
         <Field.Root>
           <Field.Label>Last Name</Field.Label>
-          <Field.Input />
+          <Input />
         </Field.Root>
       </Stack>
     </Card.Body>
