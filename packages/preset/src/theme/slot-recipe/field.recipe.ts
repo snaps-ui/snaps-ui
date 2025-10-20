@@ -1,7 +1,7 @@
 import { defineSlotRecipe } from '@pandacss/dev'
-import { fieldAnatomy } from '@ark-ui/react'
+import { fieldAnatomy } from '@ark-ui/react/anatomy'
 
-export const fieldRecipe = defineSlotRecipe({
+export const fieldSlotRecipe = defineSlotRecipe({
   className: 'snaps-field',
   slots: fieldAnatomy.keys(),
   base: {
