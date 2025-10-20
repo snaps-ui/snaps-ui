@@ -1,7 +1,7 @@
 import { defineSlotRecipe } from '@pandacss/dev'
 import { tabsAnatomy } from '@ark-ui/react/anatomy'
 
-export const tabsRecipe = defineSlotRecipe({
+export const tabsSlotRecipe = defineSlotRecipe({
   className: 'snaps-tabs',
   slots: tabsAnatomy.keys(),
   base: {
