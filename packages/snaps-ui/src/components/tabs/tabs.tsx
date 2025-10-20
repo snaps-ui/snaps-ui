@@ -6,16 +6,16 @@ import type {
   HTMLStyledProps,
   RecipeVariantProps,
 } from '@snaps-ui/styled-system/types'
-import { tabsRecipe } from '@snaps-ui/styled-system/recipes'
+import { tabsSlotRecipe } from '@snaps-ui/styled-system/recipes'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
 // ─────────────────────────────────────────────
 // Build context utilities for the `tabsRecipe`
 // ─────────────────────────────────────────────
-const { withSlotProvider, withSlotContext } = makeStyleContext(tabsRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(tabsSlotRecipe)
 
-type TabsVariantProps = RecipeVariantProps<typeof tabsRecipe>
+type TabsVariantProps = RecipeVariantProps<typeof tabsSlotRecipe>
 
 // -------------------- Root --------------------
 export type TabsRootProviderProps = Assign<

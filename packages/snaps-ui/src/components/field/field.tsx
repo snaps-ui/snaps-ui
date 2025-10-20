@@ -4,25 +4,19 @@ import * as React from 'react'
 import type { Assign, HTMLArkProps } from '@ark-ui/react'
 import { ark } from '@ark-ui/react/factory'
 import { Field as ArkField, useFieldContext } from '@ark-ui/react/field'
-import {
-  fieldRecipe,
-  inputRecipe,
-  textareaRecipe,
-} from '@snaps-ui/styled-system/recipes'
+import { fieldSlotRecipe } from '@snaps-ui/styled-system/recipes'
 import type {
-  ComponentProps,
   HTMLStyledProps,
   RecipeVariantProps,
 } from '@snaps-ui/styled-system/types'
 import { cx } from '@snaps-ui/styled-system/css'
 
 import { makeStyleContext } from '../../system/make-style-context'
-import { styled } from '@snaps-ui/styled-system/jsx'
 
-const { withSlotProvider, withSlotContext } = makeStyleContext(fieldRecipe)
+const { withSlotProvider, withSlotContext } = makeStyleContext(fieldSlotRecipe)
 
 // Variants from recipe
-type FieldVariantProps = RecipeVariantProps<typeof fieldRecipe>
+type FieldVariantProps = RecipeVariantProps<typeof fieldSlotRecipe>
 
 // -------------------- RootProvider --------------------
 export interface FieldRootProviderProps
@@ -95,7 +89,7 @@ export const FieldRequiredIndicator = React.forwardRef<
 >(function FieldIndicator(props, ref) {
   const { fallback, className, children = '*', ...rest } = props
 
-  const slotStyles = fieldRecipe().requiredIndicator
+  const slotStyles = fieldSlotRecipe().requiredIndicator
 
   const context = useFieldContext()
   if (!context.required) {
