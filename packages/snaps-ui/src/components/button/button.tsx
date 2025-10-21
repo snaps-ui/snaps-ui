@@ -14,6 +14,7 @@ interface LoadingButtonProps {
   isLoading?: boolean
   loadingText?: React.ReactNode
   spinnerPlacement?: 'start' | 'end'
+  spinner?: React.ReactNode
 }
 
 type ButtonBaseProps = ComponentProps<typeof StyledButton>
@@ -29,18 +30,23 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       asChild,
       disabled,
+      spinner,
       ...rest
     } = props
+
+    const LoaderComp = () => <Loader spinner={spinner} />
 
     const checkDisabled = isLoading || disabled
 
     const buttonContent = (
       <>
         {isLoading && spinnerPlacement === 'start' && !loadingText && (
-          <Loader />
+          <LoaderComp />
         )}
         {isLoading && loadingText ? loadingText : children}
-        {isLoading && spinnerPlacement === 'end' && !loadingText && <Loader />}
+        {isLoading && spinnerPlacement === 'end' && !loadingText && (
+          <LoaderComp />
+        )}
       </>
     )
 
