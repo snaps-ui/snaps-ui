@@ -2,14 +2,22 @@
 
 import { Spinner, type SpinnerProps } from '../spinner'
 
-export const Loader = (props: SpinnerProps) => {
+type Props = {
+  spinner?: React.ReactNode
+} & SpinnerProps
+
+export const Loader = (props: Props) => {
+  const { spinner, ...rest } = props
+
+  if (spinner) return <>{spinner}</>
+
   return (
     <Spinner
       width="1.1em"
       height="1.1em"
       borderWidth="1.5px"
       aria-hidden="true"
-      {...props}
+      {...rest}
     />
   )
 }
