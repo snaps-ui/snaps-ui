@@ -1,0 +1,53 @@
+---
+title: Switch
+description: A control element that allows for a binary selection.
+---
+
+<ExampleTabs name="switch-basics" scope="switch" />
+
+## Usage
+
+```tsx
+import { Switch } from '@snaps-ui/react'
+
+;<Switch.Root>
+  <Switch.HiddenInput />
+  <Switch.Control>
+    <Switch.Thumb />
+  </Switch.Control>
+  <Switch.Label />
+</Switch.Root>
+```
+
+## Examples
+
+### Sizes
+
+Pass the **size** prop to the **Switch.Root** component to change the size of the switch component.
+
+<ExampleTabs name="switch-sizes" scope="switch" />
+
+### Colors
+
+Pass the **colorPalette** prop to the **Switch.Root** component to change the color of the component.
+Available palettes include:
+
+- red
+
+- blue
+
+- green
+
+- purple
+
+- orange
+
+- gray
+
+<ExampleTabs name="switch-with-colors" scope="switch" />
+
+### Controlled
+
+Use the **checked** and **onCheckedChange** props to control the state of the switch.
+
+<ExampleTabs name="switch-with-control" scope="switch" />

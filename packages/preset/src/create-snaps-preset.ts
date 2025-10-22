@@ -34,7 +34,7 @@ export const createSnapsPreset = (options: PresetsOptions) => {
     globalCss: {
       ...globalCss,
       html: {
-        colorPallete: accentColor.name,
+        colorPalette: accentColor.name,
       },
     },
     theme: {

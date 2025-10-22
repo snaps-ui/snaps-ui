@@ -35,13 +35,13 @@ export const BillingAddress = () => {
         </Field.Root>
 
         <HStack gap={3}>
-          <Button bg={'accent.default'} ripple>
+          <Button colorPalette={'accent'} ripple>
             Submit
           </Button>
           <Button
             variant={'outline'}
             borderColor={'accent.default'}
-            _hover={{ bg: 'accent.default' }}
+            colorPalette={'accent'}
             ripple
           >
             Cancel
@@ -125,7 +125,7 @@ export const TeamMembers = () => {
             Invite your team to collaborate on this project.
           </Typography>
 
-          <Button bg={'accent.default'}>
+          <Button colorPalette={'accent'}>
             <FaPlus /> Invite Member
           </Button>
         </Stack>

@@ -2,11 +2,11 @@
 
 import { Spinner, type SpinnerProps } from '../spinner'
 
-type Props = {
+export interface LoaderProps extends SpinnerProps {
   spinner?: React.ReactNode
-} & SpinnerProps
+}
 
-export const Loader = (props: Props) => {
+export const Loader = (props: LoaderProps) => {
   const { spinner, ...rest } = props
 
   if (spinner) return <>{spinner}</>
