@@ -48,6 +48,7 @@ export const asideComponentLinks = [
       { name: 'Command Input', new: true, linkUrl: 'command-input' },
       { name: 'Input Group - WIP', new: false, linkUrl: 'input-group' },
       { name: 'Clipboard', new: true, linkUrl: 'clipboard' },
+      { name: 'Switch', new: true, linkUrl: 'switch' },
     ],
   },
 
