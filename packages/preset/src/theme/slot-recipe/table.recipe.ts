@@ -73,10 +73,15 @@ export const tableSlotRecipe = defineSlotRecipe({
       },
       subtle: {
         headCell: { bg: 'bg.subtle' },
+      },
+    },
+    hoverable: {
+      true: {
         row: {
           _hover: { bg: 'bg.subtle' },
         },
       },
+      false: {},
     },
 
     size: {
@@ -104,5 +109,6 @@ export const tableSlotRecipe = defineSlotRecipe({
   defaultVariants: {
     size: 'md',
     variant: 'subtle',
+    hoverable: false,
   },
 })

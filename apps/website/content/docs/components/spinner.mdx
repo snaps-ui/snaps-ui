@@ -9,7 +9,6 @@ description: Used to provide a visual cue that an action is processing
 
 ```tsx
 import { Spinner } from '@snaps-ui/react'
-
 ;<Spinner />
 ```
 
@@ -20,3 +19,16 @@ import { Spinner } from '@snaps-ui/react'
 Use the **size** prop to change the size of the spinner.
 
 <ExampleTabs name="spinner-with-sizes" scope="spinner" />
+
+### Color
+
+Use the **colorPalette** prop to change the color of the spinner.
+
+<ExampleTabs name="spinner-with-color" scope="spinner" />
+
+## Props
+
+| Prop           | Type                                   | Default          | Description                       |
+| -------------- | -------------------------------------- | ---------------- | --------------------------------- |
+| `size`         | `"xs" \| "sm" \| "md" \| "lg" \| "xl"` | `"md"`           | Controls the size of the spinner. |
+| `colorPalette` | `string`                               | `"currentColor"` | Sets the color of the spinner.    |

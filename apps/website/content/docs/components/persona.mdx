@@ -9,7 +9,6 @@ description: A composite component that combines an avatar, name, and title to r
 
 ```tsx
 import { Persona } from '@snaps-ui/react'
-
 ;<Persona
   name="Justice Chimobi"
   title="Frontend Engineer"
@@ -45,3 +44,14 @@ Use the orientation="vertical" prop to stack the avatar above the text.
 Adjust the avatar size using the imgSize prop.
 
 <ExampleTabs name="persona-sizes" scope="persona" />
+
+## Props
+
+| Prop          | Type                           | Default        | Description                                                      |
+| ------------- | ------------------------------ | -------------- | ---------------------------------------------------------------- |
+| `name`        | `string`                       | —              | The main text displayed as the person’s name.                    |
+| `title`       | `string`                       | —              | Secondary text that represents the person’s role or description. |
+| `img`         | `string`                       | —              | The source URL or path of the person’s avatar image.             |
+| `imgSize`     | `"sm" \| "md" \| "lg" \| "xl"` | `"md"`         | Controls the size of the avatar image.                           |
+| `orientation` | `"horizontal" \| "vertical"`   | `"horizontal"` | Defines the layout direction of the Persona component.           |
+| `spacing`     | `string \| number`             | `"0.5rem"`     | Sets the space between the avatar and text content.              |

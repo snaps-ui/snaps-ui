@@ -9,7 +9,6 @@ description: A floating label input built on the Input and Field components for 
 
 ```tsx
 import { FloatInput } from '@snaps-ui/react'
-
 ;<FloatInput />
 ```
 
@@ -42,3 +41,18 @@ You can use the **disabled** prop to disable the field.
 Pass the **size** prop to adjust both the input height and label font size.
 
 <ExampleTabs name="float-with-size" scope="float-input" />
+
+## Props
+
+### FloatInput
+
+| Prop       | Type                                                                            | Default  | Description                                                               |
+| ---------- | ------------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------- |
+| `label`    | `string`                                                                        | —        | The floating label text displayed above the input when focused or filled. |
+| `id`       | `string`                                                                        | —        | Please wrap your **FloatInput** with **Field.Root**.                      |
+| `size`     | `"2xs" \| `"xs" \| "sm" \| "md" \| `"lg" \| "md" \| "lg"` \| `"xl"` \| `"2xl" ` | `"md"`   | Controls the height of the input and size of the label.                   |
+| `disabled` | `boolean`                                                                       | `false`  | Disables the input and label interaction.                                 |
+| `type`     | `string`                                                                        | `"text"` | The input type (e.g., `text`, `email`, `password`).                       |
+| `value`    | `string`                                                                        | —        | The controlled value of the input.                                        |
+| `onChange` | `(event: React.ChangeEvent<HTMLInputElement>) => void`                          | —        | Callback invoked when the input value changes.                            |
+| `name`     | `string`                                                                        | —        | The name of the input field for form submission.                          |

@@ -9,7 +9,6 @@ description: A collapsible component for displaying content in a vertical stack.
 
 ```tsx
 import { Accordion } from '@snaps-ui/react'
-
 ;<Accordion.Root>
   <Accordion.Item>
     <Accordion.ItemTrigger>
@@ -54,3 +53,53 @@ Available sizes: **sm**, **md**, **lg**.
 Use the **variant** prop to switch between different visual styles of the accordion.
 
 <ExampleTabs name="accordion-variant" scope="accordion" />
+
+## Props
+
+### Root
+
+| Prop            | Type                                  | Default   | Description                                          |
+| --------------- | ------------------------------------- | --------- | ---------------------------------------------------- |
+| `defaultValue`  | `string[]`                            | —         | The value(s) of the item(s) to expand by default.    |
+| `value`         | `string[]`                            | —         | The controlled value of the expanded item(s).        |
+| `onValueChange` | `(value: string \| string[]) => void` | —         | Callback function triggered when the value changes.  |
+| `collapsible`   | `boolean`                             | `false`   | Allows all items to be collapsed so none are open.   |
+| `multiple`      | `boolean`                             | `false`   | Enables multiple accordion items to be open at once. |
+| `size`          | `"sm" \| "md" \| "lg"`                | `"md"`    | Controls the overall size of the accordion.          |
+| `variant`       | `"flush" \| "outline" \| "subtle"`    | `"plain"` | Sets the visual style of the accordion.              |
+| `children`      | `ReactNode`                           | —         | The accordion items to render within the root.       |
+
+---
+
+### Item
+
+| Prop       | Type        | Default | Description                                       |
+| ---------- | ----------- | ------- | ------------------------------------------------- |
+| `value`    | `string`    | —       | Unique value used to identify the accordion item. |
+| `disabled` | `boolean`   | `false` | Disables interaction for this accordion item.     |
+| `children` | `ReactNode` | —       | The trigger and content for the accordion item.   |
+
+---
+
+### ItemTrigger
+
+| Prop       | Type        | Default | Description                                      |
+| ---------- | ----------- | ------- | ------------------------------------------------ |
+| `children` | `ReactNode` | —       | The content displayed inside the trigger button. |
+| `disabled` | `boolean`   | `false` | Disables interaction with the trigger.           |
+
+---
+
+### ItemIndicator
+
+| Prop       | Type        | Default | Description                                               |
+| ---------- | ----------- | ------- | --------------------------------------------------------- |
+| `children` | `ReactNode` | —       | Typicallyi an icon or symbol indicating open/close state. |
+
+---
+
+### ItemContent
+
+| Prop       | Type        | Default | Description                                                 |
+| ---------- | ----------- | ------- | ----------------------------------------------------------- |
+| `children` | `ReactNode` | —       | The contentt displayed when the accordion item is expanded. |

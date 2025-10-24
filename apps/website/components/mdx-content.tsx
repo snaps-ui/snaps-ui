@@ -11,7 +11,15 @@ import { Anchor } from '~/components/mdx/anchor'
 import { Code, Pre } from '~/components/mdx/code'
 import { CodeBlock } from '~/components/mdx/code-block'
 import { H1, H2, H3, H4, P, Strong } from '~/components/mdx/typography'
-import { Table } from '~/components/mdx/table'
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHeadCell,
+  TableHeader,
+  TableRow,
+  TableFooter,
+} from '~/components/mdx/table'
 
 const sharedComponents = {
   a: Anchor,
@@ -26,6 +34,12 @@ const sharedComponents = {
   p: P,
   card: Card,
   table: Table,
+  tbody: TableBody,
+  thead: TableHeader,
+  th: TableHeadCell,
+  tfoot: TableFooter,
+  tr: TableRow,
+  td: TableCell,
   callout: Callout,
   ExampleTabs: ExampleTabs,
   ExamplePreview: ExamplePreview,

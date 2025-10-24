@@ -9,7 +9,6 @@ description: An input-like trigger used to open command palettes or search dialo
 
 ```tsx
 import { CommandInput } from '@snaps-ui/react'
-
 ;<CommandInput onOpen={() => console.log('Open command palette')} />
 ```
 
@@ -35,3 +34,14 @@ When the user presses the defined shortcut, the onOpen callback is automatically
 ## Accessibility
 
 The CommandInput uses a semantic button **role** with **aria-haspopup="dialog"** for accessibility, making it discoverable by assistive technologies as a command or dialog trigger.
+
+## Props
+
+### CommandInput
+
+| Prop          | Type         | Default                             | Description                                                               |
+| ------------- | ------------ | ----------------------------------- | ------------------------------------------------------------------------- |
+| `placeholder` | `string`     | `"Search or type a command..."`     | Text displayed when the input is empty.                                   |
+| `shortcut`    | `string`     | `"⌘K"` (Mac) / `"Ctrl+K"` (Windows) | Keyboard shortcut to trigger the command palette.                         |
+| `onOpen`      | `() => void` | —                                   | Callback invoked when the input or shortcut triggers the command palette. |
+| `leftElement` | `ReactNode`  | `<SearchIcon />`                    | Optional icon displayed inside the input trigger.                         |

@@ -9,11 +9,10 @@ description: A button used to close modals, drawers, alerts, and other dismissib
 
 ```tsx
 import { CloseButton } from '@snaps-ui/react'
-
 ;<CloseButton />
 ```
 
-It accepts all props available in **Button** component.
+> The **CloseButton** component inherits all props available in the **Button** component.
 
 ## To change the default icon, wrap your custom icon as a child:
 
@@ -22,3 +21,18 @@ It accepts all props available in **Button** component.
   <YourCustomIcon />
 </CloseButton>
 ```
+
+## Props
+
+### CloseButton
+
+| Prop           | Type                                                                            | Default                               | Description                                                                 |
+| -------------- | ------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------------------------------------------- |
+| `size`         | `"2xs" \| `"xs" \| "sm" \| "md" \| `"lg" \| "md" \| "lg"` \| `"xl"` \| `"2xl" ` | Defines the size of the close button. |
+| `colorPalette` | `"gray" \| "red" \| "blue" \| "green" \| "purple" \| "orange"`                  | `"gray"`                              | Sets the color palette for the button.                                      |
+| `variant`      | `"solid" \| "subtle" \| "outline" \| "ghost"`                                   | `"ghost"`                             | Defines the visual style of the button.                                     |
+| `childeren`    | `ReactNode`                                                                     | `<XIcon />`                           | The icon displayed inside the button. Defaults to a close (×) icon.         |
+| `aria-label`   | `string`                                                                        | `"Close"`                             | Accessible label for screen readers.                                        |
+| `onClick`      | `() => void`                                                                    | `-`                                   | Called when the close button is clicked.                                    |
+| `disabled`     | `boolean`                                                                       | `false`                               | Disables the button when set to true.                                       |
+| `asChild`      | `boolean`                                                                       | `false`                               | Passes props to a custom element instead of rendering a default `<button>`. |
