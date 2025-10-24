@@ -3,11 +3,11 @@
 import * as React from 'react'
 import type { Assign } from '@ark-ui/react'
 import { Clipboard as ArkClipboard } from '@ark-ui/react/clipboard'
-import type {
-  HTMLStyledProps,
-  RecipeVariantProps,
-} from '@snaps-ui/styled-system/types'
-import { clipboardSlotRecipe } from '@snaps-ui/styled-system/recipes'
+import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
+import {
+  clipboardSlotRecipe,
+  type ClipboardSlotRecipeVariantProps,
+} from '@snaps-ui/styled-system/recipes'
 import { LuCheck, LuCopy } from 'react-icons/lu'
 
 import { makeStyleContext } from '../../system/make-style-context'
@@ -15,14 +15,11 @@ import { makeStyleContext } from '../../system/make-style-context'
 const { withSlotProvider, withSlotContext } =
   makeStyleContext(clipboardSlotRecipe)
 
-// Variants from recipe
-type ClipboardVariantProps = RecipeVariantProps<typeof clipboardSlotRecipe>
-
 // -------------------- RootProvider --------------------
 export interface ClipboardRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkClipboard.RootProviderBaseProps>,
-    ClipboardVariantProps
+    ClipboardSlotRecipeVariantProps
   > {}
 
 export const ClipboardRootProvider = withSlotProvider<
@@ -34,7 +31,7 @@ export const ClipboardRootProvider = withSlotProvider<
 export interface ClipboardRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkClipboard.RootBaseProps>,
-    ClipboardVariantProps
+    ClipboardSlotRecipeVariantProps
   > {}
 
 export const ClipboardRoot = withSlotProvider<

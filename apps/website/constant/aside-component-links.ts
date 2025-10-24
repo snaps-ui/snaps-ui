@@ -23,6 +23,7 @@ export const asideComponentLinks = [
       { name: 'Persona', new: true, linkUrl: 'persona' },
       { name: 'Image', new: false, linkUrl: 'image' },
       { name: 'Typography', new: false, linkUrl: 'typography' },
+      { name: 'Table', new: true, linkUrl: 'table' },
       { name: 'KBD', new: false, linkUrl: 'kbd' },
     ],
   },

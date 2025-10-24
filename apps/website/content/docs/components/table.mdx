@@ -1,0 +1,52 @@
+---
+title: Table
+description: Used to display data in a tabular format.
+---
+
+<ExampleTabs name="table-basics" scope="table" />
+
+## Usage
+
+```tsx
+import { Table } from '@snaps-ui/react'
+
+;<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.HeadCell />
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell />
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+```
+
+## Examples
+
+### Sizes
+
+Use the **size** prop to adjust the spacing of table cells.
+
+<ExampleTabs name="table-sizes" scope="table" />
+
+### Variants
+
+Use the **variant** prop to change the visual style of the table (e.g., plain, outline, striped).
+
+<ExampleTabs name="table-variants" scope="table" />
+
+### With Caption
+
+Use the **Table.Caption** component to add a caption to your table.
+You can also control its position with the **captionSide** prop ("top" or "bottom").
+
+<ExampleTabs name="table-with-caption" scope="table" />
+
+### Scroll Area
+
+Wrap your **Table.Root** with **Table.ScrollArea** to enable horizontal scrolling for wide tables and mobile screens.
+
+<ExampleTabs name="table-scroll-area" scope="table" />

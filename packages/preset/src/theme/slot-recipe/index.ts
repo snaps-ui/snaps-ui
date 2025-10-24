@@ -7,6 +7,7 @@ import { fieldSlotRecipe } from './field.recipe'
 import { clipboardSlotRecipe } from './clipboard.recipe'
 import { accordionSlotRecipe } from './accordion.recipe'
 import { switchSlotRecipe } from './switch.recipe'
+import { tableSlotRecipe } from './table.recipe'
 
 export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
   accordionSlotRecipe,
@@ -16,4 +17,5 @@ export const slotRecipes: Record<string, Partial<SlotRecipeConfig>> = {
   fieldSlotRecipe,
   switchSlotRecipe,
   tabsSlotRecipe,
+  tableSlotRecipe,
 }

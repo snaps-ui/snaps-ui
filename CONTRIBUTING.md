@@ -51,7 +51,7 @@ pnpm build:packages
 Start Storybook
 
 ```bash
-pnpm storybook
+pnpm dev:storybook
 ```
 
 Start documentation website
