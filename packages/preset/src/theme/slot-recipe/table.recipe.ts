@@ -62,7 +62,7 @@ export const tableSlotRecipe = defineSlotRecipe({
           borderRadius: 'md',
           overflow: 'hidden',
         },
-        head: {
+        header: {
           bg: 'bg.subtle',
         },
       },
