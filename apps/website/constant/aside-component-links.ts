@@ -65,6 +65,9 @@ export const asideComponentLinks = [
 export const asideUtilLinks = [
   {
     section: 'Utilities',
-    items: [{ name: 'Client Only', new: true, linkUrl: 'client-only' }],
+    items: [
+      { name: 'Client Only', new: true, linkUrl: 'client-only' },
+      { name: 'Formats', new: true, linkUrl: 'formats' },
+    ],
   },
 ]

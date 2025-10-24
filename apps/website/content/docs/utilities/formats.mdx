@@ -1,0 +1,32 @@
+---
+title: Formats
+description: Utilities to format bytes, numbers, and relative time into human-readable strings.
+---
+
+## Usage
+
+The **@snaps-ui/react** package provides simple formatters to make displaying data more readable — such as converting file sizes, numeric values, and timestamps.
+
+```tsx
+import { FormatBytes, FormatNumber, FormatRelativeTime } from '@snaps-ui/react'
+```
+
+## Examples
+
+### Bytes
+
+Use the **FormatBytes** component to convert raw byte values into human-readable formats.
+
+<ExampleTabs name="format-bytes" scope="format" />
+
+### Numbers
+
+Use the **FormatNumber** component to format numeric values based on locale and precision.
+
+<ExampleTabs name="format-number" scope="format" />
+
+### Relative Time
+
+Use the **FormatRelativeTime** component to display dates as relative time (e.g., “3 minutes ago”, “yesterday”).
+
+<ExampleTabs name="format-relative-time" scope="format" />
