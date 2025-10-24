@@ -9,7 +9,6 @@ description: A control element that allows for a binary selection.
 
 ```tsx
 import { Switch } from '@snaps-ui/react'
-
 ;<Switch.Root>
   <Switch.HiddenInput />
   <Switch.Control>
@@ -51,3 +50,54 @@ Available palettes include:
 Use the **checked** and **onCheckedChange** props to control the state of the switch.
 
 <ExampleTabs name="switch-with-control" scope="switch" />
+
+## Props
+
+### Root
+
+| Prop              | Type                                                           | Default  | Description                                                               |
+| ----------------- | -------------------------------------------------------------- | -------- | ------------------------------------------------------------------------- |
+| `checked`         | `boolean`                                                      | —        | Controls the checked state of the switch (for controlled usage).          |
+| `defaultChecked`  | `boolean`                                                      | `false`  | Sets the initial checked state (for uncontrolled usage).                  |
+| `onCheckedChange` | `(checked: boolean) => void`                                   | —        | Callback fired when the switch state changes.                             |
+| `required`        | `boolean`                                                      | `false`  | Marks the switch as required in a form.                                   |
+| `disabled`        | `boolean`                                                      | `false`  | Disables interaction with the switch.                                     |
+| `name`            | `string`                                                       | —        | The name of the switch input for form submission.                         |
+| `value`           | `string`                                                       | `"on"`   | The value of the switch input when checked.                               |
+| `size`            | `"sm" \| "md" \| "lg"`                                         | `"md"`   | Controls the size of the switch.                                          |
+| `colorPalette`    | `"red" \| "blue" \| "green" \| "purple" \| "orange" \| "gray"` | `"blue"` | Sets the color palette of the switch.                                     |
+| `children`        | `ReactNode`                                                    | —        | The content of the switch, typically including control, thumb, and label. |
+| `as`              | `React.ElementType`                                            | —        | The content of the switch, typically including control, thumb, and label. |
+
+---
+
+### Control
+
+| Prop       | Type        | Default | Description                                                    |
+| ---------- | ----------- | ------- | -------------------------------------------------------------- |
+| `children` | `ReactNode` | —       | Contains the visual parts of the switch (usually the `Thumb`). |
+
+---
+
+### Thumb
+
+| Prop       | Type        | Default | Description                    |
+| ---------- | ----------- | ------- | ------------------------------ |
+| `children` | `ReactNode` | —       | Optional custom thumb content. |
+
+---
+
+### Label
+
+| Prop       | Type        | Default | Description                                 |
+| ---------- | ----------- | ------- | ------------------------------------------- |
+| `children` | `ReactNode` | —       | The label text displayed beside the switch. |
+
+---
+
+### HiddenInput
+
+| Prop    | Type     | Default | Description                                               |
+| ------- | -------- | ------- | --------------------------------------------------------- |
+| `name`  | `string` | —       | The name of the hidden input field.                       |
+| `value` | `string` | `"on"`  | The value of the hidden input when the switch is checked. |

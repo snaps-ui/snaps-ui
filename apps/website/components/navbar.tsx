@@ -20,7 +20,7 @@ export const NavBar = () => {
 
   const navLinks = [
     { href: '/docs/getting-started', label: 'Docs' },
-    { href: '/docs/components', label: 'Components' },
+    { href: '/docs/components/accordion', label: 'Components' },
     { href: '#', label: 'Blogs' },
   ]
 

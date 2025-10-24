@@ -30,3 +30,34 @@ Use the **FormatNumber** component to format numeric values based on locale and 
 Use the **FormatRelativeTime** component to display dates as relative time (e.g., “3 minutes ago”, “yesterday”).
 
 <ExampleTabs name="format-relative-time" scope="format" />
+
+## Props
+
+### FormatBytes
+
+| Prop    | Type              | Default   | Description                             |
+| ------- | ----------------- | --------- | --------------------------------------- |
+| `value` | `number`          | —         | The raw byte value to format.           |
+| `unit`  | `"bit" \| "bytes" | `"bytes"` | The base unit to start formatting from. |
+
+---
+
+### FormatNumber
+
+| Prop                    | Type                                      | Default      | Description                                                |
+| ----------------------- | ----------------------------------------- | ------------ | ---------------------------------------------------------- |
+| `value`                 | `number`                                  | —            | The numeric value to format.                               |
+| `style`                 | `string`                                  | -            | The style of the format.                                   |
+| `unit`                  | `kilometer` \| `etc...`                   | -            | The unit value to display.                                 |
+| `notation`              | `"standard" \| "compact" \| "scientific"` | `"standard"` | Controls how numbers are displayed (e.g., `1K`, `1.2e+3`). |
+| `minimumFractionDigits` | `number`                                  | `0`          | Minimum number of decimal places to show.                  |
+| `maximumFractionDigits` | `number`                                  | `2`          | Maximum number of decimal places to show.                  |
+
+---
+
+### FormatRelativeTime
+
+| Prop      | Type                       | Default  | Description                                                                           |
+| --------- | -------------------------- | -------- | ------------------------------------------------------------------------------------- |
+| `value`   | `Date \| string \| number` | —        | The date or timestamp to format relative to now.                                      |
+| `numeric` | `"always" \| "auto"`       | `"auto"` | Whether to always show numeric values (`3 days ago`) or relative terms (`yesterday`). |

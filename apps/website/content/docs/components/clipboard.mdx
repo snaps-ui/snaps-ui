@@ -59,3 +59,43 @@ This setup gives you maximum flexibility — you can:
 > When using **Clipboard.RootProvider**, you don’t need to use Clipboard.Root.
 
 <ExampleTabs name="clipboard-root-provider" scope="clipboard" />
+
+## Props
+
+### Clipboard.Root
+
+| Prop      | Type                      | Default  | Description                                                                               |
+| --------- | ------------------------- | -------- | ----------------------------------------------------------------------------------------- |
+| `timeout` | `number`                  | `3000ms` | Duration (in milliseconds) for how long the copied indicator or status text is displayed. |
+| `onCopy`  | `(value: string) => void` | `-`      | Callback fired after text is successfully copied.                                         |
+| `value`   | `string`                  | `-`      | The text value to be copied. If not provided, it’s taken from the `Clipboard.Input`.      |
+
+---
+
+### Clipboard.Trigger
+
+| Prop      | Type      | Default | Description                                                                                  |
+| --------- | --------- | ------- | -------------------------------------------------------------------------------------------- |
+| `asChild` | `boolean` | `false` | Passes the trigger props to a custom child component instead of rendering a default element. |
+
+---
+
+### Clipboard.Input
+
+| Prop       | Type      | Default | Description                                                               |
+| ---------- | --------- | ------- | ------------------------------------------------------------------------- |
+| `readOnly` | `boolean` | `true`  | Makes the input field read-only (recommended).                            |
+| `asChild`  | `boolean` | `false` | Passes the custom child component instead of rendering a default element. |
+
+---
+
+### useClipboard Hook
+
+| Property   | Type                       | Description                                       |
+| ---------- | -------------------------- | ------------------------------------------------- |
+| `copied`   | `boolean`                  | Whether the text has been successfully copied.    |
+| `value`    | `string`                   | The current value managed by the clipboard store. |
+| `copy`     | `(value?: string) => void` | Function to trigger the copy action manually.     |
+| `setValue` | `(value: string) => void`  | Updates the clipboard value.                      |
+
+---

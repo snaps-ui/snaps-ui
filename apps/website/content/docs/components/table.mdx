@@ -9,7 +9,6 @@ description: Used to display data in a tabular format.
 
 ```tsx
 import { Table } from '@snaps-ui/react'
-
 ;<Table.Root>
   <Table.Header>
     <Table.Row>
@@ -32,9 +31,15 @@ Use the **size** prop to adjust the spacing of table cells.
 
 <ExampleTabs name="table-sizes" scope="table" />
 
+### Hoverable
+
+Use the **hoverable** prop to enable interractive hover effects on table rows, improving readability and focus.
+
+<ExampleTabs name="table-hoverable" scope="table" />
+
 ### Variants
 
-Use the **variant** prop to change the visual style of the table (e.g., plain, outline, striped).
+Use the **variant** prop to change the visual style of the table (e.g., subtle, outline, striped).
 
 <ExampleTabs name="table-variants" scope="table" />
 
@@ -50,3 +55,55 @@ You can also control its position with the **captionSide** prop ("top" or "botto
 Wrap your **Table.Root** with **Table.ScrollArea** to enable horizontal scrolling for wide tables and mobile screens.
 
 <ExampleTabs name="table-scroll-area" scope="table" />
+
+## Props
+
+### Root
+
+| Prop        | Type                                 | Default    | Description                            |
+| ----------- | ------------------------------------ | ---------- | -------------------------------------- |
+| `size`      | `"sm" \| "md" \| "lg"`               | `"md"`     | Controls the spacing of table cells.   |
+| `variant`   | `"subtle" \| "outline" \| "striped"` | `"subtle"` | Changes the visual style of the table. |
+| `hoverable` | `boolean`                            | `false`    | Highlights a row when hovered.         |
+| `width`     | `string \| number`                   | `100%`     | Sets the width of the table.           |
+| `children`  | `ReactNode`                          | —          | The content of the table.              |
+
+---
+
+### HeadCell
+
+| Prop       | Type                            | Default  | Description                                |
+| ---------- | ------------------------------- | -------- | ------------------------------------------ |
+| `align`    | `"left" \| "center" \| "right"` | `"left"` | Aligns the header cell content.            |
+| `width`    | `string \| number`              | —        | Sets a specific width for the header cell. |
+| `children` | `ReactNode`                     | —        | The content of the header cell.            |
+
+---
+
+### Cell
+
+| Prop       | Type                            | Default  | Description                                 |
+| ---------- | ------------------------------- | -------- | ------------------------------------------- |
+| `align`    | `"left" \| "center" \| "right"` | `"left"` | Aligns the cell content.                    |
+| `colSpan`  | `number`                        | `1`      | Merges multiple columns into a single cell. |
+| `rowSpan`  | `number`                        | `1`      | Merges multiple rows into a single cell.    |
+| `children` | `ReactNode`                     | —        | The content of the cell.                    |
+
+---
+
+### Caption
+
+| Prop          | Type                | Default    | Description                       |
+| ------------- | ------------------- | ---------- | --------------------------------- |
+| `captionSide` | `"top" \| "bottom"` | `"bottom"` | Sets the position of the caption. |
+| `children`    | `ReactNode`         | —          | The caption text for the table.   |
+
+---
+
+### ScrollArea
+
+| Prop        | Type               | Default  | Description                                                           |
+| ----------- | ------------------ | -------- | --------------------------------------------------------------------- |
+| `children`  | `ReactNode`        | —        | The table content wrapped with a scroll container.                    |
+| `maxWidth`  | `string \| number` | `"100%"` | Sets the maximum width of the scroll area.                            |
+| `maxHeight` | `string \| number` | —        | Sets the maximum height of the scroll area, enabling vertical scroll. |
