@@ -56,7 +56,7 @@ export const AuthenticationExample = () => {
               </Field.Root>
 
               <Stack gap={3}>
-                <Button bg={'accent.default'}>Sign up with Email </Button>
+                <Button colorPalette={'accent'}>Sign up with Email </Button>
 
                 <Typography
                   variant={'subtitle1'}

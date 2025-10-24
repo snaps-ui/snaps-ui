@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { ark } from '@ark-ui/react/factory'
+import { ark, type PolymorphicProps } from '@ark-ui/react/factory'
 import { styled } from '@snaps-ui/styled-system/jsx'
 import { buttonRecipe } from '@snaps-ui/styled-system/recipes'
 import { type ComponentProps } from '@snaps-ui/styled-system/types'
@@ -19,7 +19,10 @@ interface LoadingButtonProps {
 
 type ButtonBaseProps = ComponentProps<typeof StyledButton>
 
-export interface ButtonProps extends ButtonBaseProps, LoadingButtonProps {}
+export interface ButtonProps
+  extends ButtonBaseProps,
+    LoadingButtonProps,
+    PolymorphicProps {}
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   function Button(props, ref) {

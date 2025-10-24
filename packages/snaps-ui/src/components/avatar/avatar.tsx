@@ -4,11 +4,11 @@ import { forwardRef } from 'react'
 import { ark } from '@ark-ui/react/factory'
 import type { Assign, HTMLArkProps } from '@ark-ui/react'
 import { Avatar as ArkAvatar } from '@ark-ui/react/avatar'
-import { avaterSlotRecipe } from '@snaps-ui/styled-system/recipes'
-import type {
-  HTMLStyledProps,
-  RecipeVariantProps,
-} from '@snaps-ui/styled-system/types'
+import {
+  avaterSlotRecipe,
+  type AvaterSlotRecipeVariantProps,
+} from '@snaps-ui/styled-system/recipes'
+import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
 import { styled } from '@snaps-ui/styled-system/jsx'
 
 import { makeStyleContext } from '../../system/make-style-context'
@@ -16,14 +16,11 @@ import { getInitials } from '../../utils/get-initial'
 
 const { withSlotProvider, withSlotContext } = makeStyleContext(avaterSlotRecipe)
 
-// Variants from recipe
-type AvatarVariantProps = RecipeVariantProps<typeof avaterSlotRecipe>
-
 // -------------------- RootProvider --------------------
 export interface AvatarRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkAvatar.RootProviderBaseProps>,
-    AvatarVariantProps
+    AvaterSlotRecipeVariantProps
   > {}
 
 export const AvatarRootProvider = withSlotProvider<
@@ -35,7 +32,7 @@ export const AvatarRootProvider = withSlotProvider<
 export interface AvatarRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkAvatar.RootBaseProps>,
-    AvatarVariantProps
+    AvaterSlotRecipeVariantProps
   > {}
 
 export const AvatarRoot = withSlotProvider<HTMLDivElement, AvatarRootProps>(

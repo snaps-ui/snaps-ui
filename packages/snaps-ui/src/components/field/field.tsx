@@ -4,25 +4,22 @@ import * as React from 'react'
 import type { Assign, HTMLArkProps } from '@ark-ui/react'
 import { ark } from '@ark-ui/react/factory'
 import { Field as ArkField, useFieldContext } from '@ark-ui/react/field'
-import { fieldSlotRecipe } from '@snaps-ui/styled-system/recipes'
-import type {
-  HTMLStyledProps,
-  RecipeVariantProps,
-} from '@snaps-ui/styled-system/types'
+import {
+  fieldSlotRecipe,
+  type FieldSlotRecipeVariantProps,
+} from '@snaps-ui/styled-system/recipes'
+import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
 import { cx } from '@snaps-ui/styled-system/css'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
 const { withSlotProvider, withSlotContext } = makeStyleContext(fieldSlotRecipe)
 
-// Variants from recipe
-type FieldVariantProps = RecipeVariantProps<typeof fieldSlotRecipe>
-
 // -------------------- RootProvider --------------------
 export interface FieldRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkField.RootProviderBaseProps>,
-    FieldVariantProps
+    FieldSlotRecipeVariantProps
   > {}
 
 export const FieldRootProvider = withSlotProvider<
@@ -34,7 +31,7 @@ export const FieldRootProvider = withSlotProvider<
 export interface FieldRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkField.RootBaseProps>,
-    FieldVariantProps
+    FieldSlotRecipeVariantProps
   > {}
 
 export const FieldRoot = withSlotProvider<HTMLDivElement, FieldRootProps>(

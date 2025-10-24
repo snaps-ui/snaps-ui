@@ -2,11 +2,12 @@ import { defineConfig } from 'tsup'
 
 export default defineConfig({
   target: 'es2022',
-  experimentalDts: true,
+  splitting: false,
+  sourcemap: false,
   clean: true,
-  sourcemap: true,
+  minify: false,
   format: ['esm', 'cjs'],
   banner: {
     js: "'use client'",
   },
-});
+})

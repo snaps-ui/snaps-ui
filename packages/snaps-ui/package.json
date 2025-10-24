@@ -37,10 +37,8 @@
   },
   "scripts": {
     "clean": "rimraf --no-glob ./dist",
-    "build:tsup": "NODE_OPTIONS='--max-old-space-size=16384' tsup --config tsup.config.ts ",
-    "build:types": "tsc --emitDeclarationOnly --outDir dist --project tsconfig.json",
+    "build": "pnpm clean && tsup --config tsup.config.ts && tsc --outDir dist --project tsconfig.json",
     "prebuild": "pnpm clean",
-    "build": "tsc --outDir dist --project tsconfig.json",
     "lint": "eslint src --ext .ts,.tsx,.js,.jsx --config ../../eslint.config.js",
     "typecheck": "tsc --noEmit",
     "test": "vitest"

@@ -2,25 +2,22 @@
 
 import type { Assign } from '@ark-ui/react'
 import { Accordion as ArkAccordion } from '@ark-ui/react/accordion'
-import { accordionSlotRecipe } from '@snaps-ui/styled-system/recipes'
-import type {
-  HTMLStyledProps,
-  RecipeVariantProps,
-} from '@snaps-ui/styled-system/types'
+import {
+  accordionSlotRecipe,
+  type AccordionSlotRecipeVariantProps,
+} from '@snaps-ui/styled-system/recipes'
+import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
 const { withSlotProvider, withSlotContext } =
   makeStyleContext(accordionSlotRecipe)
 
-// Variants from recipe
-type AccordionVariantProps = RecipeVariantProps<typeof accordionSlotRecipe>
-
 // -------------------- RootProvider --------------------
 export interface AccordionRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkAccordion.RootProviderBaseProps>,
-    AccordionVariantProps
+    AccordionSlotRecipeVariantProps
   > {}
 
 export const AccordionRootProvider = withSlotProvider<
@@ -32,7 +29,7 @@ export const AccordionRootProvider = withSlotProvider<
 export interface AccordionRootProps
   extends Assign<
     Assign<HTMLStyledProps<'div'>, ArkAccordion.RootBaseProps>,
-    AccordionVariantProps
+    AccordionSlotRecipeVariantProps
   > {}
 
 export const AccordionRoot = withSlotProvider<

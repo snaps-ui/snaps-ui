@@ -1,33 +1,16 @@
-import fs from 'node:fs'
-import path from 'node:path'
 import { defineConfig } from 'tsup'
 
 import rootConfig from '../../tsup.config'
 
-function directiveRemover(nameOfFile: string) {
-  const file = path.resolve(__dirname, 'dist', nameOfFile)
-
-  return fs.promises.writeFile(
-    file,
-    fs.readFileSync(file, 'utf-8').replace("'use client'\n", '')
-  )
-}
-
 export default defineConfig({
   ...rootConfig,
-  entry: [
-    'src/components/**/index.ts',
-    'src/colors.ts',
-    'src/base-presets.ts',
-    'src/index.ts',
+  entry: ['src/index.ts', 'src/collection.ts', 'src/components/**/index.ts'],
+  external: [
+    'react',
+    'react-dom',
+    'react-icons',
+    '@ark-ui/react',
+    '@pandacss/dev',
+    '@snaps-ui/panda-preset',
   ],
-  tsconfig: './tsconfig.json',
-  sourcemap: false,
-  external: ['@ark-ui/react', '@pandacss/dev', 'react', 'react-dom'],
-  async onSuccess() {
-    await Promise.all([
-      directiveRemover('index.cjs'),
-      directiveRemover('index.js'),
-    ])
-  },
 })

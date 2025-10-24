@@ -2,23 +2,21 @@
 
 import type { Assign } from '@ark-ui/react'
 import { Switch as ArkSwitch } from '@ark-ui/react/switch'
-import type {
-  HTMLStyledProps,
-  RecipeVariantProps,
-} from '@snaps-ui/styled-system/types'
-import { switchSlotRecipe } from '@snaps-ui/styled-system/recipes'
+import type { HTMLStyledProps } from '@snaps-ui/styled-system/types'
+import {
+  switchSlotRecipe,
+  type SwitchSlotRecipeVariantProps,
+} from '@snaps-ui/styled-system/recipes'
 
 import { makeStyleContext } from '../../system/make-style-context'
 
 const { withSlotProvider, withSlotContext } = makeStyleContext(switchSlotRecipe)
 
-type SwitchVariantProps = RecipeVariantProps<typeof switchSlotRecipe>
-
 // -------------------- Root Provider --------------------
 export interface SwitchRootProviderProps
   extends Assign<
     Assign<HTMLStyledProps<'label'>, ArkSwitch.RootProviderBaseProps>,
-    SwitchVariantProps
+    SwitchSlotRecipeVariantProps
   > {}
 
 export const SwitchRootProvider = withSlotProvider<
@@ -30,7 +28,7 @@ export const SwitchRootProvider = withSlotProvider<
 export interface SwitchRootProps
   extends Assign<
     Assign<HTMLStyledProps<'label'>, ArkSwitch.RootBaseProps>,
-    SwitchVariantProps
+    SwitchSlotRecipeVariantProps
   > {}
 
 export const SwitchRoot = withSlotProvider<HTMLLabelElement, SwitchRootProps>(
