@@ -38,15 +38,19 @@ Check out our [CONTRIBUTING File](CONTRIBUTING.md) for details.
 
 ## 📣 Stay Connected
 
-[💻 Website](https://snaps-ui.vercel.app/)
+[Website](https://snaps-ui.vercel.app/)
 
-🐦 [LinkedIn](https://www.linkedin.com/company/snaps-ui)
+[LinkedIn](https://www.linkedin.com/company/snaps-ui)
 
-🐦 Twitter (coming soon)
+[Twitter](https://x.com/SnapsUi)
 
 💬 Community Discord (coming soon)
 
-### 🙏🏽 Support
+## Acknowledgement
+
+Most of the documentation were taken from [Ark UI](https://ark-ui.com/), [Chakra UI](https://chakra-ui.com/) and inspired by [Park UI](https://park-ui.com/)
+
+## 🙏🏽 Support
 
 This project needs a star️ from you. Don't forget to leave a star✨
 
