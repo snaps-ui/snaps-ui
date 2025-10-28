@@ -23,6 +23,11 @@
       "import": "./dist/collection.js",
       "require": "./dist/collection.cjs"
     },
+    "./anatomy": {
+      "types": "./dist/anatomy.d.ts",
+      "import": "./dist/anatomy.js",
+      "require": "./dist/anatomy.cjs"
+    },
     "./provider": {
       "types": "./dist/provider/index.d.ts",
       "import": "./dist/provider/index.js",

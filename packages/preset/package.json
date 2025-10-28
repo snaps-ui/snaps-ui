@@ -22,6 +22,11 @@
       "import": "./dist/colors/*.js",
       "require": "./dist/colors/*.cjs"
     },
+    "./anatomy": {
+      "types": "./dist/anatomy.d.ts",
+      "import": "./dist/anatomy.js",
+      "require": "./dist/anatomy.cjs"
+    },
     "./package.json": "./package.json"
   },
   "scripts": {
