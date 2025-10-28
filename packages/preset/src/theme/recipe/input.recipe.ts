@@ -13,15 +13,13 @@ export const inputRecipe = defineRecipe({
     outline: '0',
     position: 'relative',
     width: '100%',
+    height: 'var(--input-height)',
+    minW: 'var(--input-height)',
     minWidth: '0',
     textAlign: 'start',
     _disabled: {
       opacity: 0.3,
       cursor: 'not-allowed',
-    },
-    _focus: {
-      borderColor: 'colorPalette.default',
-      boxShadow: '0 0 0 1px var(--colors-color-palette-default)',
     },
     _invalid: {
       borderColor: 'fg.error',
@@ -35,57 +33,65 @@ export const inputRecipe = defineRecipe({
     variant: {
       outline: {
         bg: 'bg.surface',
+        _focus: {
+          borderColor: 'colorPalette.default',
+          boxShadow: '0 0 0 1px var(--colors-color-palette-default)',
+        },
       },
       flushed: {
+        bg: 'transparent',
         borderRadius: '0',
         borderTop: '0',
         borderLeft: '0',
         borderRight: '0',
+        _focus: {
+          borderTop: '0',
+          borderLeft: '0',
+          borderRight: '0',
+          borderColor: 'colorPalette.default',
+        },
       },
       subtle: {
         bg: 'bg.subtle',
+        _focus: {
+          borderColor: 'colorPalette.default',
+          boxShadow: '0 0 0 1px var(--colors-color-palette-default)',
+        },
       },
     },
     size: {
       '2xs': {
-        h: '7',
-        minH: '7',
+        '--input-height': 'sizes.7',
         textStyle: 'xs',
         px: '2',
       },
       xs: {
-        h: '8',
-        minH: '8',
+        '--input-height': 'sizes.8',
         textStyle: 'xs',
         px: '2',
       },
       sm: {
-        h: '9',
-        minH: '9',
+        '--input-height': 'sizes.9',
         textStyle: 'sm',
         px: '2.3',
       },
       md: {
-        h: '10',
-        minH: '10',
+        '--input-height': 'sizes.10',
         textStyle: 'sm',
         px: '3',
       },
       lg: {
-        h: '11',
-        minH: '11',
+        '--input-height': 'sizes.11',
         textStyle: 'md',
         px: '4',
       },
       xl: {
-        h: '12',
-        minH: '12',
+        '--input-height': 'sizes.12',
         textStyle: 'md',
         px: '4.6',
       },
       '2xl': {
-        h: '16',
-        minH: '16',
+        '--input-height': 'sizes.16',
         textStyle: 'lg',
         px: '5',
       },
