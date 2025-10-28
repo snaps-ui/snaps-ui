@@ -16,6 +16,7 @@ export const inputRecipe = defineRecipe({
     height: 'var(--input-height)',
     minW: 'var(--input-height)',
     minWidth: '0',
+    transition: 'border-color 0.2s, box-shadow 0.2s',
     textAlign: 'start',
     _disabled: {
       opacity: 0.3,

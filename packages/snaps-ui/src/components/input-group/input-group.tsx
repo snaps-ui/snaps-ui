@@ -1,49 +1,64 @@
 'use client'
 
 import * as React from 'react'
-import { Box } from '@snaps-ui/styled-system/jsx'
+import { ark } from '@ark-ui/react/factory'
+import { styled } from '@snaps-ui/styled-system/jsx'
+import { inputGroupRecipe } from '@snaps-ui/styled-system/recipes'
 
-import { Group } from '../group/index'
 import { type BoxProps } from '../box/index'
+import { InputAddon, type InputAddonProps } from '../input-addon/index'
+
+const StyledInputGroup = styled(ark.div, inputGroupRecipe)
 
 export interface InputGroupProps extends Omit<BoxProps, 'direction'> {
-  leftElement?: React.ReactNode
-  rightElement?: React.ReactNode
+  startAddon?: React.ReactNode | undefined
+  /**
+   * The props to pass to the start addon
+   */
+  startAddonProps?: InputAddonProps | undefined
+  /**
+   * The end addon to render the right of the group
+   */
+  endAddon?: React.ReactNode | undefined
+  /**
+   * The props to pass to the end addon
+   */
+  endAddonProps?: InputAddonProps | undefined
+  /**
+   * The children to render inside the group
+   */
   children: React.ReactNode
 }
 
 export const InputGroup = React.forwardRef<HTMLDivElement, InputGroupProps>(
   function InputGroup(props, ref) {
-    const { leftElement, rightElement, children, ...rest } = props
+    const {
+      startAddon,
+      startAddonProps,
+      endAddon,
+      endAddonProps,
+      children,
+      ...rest
+    } = props
 
     return (
-      <Group ref={ref} attached {...rest}>
-        {leftElement && (
-          <Box
-            px="3"
-            color="gray.400"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-          >
-            {leftElement}
-          </Box>
+      <StyledInputGroup ref={ref} {...rest}>
+        {startAddon && (
+          <InputAddon {...startAddonProps} placement="left">
+            {startAddon}
+          </InputAddon>
         )}
 
-        <Box flex="1">{children}</Box>
+        {children}
 
-        {rightElement && (
-          <Box
-            px="2"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            gap="1"
-          >
-            {rightElement}
-          </Box>
+        {endAddon && (
+          <InputAddon {...endAddonProps} placement="right">
+            {endAddon}
+          </InputAddon>
         )}
-      </Group>
+      </StyledInputGroup>
     )
   }
 )
+
+InputGroup.displayName = 'InputGroup'
