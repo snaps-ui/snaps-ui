@@ -13,6 +13,8 @@ export const buttonRecipe = defineRecipe({
     fontWeight: 'medium',
     isolation: 'isolate',
     minWidth: '0',
+    height: 'var(--input-height)',
+    minW: 'var(--input-height)',
     justifyContent: 'center',
     whiteSpace: 'nowrap',
     overflow: 'hidden',
@@ -167,8 +169,7 @@ export const buttonRecipe = defineRecipe({
 
     size: {
       '2xs': {
-        h: '6',
-        minW: '6',
+        '--input-height': 'sizes.6',
         textStyle: 'xs',
         px: '2',
         gap: '1',
@@ -178,8 +179,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       xs: {
-        h: '8',
-        minW: '8',
+        '--input-height': 'sizes.8',
         textStyle: 'xs',
         px: '2.5',
         gap: '1',
@@ -189,8 +189,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       sm: {
-        h: '9',
-        minW: '9',
+        '--input-height': 'sizes.9',
         px: '3.5',
         textStyle: 'sm',
         gap: '2',
@@ -200,8 +199,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       md: {
-        h: '10',
-        minW: '10',
+        '--input-height': 'sizes.10',
         textStyle: 'sm',
         px: '4',
         gap: '2',
@@ -211,8 +209,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       lg: {
-        h: '11',
-        minW: '11',
+        '--input-height': 'sizes.11',
         textStyle: 'md',
         px: '5',
         gap: '3',
@@ -222,8 +219,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       xl: {
-        h: '12',
-        minW: '12',
+        '--input-height': 'sizes.12',
         textStyle: 'md',
         px: '5',
         gap: '2.5',
@@ -233,8 +229,7 @@ export const buttonRecipe = defineRecipe({
         },
       },
       '2xl': {
-        h: '16',
-        minW: '16',
+        '--input-height': 'sizes.16',
         textStyle: 'lg',
         px: '7',
         gap: '3',
