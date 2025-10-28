@@ -12,5 +12,6 @@ export default defineConfig({
     '@ark-ui/react',
     '@pandacss/dev',
     '@snaps-ui/panda-preset',
+    '@snaps-ui/styled-system',
   ],
 })
