@@ -13,6 +13,8 @@ import { commandInputRecipe } from './command-Input.recipe'
 import { badgeRecipes } from './bagde.recipe'
 import { groupRecipe } from './group.recipe'
 import { floatLabelRecipe } from './float-label.recipe'
+import { inputGroupRecipe } from './input.group'
+import { inputAddonRecipe } from './input-addon.recipe'
 
 export const recipes: Record<
   string,
@@ -24,6 +26,8 @@ export const recipes: Record<
   floatLabelRecipe,
   groupRecipe,
   inputRecipe,
+  inputGroupRecipe,
+  inputAddonRecipe,
   kbdRecipe,
   spinnerRecipe,
   typographyRecipe,

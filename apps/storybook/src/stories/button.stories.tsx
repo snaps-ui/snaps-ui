@@ -25,14 +25,14 @@ export const Variants: Story = {
       <HStack>
         <Button variant="solid">solid</Button>
       </HStack>
-      <HStack>
+      <HStack gap={'4'}>
         <Button variant="solid">Solid</Button>
         <Button variant="plain">plain</Button>
         <Button variant="outline">Outline</Button>
         <Button variant="subtle">Subtle</Button>
         <Button variant="ghost">Ghost</Button>
       </HStack>
-      <HStack>
+      <HStack gap={'4'}>
         <Button variant="solid" colorPalette="neutral">
           Solid
         </Button>
@@ -46,7 +46,7 @@ export const Variants: Story = {
           Ghost
         </Button>
       </HStack>
-      <HStack>
+      <HStack gap={'4'}>
         <Button variant="solid" colorPalette="blue">
           Solid
         </Button>
@@ -66,7 +66,7 @@ export const Variants: Story = {
 
 export const Sizes: Story = {
   render: () => (
-    <HStack>
+    <HStack gap="4">
       <Button size="xs">XSmall</Button>
       <Button size="sm">Small</Button>
       <Button size="md">Medium</Button>
