@@ -1,5 +1,3 @@
-'use client'
-
 import { Avatar, AvatarGroup } from '@snaps-ui/react/avatar'
 import { Button } from '@snaps-ui/react/button'
 import { Box } from '@snaps-ui/react/box'
@@ -8,11 +6,17 @@ import { Flex } from '@snaps-ui/react/flex'
 import { Field } from '@snaps-ui/react/field'
 import { Input } from '@snaps-ui/react/input'
 import { Paper } from '@snaps-ui/react/paper'
-import { HStack, Stack } from '@snaps-ui/react/stack'
+import { HStack, Stack, VStack } from '@snaps-ui/react/stack'
 import { Textarea } from '@snaps-ui/react/textarea'
 import { Typography } from '@snaps-ui/react/typography'
 import { Tabs } from '@snaps-ui/react/tabs'
+import { Checkbox } from '@snaps-ui/react/checkbox'
+import { Spinner } from '@snaps-ui/react/spinner'
 import { FaPlus } from 'react-icons/fa6'
+import { InputGroup } from '@snaps-ui/react/input-group'
+import { Switch } from '@snaps-ui/react/switch'
+import { Persona } from '@snaps-ui/react/persona'
+import { BiSearch, BiUser } from 'react-icons/bi'
 
 export const BillingAddress = () => {
   return (
@@ -22,6 +26,18 @@ export const BillingAddress = () => {
         <Typography variant={'subtitle2'}>
           The billing address associated with your payment method
         </Typography>
+      </Stack>
+
+      <Stack mb={'4'}>
+        <Checkbox.Root size={'sm'} colorPalette={'accent'} defaultChecked>
+          <Checkbox.HiddenInput />
+          <Checkbox.Control>
+            <Checkbox.Indicator />
+          </Checkbox.Control>
+          <Checkbox.Label color={'fg.muted'}>
+            Same as Shipping address.
+          </Checkbox.Label>
+        </Checkbox.Root>
       </Stack>
 
       <Stack gap={5}>
@@ -118,10 +134,10 @@ export const TeamMembers = () => {
               <Avatar.Fallback>+3</Avatar.Fallback>
             </Avatar.Root>
           </AvatarGroup>
-          <Typography variant={'subtitle1'} textAlign={'center'}>
+          <Typography variant={'body1'} textAlign={'center'}>
             No Team Members
           </Typography>
-          <Typography variant={'subtitle2'}>
+          <Typography variant={'body2'}>
             Invite your team to collaborate on this project.
           </Typography>
 
@@ -166,6 +182,79 @@ export const TabsExample = () => {
           </Typography>
         </Tabs.Content>
       </Tabs.Root>
+    </Paper>
+  )
+}
+
+export const ProcessingCard = () => {
+  return (
+    <Paper width={'full'} height="min-content">
+      <Center>
+        <Stack gap={4} mb={'15px'} textAlign={'center'}>
+          <VStack
+            display={'flex'}
+            justifyContent={'center'}
+            alignItems={'center'}
+          >
+            <Spinner />
+          </VStack>
+
+          <Typography>Payment processing</Typography>
+
+          <Typography>Please wait while we process your payment</Typography>
+
+          <Button colorPalette={'accent'} width={'auto'}>
+            Stop processing
+          </Button>
+        </Stack>
+      </Center>
+    </Paper>
+  )
+}
+
+export const MoreComponents = () => {
+  return (
+    <Paper width={'full'} height="min-content">
+      <Stack gap={4} mb={'15px'}>
+        <VStack gap={4}>
+          <Typography variant={'body2'} color={'fg.muted'}>
+            Input Group
+          </Typography>
+          <InputGroup startAddon={<BiUser />}>
+            <Input placeholder="@justicechimobi_" />
+          </InputGroup>
+
+          <InputGroup startAddon={<BiSearch />} endAddon="23 results">
+            <Input placeholder="search..." />
+          </InputGroup>
+        </VStack>
+
+        <VStack gap={3}>
+          <Typography variant={'body2'} color={'fg.muted'}>
+            Switch
+          </Typography>
+
+          <Switch.Root colorPalette={'green'} defaultChecked>
+            <Switch.HiddenInput />
+            <Switch.Control>
+              <Switch.Thumb />
+            </Switch.Control>
+            <Switch.Label>Allow for auto renew payments</Switch.Label>
+          </Switch.Root>
+        </VStack>
+
+        <VStack gap={3}>
+          <Typography variant={'body2'} color={'fg.muted'}>
+            Persona
+          </Typography>
+          <Persona
+            name="Leanne Graham"
+            title="harness real-time e-markets"
+            img={'http://bit.ly/47jPX1D'}
+            imgSize="lg"
+          />
+        </VStack>
+      </Stack>
     </Paper>
   )
 }
